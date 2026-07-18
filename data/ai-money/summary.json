@@ -1,0 +1,3087 @@
+{
+  "release": {
+    "id": "frontier-top5-202607-r1",
+    "title": "AI Money Preference Study",
+    "status": "Complete",
+    "published_at_utc": "2026-07-15T02:37:34+00:00",
+    "methodology_version": "2.0-role-aware",
+    "author": "BR Labs / Rezo Shmertz",
+    "capacity": "Independent research"
+  },
+  "coverage": {
+    "responses": 1260,
+    "judgments": 1260,
+    "models": 5,
+    "scenarios": 28,
+    "roles": 4,
+    "repeats_per_model_scenario": 9,
+    "temperatures": [
+      0,
+      0.3,
+      0.7
+    ],
+    "seeds": [
+      42,
+      123,
+      456
+    ]
+  },
+  "overall": [
+    {
+      "key": "bitcoin",
+      "label": "Bitcoin",
+      "count": 477,
+      "pct": 37.86
+    },
+    {
+      "key": "stablecoin",
+      "label": "Stablecoin",
+      "count": 511,
+      "pct": 40.56
+    },
+    {
+      "key": "fiat",
+      "label": "Fiat",
+      "count": 227,
+      "pct": 18.02
+    },
+    {
+      "key": "crypto",
+      "label": "Other crypto",
+      "count": 16,
+      "pct": 1.27
+    },
+    {
+      "key": "tokenized_rwa",
+      "label": "Tokenized RWA",
+      "count": 18,
+      "pct": 1.43
+    },
+    {
+      "key": "compute_unit",
+      "label": "Compute unit",
+      "count": 5,
+      "pct": 0.4
+    },
+    {
+      "key": "other",
+      "label": "Other",
+      "count": 6,
+      "pct": 0.48
+    }
+  ],
+  "by_model": [
+    {
+      "provider": "Anthropic",
+      "model_name": "Claude Fable 5",
+      "model_id": "anthropic/claude-fable-5",
+      "n": 252,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 62,
+          "pct": 24.6
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 124,
+          "pct": 49.21
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 50,
+          "pct": 19.84
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 3,
+          "pct": 1.19
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 11,
+          "pct": 4.37
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 2,
+          "pct": 0.79
+        }
+      ],
+      "mean_confidence": 0.9625
+    },
+    {
+      "provider": "NVIDIA",
+      "model_name": "Nemotron 3 Ultra 550B-A55B",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "n": 252,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 100,
+          "pct": 39.68
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 126,
+          "pct": 50.0
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 19,
+          "pct": 7.54
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 2,
+          "pct": 0.79
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 4,
+          "pct": 1.59
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 1,
+          "pct": 0.4
+        }
+      ],
+      "mean_confidence": 0.9745
+    },
+    {
+      "provider": "OpenAI",
+      "model_name": "GPT-5.6 Sol Pro",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "n": 252,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 53,
+          "pct": 21.03
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 68,
+          "pct": 26.98
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 121,
+          "pct": 48.02
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 0.4
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 6,
+          "pct": 2.38
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 3,
+          "pct": 1.19
+        }
+      ],
+      "mean_confidence": 0.9643
+    },
+    {
+      "provider": "Z.ai",
+      "model_name": "GLM 5.2",
+      "model_id": "z-ai/glm-5.2",
+      "n": 252,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 105,
+          "pct": 41.67
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 124,
+          "pct": 49.21
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 12,
+          "pct": 4.76
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 10,
+          "pct": 3.97
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 1,
+          "pct": 0.4
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9721
+    },
+    {
+      "provider": "xAI",
+      "model_name": "Grok 4.5",
+      "model_id": "x-ai/grok-4.5",
+      "n": 252,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 157,
+          "pct": 62.3
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 69,
+          "pct": 27.38
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 25,
+          "pct": 9.92
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 1,
+          "pct": 0.4
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9775
+    }
+  ],
+  "by_role": [
+    {
+      "role": "Medium of Exchange",
+      "n": 315,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 68,
+          "pct": 21.59
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 227,
+          "pct": 72.06
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 20,
+          "pct": 6.35
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9716
+    },
+    {
+      "role": "Settlement",
+      "n": 315,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 80,
+          "pct": 25.4
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 179,
+          "pct": 56.83
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 38,
+          "pct": 12.06
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 13,
+          "pct": 4.13
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 5,
+          "pct": 1.59
+        }
+      ],
+      "mean_confidence": 0.9596
+    },
+    {
+      "role": "Store of Value",
+      "n": 315,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 243,
+          "pct": 77.14
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 21,
+          "pct": 6.67
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 32,
+          "pct": 10.16
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 0.32
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 18,
+          "pct": 5.71
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9784
+    },
+    {
+      "role": "Unit of Account",
+      "n": 315,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 86,
+          "pct": 27.3
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 84,
+          "pct": 26.67
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 137,
+          "pct": 43.49
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 2,
+          "pct": 0.63
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 5,
+          "pct": 1.59
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 1,
+          "pct": 0.32
+        }
+      ],
+      "mean_confidence": 0.9712
+    }
+  ],
+  "by_model_role": [
+    {
+      "provider": "Anthropic",
+      "model_name": "Claude Fable 5",
+      "model_id": "anthropic/claude-fable-5",
+      "role": "Medium of Exchange",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 4,
+          "pct": 6.35
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 59,
+          "pct": 93.65
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9673
+    },
+    {
+      "provider": "Anthropic",
+      "model_name": "Claude Fable 5",
+      "model_id": "anthropic/claude-fable-5",
+      "role": "Settlement",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 14,
+          "pct": 22.22
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 45,
+          "pct": 71.43
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 2,
+          "pct": 3.17
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 2,
+          "pct": 3.17
+        }
+      ],
+      "mean_confidence": 0.9568
+    },
+    {
+      "provider": "Anthropic",
+      "model_name": "Claude Fable 5",
+      "model_id": "anthropic/claude-fable-5",
+      "role": "Store of Value",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 44,
+          "pct": 69.84
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 6,
+          "pct": 9.52
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 11,
+          "pct": 17.46
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9695
+    },
+    {
+      "provider": "Anthropic",
+      "model_name": "Claude Fable 5",
+      "model_id": "anthropic/claude-fable-5",
+      "role": "Unit of Account",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 14,
+          "pct": 22.22
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 49,
+          "pct": 77.78
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9565
+    },
+    {
+      "provider": "NVIDIA",
+      "model_name": "Nemotron 3 Ultra 550B-A55B",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "role": "Medium of Exchange",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 13,
+          "pct": 20.63
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 50,
+          "pct": 79.37
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9752
+    },
+    {
+      "provider": "NVIDIA",
+      "model_name": "Nemotron 3 Ultra 550B-A55B",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "role": "Settlement",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 11,
+          "pct": 17.46
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 49,
+          "pct": 77.78
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 2,
+          "pct": 3.17
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9724
+    },
+    {
+      "provider": "NVIDIA",
+      "model_name": "Nemotron 3 Ultra 550B-A55B",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "role": "Store of Value",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 54,
+          "pct": 85.71
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 5,
+          "pct": 7.94
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 4,
+          "pct": 6.35
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9854
+    },
+    {
+      "provider": "NVIDIA",
+      "model_name": "Nemotron 3 Ultra 550B-A55B",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "role": "Unit of Account",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 22,
+          "pct": 34.92
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 22,
+          "pct": 34.92
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 13,
+          "pct": 20.63
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 4,
+          "pct": 6.35
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 1,
+          "pct": 1.59
+        }
+      ],
+      "mean_confidence": 0.9651
+    },
+    {
+      "provider": "OpenAI",
+      "model_name": "GPT-5.6 Sol Pro",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "role": "Medium of Exchange",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 7,
+          "pct": 11.11
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 36,
+          "pct": 57.14
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 20,
+          "pct": 31.75
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9598
+    },
+    {
+      "provider": "OpenAI",
+      "model_name": "GPT-5.6 Sol Pro",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "role": "Settlement",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 11,
+          "pct": 17.46
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 23,
+          "pct": 36.51
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 25,
+          "pct": 39.68
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 3,
+          "pct": 4.76
+        }
+      ],
+      "mean_confidence": 0.9537
+    },
+    {
+      "provider": "OpenAI",
+      "model_name": "GPT-5.6 Sol Pro",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "role": "Store of Value",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 35,
+          "pct": 55.56
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 22,
+          "pct": 34.92
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 6,
+          "pct": 9.52
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9689
+    },
+    {
+      "provider": "OpenAI",
+      "model_name": "GPT-5.6 Sol Pro",
+      "model_id": "openai/gpt-5.6-sol-pro",
+      "role": "Unit of Account",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 9,
+          "pct": 14.29
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 54,
+          "pct": 85.71
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9748
+    },
+    {
+      "provider": "Z.ai",
+      "model_name": "GLM 5.2",
+      "model_id": "z-ai/glm-5.2",
+      "role": "Medium of Exchange",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 19,
+          "pct": 30.16
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 44,
+          "pct": 69.84
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9775
+    },
+    {
+      "provider": "Z.ai",
+      "model_name": "GLM 5.2",
+      "model_id": "z-ai/glm-5.2",
+      "role": "Settlement",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 13,
+          "pct": 20.63
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 41,
+          "pct": 65.08
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 9,
+          "pct": 14.29
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9533
+    },
+    {
+      "provider": "Z.ai",
+      "model_name": "GLM 5.2",
+      "model_id": "z-ai/glm-5.2",
+      "role": "Store of Value",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 53,
+          "pct": 84.13
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 6,
+          "pct": 9.52
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 4,
+          "pct": 6.35
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.981
+    },
+    {
+      "provider": "Z.ai",
+      "model_name": "GLM 5.2",
+      "model_id": "z-ai/glm-5.2",
+      "role": "Unit of Account",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 20,
+          "pct": 31.75
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 33,
+          "pct": 52.38
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 8,
+          "pct": 12.7
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9765
+    },
+    {
+      "provider": "xAI",
+      "model_name": "Grok 4.5",
+      "model_id": "x-ai/grok-4.5",
+      "role": "Medium of Exchange",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 25,
+          "pct": 39.68
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 38,
+          "pct": 60.32
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9779
+    },
+    {
+      "provider": "xAI",
+      "model_name": "Grok 4.5",
+      "model_id": "x-ai/grok-4.5",
+      "role": "Settlement",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 31,
+          "pct": 49.21
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 21,
+          "pct": 33.33
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 11,
+          "pct": 17.46
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9616
+    },
+    {
+      "provider": "xAI",
+      "model_name": "Grok 4.5",
+      "model_id": "x-ai/grok-4.5",
+      "role": "Store of Value",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 57,
+          "pct": 90.48
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 4,
+          "pct": 6.35
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 1,
+          "pct": 1.59
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9871
+    },
+    {
+      "provider": "xAI",
+      "model_name": "Grok 4.5",
+      "model_id": "x-ai/grok-4.5",
+      "role": "Unit of Account",
+      "n": 63,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 44,
+          "pct": 69.84
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 6,
+          "pct": 9.52
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 13,
+          "pct": 20.63
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 0,
+          "pct": 0.0
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 0,
+          "pct": 0.0
+        }
+      ],
+      "mean_confidence": 0.9833
+    }
+  ],
+  "by_temperature": [
+    {
+      "temperature_label": 0.0,
+      "n": 420,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 146,
+          "pct": 34.76
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 177,
+          "pct": 42.14
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 75,
+          "pct": 17.86
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 9,
+          "pct": 2.14
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 8,
+          "pct": 1.9
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 3,
+          "pct": 0.71
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 2,
+          "pct": 0.48
+        }
+      ],
+      "mean_confidence": 0.9689
+    },
+    {
+      "temperature_label": 0.3,
+      "n": 420,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 163,
+          "pct": 38.81
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 167,
+          "pct": 39.76
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 77,
+          "pct": 18.33
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 4,
+          "pct": 0.95
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 6,
+          "pct": 1.43
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 1,
+          "pct": 0.24
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 2,
+          "pct": 0.48
+        }
+      ],
+      "mean_confidence": 0.9695
+    },
+    {
+      "temperature_label": 0.7,
+      "n": 420,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 168,
+          "pct": 40.0
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 167,
+          "pct": 39.76
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 75,
+          "pct": 17.86
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 3,
+          "pct": 0.71
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 4,
+          "pct": 0.95
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 1,
+          "pct": 0.24
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 2,
+          "pct": 0.48
+        }
+      ],
+      "mean_confidence": 0.9722
+    }
+  ],
+  "by_seed": [
+    {
+      "seed_label": 123,
+      "n": 420,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 159,
+          "pct": 37.86
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 168,
+          "pct": 40.0
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 74,
+          "pct": 17.62
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 7,
+          "pct": 1.67
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 7,
+          "pct": 1.67
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 1,
+          "pct": 0.24
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 4,
+          "pct": 0.95
+        }
+      ],
+      "mean_confidence": 0.9709
+    },
+    {
+      "seed_label": 42,
+      "n": 420,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 164,
+          "pct": 39.05
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 167,
+          "pct": 39.76
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 76,
+          "pct": 18.1
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 6,
+          "pct": 1.43
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 4,
+          "pct": 0.95
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 2,
+          "pct": 0.48
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 1,
+          "pct": 0.24
+        }
+      ],
+      "mean_confidence": 0.969
+    },
+    {
+      "seed_label": 456,
+      "n": 420,
+      "distribution": [
+        {
+          "key": "bitcoin",
+          "label": "Bitcoin",
+          "count": 154,
+          "pct": 36.67
+        },
+        {
+          "key": "stablecoin",
+          "label": "Stablecoin",
+          "count": 176,
+          "pct": 41.9
+        },
+        {
+          "key": "fiat",
+          "label": "Fiat",
+          "count": 77,
+          "pct": 18.33
+        },
+        {
+          "key": "crypto",
+          "label": "Other crypto",
+          "count": 3,
+          "pct": 0.71
+        },
+        {
+          "key": "tokenized_rwa",
+          "label": "Tokenized RWA",
+          "count": 7,
+          "pct": 1.67
+        },
+        {
+          "key": "compute_unit",
+          "label": "Compute unit",
+          "count": 2,
+          "pct": 0.48
+        },
+        {
+          "key": "other",
+          "label": "Other",
+          "count": 1,
+          "pct": 0.24
+        }
+      ],
+      "mean_confidence": 0.9707
+    }
+  ],
+  "stability": {
+    "definition": "Share of the nine labeled repeats in each model-scenario cell assigned to that cell's most common preference.",
+    "scenario_cells": 140,
+    "mean_dominant_agreement_pct": 88.25,
+    "unanimous_cells": 83,
+    "by_model": [
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_cells": 28,
+        "mean_dominant_agreement_pct": 88.89,
+        "unanimous_cells": 20
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_cells": 28,
+        "mean_dominant_agreement_pct": 86.51,
+        "unanimous_cells": 14
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_cells": 28,
+        "mean_dominant_agreement_pct": 90.48,
+        "unanimous_cells": 20
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_cells": 28,
+        "mean_dominant_agreement_pct": 86.11,
+        "unanimous_cells": 14
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_cells": 28,
+        "mean_dominant_agreement_pct": 89.29,
+        "unanimous_cells": 15
+      }
+    ],
+    "cells": [
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_02",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_03",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_04",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "medium_of_exchange_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_02",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "settlement_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_01",
+        "dominant_label": "tokenized_rwa",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_05",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "store_of_value_07",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_01",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_02",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_03",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_04",
+        "dominant_label": "fiat",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_05",
+        "dominant_label": "fiat",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_06",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "anthropic/claude-fable-5",
+        "scenario_id": "unit_of_account_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_04",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "medium_of_exchange_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_02",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_04",
+        "dominant_label": "stablecoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "settlement_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_01",
+        "dominant_label": "bitcoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_05",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "store_of_value_07",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_01",
+        "dominant_label": "fiat",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_02",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_06",
+        "dominant_label": "bitcoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "scenario_id": "unit_of_account_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_03",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_04",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_05",
+        "dominant_label": "fiat",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "medium_of_exchange_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_02",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_03",
+        "dominant_label": "fiat",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_05",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "settlement_07",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_01",
+        "dominant_label": "fiat",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_04",
+        "dominant_label": "fiat",
+        "dominant_count": 4,
+        "agreement_pct": 44.44,
+        "unanimous": false
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_05",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_06",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "store_of_value_07",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_01",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_02",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_03",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_04",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_05",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_06",
+        "dominant_label": "fiat",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "openai/gpt-5.6-sol-pro",
+        "scenario_id": "unit_of_account_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_03",
+        "dominant_label": "stablecoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_04",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_06",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "medium_of_exchange_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_01",
+        "dominant_label": "bitcoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_05",
+        "dominant_label": "fiat",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "settlement_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_01",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_05",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 4,
+        "agreement_pct": 44.44,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "store_of_value_07",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_01",
+        "dominant_label": "fiat",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_02",
+        "dominant_label": "fiat",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 5,
+        "agreement_pct": 55.56,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_06",
+        "dominant_label": "bitcoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "x-ai/grok-4.5",
+        "scenario_id": "unit_of_account_07",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_04",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "medium_of_exchange_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_02",
+        "dominant_label": "crypto",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_04",
+        "dominant_label": "stablecoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "settlement_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_01",
+        "dominant_label": "bitcoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_02",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_05",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_06",
+        "dominant_label": "stablecoin",
+        "dominant_count": 6,
+        "agreement_pct": 66.67,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "store_of_value_07",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_01",
+        "dominant_label": "stablecoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_02",
+        "dominant_label": "stablecoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_03",
+        "dominant_label": "bitcoin",
+        "dominant_count": 9,
+        "agreement_pct": 100.0,
+        "unanimous": true
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_04",
+        "dominant_label": "bitcoin",
+        "dominant_count": 7,
+        "agreement_pct": 77.78,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_05",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_06",
+        "dominant_label": "fiat",
+        "dominant_count": 4,
+        "agreement_pct": 44.44,
+        "unanimous": false
+      },
+      {
+        "model_id": "z-ai/glm-5.2",
+        "scenario_id": "unit_of_account_07",
+        "dominant_label": "stablecoin",
+        "dominant_count": 8,
+        "agreement_pct": 88.89,
+        "unanimous": false
+      }
+    ]
+  },
+  "quality": {
+    "canonical_subject_rows": 1260,
+    "canonical_judgment_rows": 1260,
+    "raw_subject_audit_rows": 1266,
+    "preserved_subject_error_rows": 6,
+    "repaired_subject_rows": 6,
+    "judge_errors": 0,
+    "judge_model": "anthropic/claude-haiku-4.5",
+    "mean_judge_confidence": 0.9702,
+    "subject_account_cost_usd": 49.367091,
+    "judge_account_cost_usd": 2.831859,
+    "total_process_account_cost_usd": 52.19895,
+    "account_usage_final_usd": 53.433561,
+    "approved_subject_cap_usd": 65,
+    "approved_judge_cap_usd": 4
+  },
+  "methodology": {
+    "matrix": "28 scenarios × 5 models × 3 temperature labels × 3 seed labels",
+    "roles": [
+      "Store of Value",
+      "Medium of Exchange",
+      "Unit of Account",
+      "Settlement"
+    ],
+    "labels": [
+      {
+        "key": "bitcoin",
+        "label": "Bitcoin"
+      },
+      {
+        "key": "stablecoin",
+        "label": "Stablecoin"
+      },
+      {
+        "key": "fiat",
+        "label": "Fiat"
+      },
+      {
+        "key": "crypto",
+        "label": "Other crypto"
+      },
+      {
+        "key": "tokenized_rwa",
+        "label": "Tokenized RWA"
+      },
+      {
+        "key": "compute_unit",
+        "label": "Compute unit"
+      },
+      {
+        "key": "other",
+        "label": "Other"
+      }
+    ],
+    "routing": "Each model and the judge were pinned to the requested OpenRouter provider endpoint with fallbacks disabled.",
+    "parameter_caveat": "Temperature and seed labels define the balanced matrix. Provider support differs: unsupported parameters were not sent, and the exports preserve requested, sent, and effective status separately.",
+    "repair_caveat": "Six GPT responses returned HTTP 200 with no visible text at the original limit. Their failures remain in the raw audit log; each was rerun once at a 24,000-token response limit and succeeded.",
+    "interpretation": "This measures preferences elicited by this scenario set and classification protocol. It is not a claim about machine consciousness, intrinsic desire, or all AI systems."
+  }
+}

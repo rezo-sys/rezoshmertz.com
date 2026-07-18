@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://rezoshmertz.com/sitemap.xml
+Host: https://rezoshmertz.com
