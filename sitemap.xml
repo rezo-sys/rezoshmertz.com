@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://rezoshmertz.com/</loc></url>
-  <url><loc>https://rezoshmertz.com/about</loc></url>
-  <url><loc>https://rezoshmertz.com/appearances</loc></url>
-  <url><loc>https://rezoshmertz.com/contact</loc></url>
-  <url><loc>https://rezoshmertz.com/conversations</loc></url>
-  <url><loc>https://rezoshmertz.com/media</loc></url>
-  <url><loc>https://rezoshmertz.com/portfolio</loc></url>
-  <url><loc>https://rezoshmertz.com/press</loc></url>
-  <url><loc>https://rezoshmertz.com/research</loc></url>
-  <url><loc>https://rezoshmertz.com/research/ai-money</loc></url>
-  <url><loc>https://rezoshmertz.com/work</loc></url>
-  <url><loc>https://rezoshmertz.com/writing</loc></url>
+<url>
+<loc>https://rezoshmertz.com</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/about</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/work</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/portfolio</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/research</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/research/ai-money</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/writing</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/media</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/conversations</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/press</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/appearances</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://rezoshmertz.com/contact</loc>
+<lastmod>2026-07-16T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
