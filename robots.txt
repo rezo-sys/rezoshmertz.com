@@ -1,5 +1,4 @@
-User-Agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://rezoshmertz.com/sitemap.xml
-Host: https://rezoshmertz.com
