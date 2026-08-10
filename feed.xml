@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Rezo Shmertz — Writing and Research</title>
+  <id>https://rezoshmertz.com/</id>
+  <link href="https://rezoshmertz.com/feed.xml" rel="self"/>
+  <link href="https://rezoshmertz.com/"/>
+  <updated>2026-08-10T00:00:00Z</updated>
+  <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+  <entry>
+    <title>Bitcoin Cycle Roadmap and Bear-Market Scenario — Rezo Shmertz</title>
+    <id>https://rezoshmertz.com/research/</id>
+    <link href="https://rezoshmertz.com/research/"/>
+    <published>2026-07-15T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>A historical Bitcoin cycle scenario framework with cycle timing, drawdown context, and a live market readout. An analyst scenario, not a prediction.</summary>
+  </entry>
+  <entry>
+    <title>What Money Would AI Choose? 1,260 Model Decisions — Rezo Shmertz</title>
+    <id>https://rezoshmertz.com/research/ai-money/</id>
+    <link href="https://rezoshmertz.com/research/ai-money/"/>
+    <published>2026-07-15T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Results, methodology, and open data from 1,260 AI monetary-choice responses across 28 scenarios, four functions of money, and five frontier models.</summary>
+  </entry>
+  <entry>
+    <title>Solana After FTX, OUSD Redistribution &amp; Retail Conviction</title>
+    <id>https://rezoshmertz.com/writing/conversations/solana-ousd-retail-conviction/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/solana-ousd-retail-conviction/"/>
+    <published>2026-07-14T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>A BR Labs conversation with Rezo Shmertz on Solana after FTX, value capture, OUSD redistribution, payment rails, and retail conviction.</summary>
+  </entry>
+  <entry>
+    <title>AI as the New Baseline, Trust Over UX &amp; Sharpening Conviction</title>
+    <id>https://rezoshmertz.com/writing/conversations/ai-trust-conviction/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/ai-trust-conviction/"/>
+    <published>2026-07-06T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>A BR Labs conversation with Rezo Shmertz about AI leverage, hiring, institutional distribution, invisible interfaces, wallet adoption, and trust.</summary>
+  </entry>
+  <entry>
+    <title>Ethereum, Conviction &amp; What Gets Passed to the Next Generation</title>
+    <id>https://rezoshmertz.com/writing/conversations/ethereum-conviction-next-generation/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/ethereum-conviction-next-generation/"/>
+    <published>2026-06-29T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>A BR Labs conversation with Rezo Shmertz on Ethereum neutrality, institutional wrappers, stablecoins, self-custody, and inherited conviction.</summary>
+  </entry>
+  <entry>
+    <title>Warren Buffett, AI Agents, and Why Your Edge Was Never About Thinking</title>
+    <id>https://rezoshmertz.com/writing/warren-buffett-ai-agents-edge/</id>
+    <link href="https://rezoshmertz.com/writing/warren-buffett-ai-agents-edge/"/>
+    <published>2026-02-20T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz on what remains scarce when AI makes analysis abundant: judgment, trust, distribution, responsibility, and the ability to act.</summary>
+  </entry>
+  <entry>
+    <title>The Quantum Threat to Bitcoin: We Can&apos;t Predict the Timeline</title>
+    <id>https://rezoshmertz.com/writing/quantum-threat-to-bitcoin/</id>
+    <link href="https://rezoshmertz.com/writing/quantum-threat-to-bitcoin/"/>
+    <published>2026-02-10T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Bitcoin&apos;s quantum risk has an unknowable deadline. Rezo Shmertz argues for address hygiene, post-quantum research, and upgrade optionality without panic.</summary>
+  </entry>
+  <entry>
+    <title>Non-Custodial Isn&apos;t Enough: Why Perp DEXs Need Transparency</title>
+    <id>https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/</id>
+    <link href="https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/"/>
+    <published>2026-01-27T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.</summary>
+  </entry>
+  <entry>
+    <title>Strategy, Bitcoin, and the Cost of Conviction</title>
+    <id>https://rezoshmertz.com/writing/press/strategy-bitcoin-cost-of-conviction/</id>
+    <link href="https://rezoshmertz.com/writing/press/strategy-bitcoin-cost-of-conviction/"/>
+    <published>2025-12-29T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Crypto Briefing cited Rezo Shmertz on staggered Bitcoin purchases and the return methodology behind comparisons of Strategy&apos;s performance.</summary>
+  </entry>
+  <entry>
+    <title>What&apos;s Next for Stablecoins in the Region</title>
+    <id>https://rezoshmertz.com/writing/appearances/stablecoins-tbilisi-finance-summit/</id>
+    <link href="https://rezoshmertz.com/writing/appearances/stablecoins-tbilisi-finance-summit/"/>
+    <published>2025-10-22T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz joined the Tbilisi Finance Summit roundtable on the GENIUS Act, compliance, product roadmaps, and regional stablecoin infrastructure.</summary>
+  </entry>
+  <entry>
+    <title>Public Blockchains Remain the Regulatory Standard</title>
+    <id>https://rezoshmertz.com/writing/press/public-blockchains-regulatory-standard/</id>
+    <link href="https://rezoshmertz.com/writing/press/public-blockchains-regulatory-standard/"/>
+    <published>2025-09-05T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>CryptoSlate cited Rezo Shmertz on compliant corporate chains, neutral public protocols, and why regulatory arbitrage does not replace open infrastructure.</summary>
+  </entry>
+  <entry>
+    <title>Bitcoin Doesn&apos;t Compete with Ethereum and Solana</title>
+    <id>https://rezoshmertz.com/writing/bitcoin-ethereum-solana-monetary-systems/</id>
+    <link href="https://rezoshmertz.com/writing/bitcoin-ethereum-solana-monetary-systems/"/>
+    <published>2025-08-02T00:00:00Z</published>
+    <updated>2026-08-10T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Bitcoin behaves like digital gold while Ethereum and Solana resemble productive economic layers. Rezo Shmertz explains why the systems are complementary.</summary>
+  </entry>
+</feed>

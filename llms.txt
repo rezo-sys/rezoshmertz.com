@@ -1,0 +1,39 @@
+# Rezo Shmertz
+
+> Founder, investor, and researcher working across crypto markets, capital formation, confidential AI, and public research.
+
+## Identity
+
+- [About Rezo Shmertz](https://rezoshmertz.com/about/)
+- [What I Build](https://rezoshmertz.com/what-i-build/)
+- [What I Believe](https://rezoshmertz.com/what-i-believe/)
+- [What I Back](https://rezoshmertz.com/what-i-back/)
+- [X](https://x.com/rezosh)
+- [LinkedIn](https://www.linkedin.com/in/rsbit)
+
+## Research
+
+- [Bitcoin Cycle Roadmap](https://rezoshmertz.com/research/): A historical cycle scenario framework; not a prediction.
+- [What Money Would AI Choose?](https://rezoshmertz.com/research/ai-money/): 1,260 model decisions across 28 scenarios, four functions of money, and five frontier models, with downloadable data.
+
+## Writing and Public Record
+
+- [Writing, conversations, press, and appearances](https://rezoshmertz.com/writing/)
+- [Warren Buffett, AI Agents, and Why Your Edge Was Never About Thinking](https://rezoshmertz.com/writing/warren-buffett-ai-agents-edge/): Rezo Shmertz on what remains scarce when AI makes analysis abundant: judgment, trust, distribution, responsibility, and the ability to act.
+- [Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency](https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/): Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.
+- [The Quantum Threat to Bitcoin: We Can't Predict the Timeline](https://rezoshmertz.com/writing/quantum-threat-to-bitcoin/): Bitcoin's quantum risk has an unknowable deadline. Rezo Shmertz argues for address hygiene, post-quantum research, and upgrade optionality without panic.
+- [Bitcoin Doesn't Compete with Ethereum and Solana](https://rezoshmertz.com/writing/bitcoin-ethereum-solana-monetary-systems/): Bitcoin behaves like digital gold while Ethereum and Solana resemble productive economic layers. Rezo Shmertz explains why the systems are complementary.
+- [Ethereum, Conviction & What Gets Passed to the Next Generation](https://rezoshmertz.com/writing/conversations/ethereum-conviction-next-generation/): A BR Labs conversation with Rezo Shmertz on Ethereum neutrality, institutional wrappers, stablecoins, self-custody, and inherited conviction.
+- [AI as the New Baseline, Trust Over UX & Sharpening Conviction](https://rezoshmertz.com/writing/conversations/ai-trust-conviction/): A BR Labs conversation with Rezo Shmertz about AI leverage, hiring, institutional distribution, invisible interfaces, wallet adoption, and trust.
+- [Solana After FTX, OUSD Redistribution & Retail Conviction](https://rezoshmertz.com/writing/conversations/solana-ousd-retail-conviction/): A BR Labs conversation with Rezo Shmertz on Solana after FTX, value capture, OUSD redistribution, payment rails, and retail conviction.
+- [Public Blockchains Remain the Regulatory Standard](https://rezoshmertz.com/writing/press/public-blockchains-regulatory-standard/): CryptoSlate cited Rezo Shmertz on compliant corporate chains, neutral public protocols, and why regulatory arbitrage does not replace open infrastructure.
+- [Strategy, Bitcoin, and the Cost of Conviction](https://rezoshmertz.com/writing/press/strategy-bitcoin-cost-of-conviction/): Crypto Briefing cited Rezo Shmertz on staggered Bitcoin purchases and the return methodology behind comparisons of Strategy's performance.
+- [What's Next for Stablecoins in the Region](https://rezoshmertz.com/writing/appearances/stablecoins-tbilisi-finance-summit/): Rezo Shmertz joined the Tbilisi Finance Summit roundtable on the GENIUS Act, compliance, product roadmaps, and regional stablecoin infrastructure.
+
+## Machine-readable resources
+
+- [XML sitemap](https://rezoshmertz.com/sitemap.xml)
+- [Atom feed](https://rezoshmertz.com/feed.xml)
+- [AI Money responses CSV](https://rezoshmertz.com/data/ai-money/responses.csv)
+- [AI Money judgments CSV](https://rezoshmertz.com/data/ai-money/judgments.csv)
+- [AI Money results workbook](https://rezoshmertz.com/data/ai-money/full-results.xlsx)
