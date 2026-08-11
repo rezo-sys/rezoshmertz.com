@@ -29,10 +29,17 @@
   <main class="page-shell">
     <h1 class="sr-only">Bitcoin Cycle Roadmap</h1>
     <section class="bento-card research-hero" aria-labelledby="bitcoin-cycle-heading">
-      <div class="phase-readout"><span>Current cycle phase</span><strong>BEAR</strong><p class="meta">Analyst scenario · Not a prediction · 1 Aug 2026</p></div>
-      <dl class="research-metrics"><div><dt>Cycle day</dt><dd>299</dd></div><div><dt>BTC</dt><dd>$62,363</dd></div><div><dt>Drawdown</dt><dd>-50.5%</dd></div><div><dt>Days left to average bottom</dt><dd>≈84</dd></div></dl>
+      <div class="phase-readout"><span>Current cycle phase</span><strong data-btc-field="phase">BEAR</strong><p class="meta">Analyst scenario · Not a prediction · <time data-btc-field="updatedDate" datetime="2026-08-10T15:11:04.060Z">LIVE 10 AUG 2026</time> · <span data-btc-field="status">LIVE DATA</span></p></div>
+      <dl class="research-metrics"><div><dt>Cycle day</dt><dd data-btc-field="cycleDay">308</dd></div><div><dt>BTC</dt><dd data-btc-field="price">$64,679</dd></div><div><dt>Drawdown</dt><dd data-btc-field="drawdown">-48.7%</dd></div><div><dt>Days left to average bottom</dt><dd data-btc-field="daysLeft">≈75</dd></div></dl>
     </section>
-    <div class="section-title"><h2 id="bitcoin-cycle-heading">Bitcoin Cycle Roadmap</h2><span>Historical scenario system</span></div>
+    <section class="live-research-desk" aria-labelledby="bitcoin-cycle-heading">
+      <header class="live-research-header"><div><span class="eyebrow">Live research desk</span><h2 id="bitcoin-cycle-heading">Bitcoin Cycle Roadmap</h2></div><span class="live-research-signal"><i aria-hidden="true"></i> Synced to dashboard</span></header>
+      <div class="live-research-viewport">
+        <iframe class="live-research-frame" src="https://btc-dashboard-9307b.web.app/?mode=dark&amp;style=institutional&amp;page=forecast" title="Live Bitcoin cycle research dashboard" loading="eager" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      </div>
+      <footer class="live-research-footer"><span>Interactive scenario system · Not a forecast</span><a href="https://btc-dashboard-9307b.web.app/?mode=dark&amp;style=institutional&amp;page=forecast" target="_blank" rel="noopener noreferrer">OPEN LIVE DASHBOARD ↗</a></footer>
+    </section>
+    <div class="section-title research-archive-title"><h2>Research Archive</h2><span>Historical scenario system</span></div>
     <section class="company-grid">
       <figure class="bento-card research-image"><img src="/btc-cycle-map-2026-07-15.jpg" alt="Bitcoin cycle roadmap"></figure>
       <figure class="bento-card research-image"><img src="/btc-cycle-scenarios-2026-07-15.jpg" alt="Bitcoin cycle scenario comparison"></figure>
@@ -44,5 +51,5 @@
       <article class="bento-card proof-card"><span class="card-label">03 · Discipline</span><h3>No prediction</h3><p>Past bear phases averaged 383 days. The roadmap is a scenario framework, not a price promise.</p></article>
     </section>
     <footer class="page-footer"><span>Second research system</span><a href="/research/ai-money/">WHAT MONEY WOULD AI CHOOSE? →</a></footer>
-  </main><script src="/mockups/bento-site.js"></script>
+  </main><script src="/mockups/bento-site.js"></script><script type="module" src="/mockups/btc-live.js"></script>
 </body></html>

@@ -52,14 +52,14 @@
 
       <section class="research-row">
         <a class="card research-card cycle" href="/research/">
-          <header><span>Bitcoin cycle readout</span><b>Live 1 Aug 2026</b></header>
+          <header><span>Bitcoin cycle readout</span><b><time data-btc-field="updatedDate" datetime="2026-08-10T15:11:04.060Z">LIVE 10 AUG 2026</time><i aria-hidden="true"> · </i><span data-btc-field="status">LIVE DATA</span></b></header>
           <div class="cycle-main">
-            <div class="phase"><span>Current cycle phase</span><strong>BEAR</strong></div>
+            <div class="phase"><span>Current cycle phase</span><strong data-btc-field="phase">BEAR</strong></div>
             <dl>
-              <div class="metric"><dt>Cycle day</dt><dd>299</dd></div>
-              <div class="metric"><dt>BTC</dt><dd>$62,363</dd></div>
-              <div class="metric"><dt>Drawdown</dt><dd>-50.5%</dd></div>
-              <div class="metric"><dt>Days left to average bottom</dt><dd>≈84<i class="ticker" aria-hidden="true"></i></dd></div>
+              <div class="metric"><dt>Cycle day</dt><dd data-btc-field="cycleDay">308</dd></div>
+              <div class="metric"><dt>BTC</dt><dd data-btc-field="price">$64,679</dd></div>
+              <div class="metric"><dt>Drawdown</dt><dd data-btc-field="drawdown">-48.7%</dd></div>
+              <div class="metric"><dt>Days left to average bottom</dt><dd><span data-btc-field="daysLeft">≈75</span><i class="ticker" aria-hidden="true"></i></dd></div>
             </dl>
           </div>
           <footer><span>Past bear phases averaged 383 days. Not a prediction.</span><b>Open the roadmap →</b></footer>
@@ -87,5 +87,6 @@
     </main>
   </div>
   <script src="/mockups/bento-site.js"></script>
+  <script type="module" src="/mockups/btc-live.js"></script>
 </body>
 </html>
