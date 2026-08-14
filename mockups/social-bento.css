@@ -141,7 +141,7 @@ a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .ticker { display: inline-block; width: 7px; height: 19px; margin-left: 5px; vertical-align: -2px; background: var(--yellow); animation: blink 1s steps(1) infinite; }
 @keyframes blink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: .15; } }
 
-.ai { grid-column: 7 / span 6; grid-row: 1; container-type: inline-size; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto auto; align-content: stretch; gap: clamp(4px, .45vw, 9px); color: var(--ink); background: var(--yellow); border-color: var(--yellow); }
+.ai { grid-column: 7 / span 6; grid-row: 1; container-type: inline-size; display: grid; grid-template-rows: auto minmax(min-content, 1fr) auto auto auto; align-content: stretch; gap: clamp(4px, .45vw, 9px); color: var(--ink); background: var(--yellow); border-color: var(--yellow); }
 .ai h2 { align-self: center; margin: 0; max-width: 11ch; font-size: clamp(36px, 7.2cqi, 68px); line-height: .82; letter-spacing: -.04em; text-transform: uppercase; }
 .ai > p { margin: 0; max-width: 48ch; font-size: clamp(12px, 1vw, 19px); }
 .ai > header, .ai > p, .ai > .aggregate, .ai > footer { min-width: 0; }
@@ -200,6 +200,10 @@ html[data-variant="b"] .social-stack { grid-column: 11 / span 2; }
   .cycle header [data-btc-field="status"], .cycle header i { display: none; }
 }
 
+@media (max-height: 1050px) and (min-width: 851px) {
+  .ai h2 { font-size: clamp(36px, 6cqi, 46px); line-height: .8; }
+}
+
 @media (max-height: 850px) and (min-width: 851px) {
   .hero, .portrait { height: clamp(260px, 36dvh, 320px); }
   .research-card { height: clamp(245px, 34dvh, 300px); }
@@ -209,7 +213,7 @@ html[data-variant="b"] .social-stack { grid-column: 11 / span 2; }
   .research-card { padding: 14px 15px; }
   .research-card header, .research-card footer { font-size: 8px; }
   .cycle-main { padding: 8px 0; }
-  .ai h2 { font-size: clamp(38px, 3.4vw, 46px); line-height: .8; }
+  .ai h2 { font-size: clamp(32px, 5cqi, 38px); line-height: .8; }
   .ai > p { font-size: 11px; }
   .aggregate span { padding-top: 5px; font-size: 8px; }
   .aggregate b { font-size: 18px; }
