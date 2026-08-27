@@ -97,7 +97,7 @@ git push origin main
 
 Rezo can use the **Restore website snapshot** workflow in the separate private recovery repository when the complete production tree must return to a known state. The first run creates a preview only; an explicit second run applies the restoration.
 
-The workflow creates and pushes an ordinary restore commit and explicitly requests a new GitHub Pages build. It does not reset, erase, or force-push history. If the selected snapshot already matches production, it safely makes no commit.
+The workflow creates and pushes an ordinary restore commit, which triggers a new GitHub Pages build through its normal push. It does not reset, erase, or force-push history. If the selected snapshot already matches production, it safely makes no commit.
 
 ## Escalation boundaries
 
