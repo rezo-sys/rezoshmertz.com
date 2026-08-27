@@ -73,24 +73,13 @@ After publishing, verify:
 
 GitHub Pages deployment status is available under **Actions** in the production repository. A green commit alone is not enough: confirm that the live URL contains the intended update.
 
-## Automatic archives
+## Owner-controlled archives
 
-The **Daily website snapshot** GitHub Actions workflow runs every day and can also be started manually.
+The **Daily website snapshot** workflow runs from a separate private recovery repository controlled by Rezo. It is intentionally outside the production repository and inaccessible to production collaborators, so a mistaken or compromised website edit cannot remove the recovery points.
 
-Each successful run creates:
+Each successful run creates an annotated timestamped snapshot tag and a downloadable ZIP archive plus manifest retained for 90 days. Snapshot tags remain in the private recovery repository beyond the artifact-retention window.
 
-1. an immutable annotated tag named `snapshot-YYYY-MM-DD` pointing to that day's production commit; and
-2. a downloadable ZIP archive plus a manifest retained by GitHub Actions for 60 days.
-
-Snapshot tags remain in Git history unless a repository administrator deliberately removes them. This provides recovery points beyond the 60-day downloadable-artifact window.
-
-To create an additional snapshot before a high-risk update:
-
-1. Open the repository on GitHub.
-2. Select **Actions**.
-3. Select **Daily website snapshot**.
-4. Select **Run workflow** on `main`.
-5. Wait for the run to finish successfully before publishing the risky change.
+The archive system requires no action during routine autonomous publishing. Do not add a second backup workflow to this production repository or attempt to modify the owner-controlled snapshots.
 
 ## Recovery options
 
@@ -104,17 +93,11 @@ git revert <bad-commit-sha>
 git push origin main
 ```
 
-### Restore the full site from a daily snapshot
+### Restore the full site from an owner-controlled snapshot
 
-Use the **Restore website snapshot** workflow when the current production tree must be returned to a known daily state.
+Rezo can use the **Restore website snapshot** workflow in the separate private recovery repository when the complete production tree must return to a known state. The first run creates a preview only; an explicit second run applies the restoration.
 
-1. Open **Actions** → **Restore website snapshot** → **Run workflow**.
-2. Enter an exact tag such as `snapshot-2026-08-27`.
-3. Leave `apply` set to `false` and run the workflow.
-4. Download and inspect the generated restore-preview artifact.
-5. If the preview is correct, run the workflow again with the same tag and set `apply` to `true`.
-
-The workflow creates and pushes an ordinary restore commit. It does not reset, erase, or force-push history. If the selected snapshot already matches production, it safely makes no commit.
+The workflow creates and pushes an ordinary restore commit and explicitly requests a new GitHub Pages build. It does not reset, erase, or force-push history. If the selected snapshot already matches production, it safely makes no commit.
 
 ## Escalation boundaries
 
