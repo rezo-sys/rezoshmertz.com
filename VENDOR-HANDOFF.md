@@ -49,7 +49,7 @@ Do not:
 - delete or rename the `main` branch;
 - commit passwords, API keys, private datasets, proprietary source files, or credentials;
 - change `CNAME`, DNS assumptions, domain configuration, or Firebase endpoints without separate authorization;
-- remove recovery workflows or snapshot tags;
+- attempt to alter, duplicate, or bypass the owner-controlled recovery system;
 - silently replace research claims, dates, sources, or live-data labels without verifying them.
 
 ## Local preview and checks
