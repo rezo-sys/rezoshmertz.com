@@ -48,7 +48,8 @@ Do not:
 - force-push or rewrite `main` history;
 - delete or rename the `main` branch;
 - commit passwords, API keys, private datasets, proprietary source files, or credentials;
-- change `CNAME`, DNS assumptions, domain configuration, or Firebase endpoints without separate authorization;
+- add or change anything under `.github/**`;
+- change `CNAME`, `.nojekyll`, DNS assumptions, domain configuration, or Firebase endpoints without separate authorization;
 - attempt to alter, duplicate, or bypass the owner-controlled recovery system;
 - silently replace research claims, dates, sources, or live-data labels without verifying them.
 
@@ -110,4 +111,4 @@ Pause and contact Rezo before proceeding if a change requires any of the followi
 - removal of recovery controls;
 - publication of confidential or proprietary material.
 
-Within the website-editing scope above, the collaborator is expected to work autonomously, publish directly, verify the live result, and use the recovery system when necessary.
+Within the website-editing scope above, the collaborator is expected to work autonomously, publish directly, verify the live result, and use `git revert` when reversing a known vendor commit. The separate full-snapshot recovery system is owner-only and operated by Rezo.
