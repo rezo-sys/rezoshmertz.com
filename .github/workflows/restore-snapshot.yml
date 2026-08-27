@@ -1,0 +1,114 @@
+name: Restore website snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      snapshot_tag:
+        description: Daily restore point, for example snapshot-2026-08-27
+        required: true
+        type: string
+      apply:
+        description: Create and push the restore commit to main
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: production-website-restore
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current production
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Validate the selected restore point
+        id: snapshot
+        env:
+          SNAPSHOT_TAG: ${{ inputs.snapshot_tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          snapshot_tag="${SNAPSHOT_TAG}"
+          if [[ ! "${snapshot_tag}" =~ ^snapshot-[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            printf 'Invalid snapshot tag: %s\n' "${snapshot_tag}" >&2
+            exit 1
+          fi
+
+          git fetch origin main --tags --force
+          if ! git rev-parse -q --verify "refs/tags/${snapshot_tag}^{commit}" >/dev/null; then
+            printf 'Snapshot tag does not exist: %s\n' "${snapshot_tag}" >&2
+            exit 1
+          fi
+
+          snapshot_sha="$(git rev-parse "refs/tags/${snapshot_tag}^{commit}")"
+          printf 'snapshot_tag=%s\n' "${snapshot_tag}" >> "${GITHUB_OUTPUT}"
+          printf 'snapshot_sha=%s\n' "${snapshot_sha}" >> "${GITHUB_OUTPUT}"
+
+      - name: Build and stage the restore candidate
+        id: candidate
+        env:
+          SNAPSHOT_SHA: ${{ steps.snapshot.outputs.snapshot_sha }}
+          SNAPSHOT_TAG: ${{ steps.snapshot.outputs.snapshot_tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          snapshot_tag="${SNAPSHOT_TAG}"
+          snapshot_directory="${RUNNER_TEMP}/website-snapshot"
+          mkdir -p "${snapshot_directory}"
+          git archive "${SNAPSHOT_SHA}" | tar -x -C "${snapshot_directory}"
+          rsync -a --delete --exclude='.git' "${snapshot_directory}/" ./
+          git add -A
+
+          if git diff --cached --quiet; then
+            changes_detected="false"
+            printf 'has_changes=false\n' >> "${GITHUB_OUTPUT}"
+            : > restore-preview.patch
+            printf 'No changes are required. main already matches %s.\n' "${snapshot_tag}" > restore-preview.txt
+          else
+            changes_detected="true"
+            printf 'has_changes=true\n' >> "${GITHUB_OUTPUT}"
+            git diff --cached --binary > restore-preview.patch
+            printf 'Restore candidate: %s\nSnapshot commit: %s\nCurrent commit: %s\n' \
+              "${snapshot_tag}" "${SNAPSHOT_SHA}" "$(git rev-parse HEAD)" > restore-preview.txt
+          fi
+
+          {
+            printf '## Website restore preview\n\n'
+            printf -- '- Snapshot: `%s`\n' "${snapshot_tag}"
+            printf -- '- Snapshot commit: `%s`\n' "${SNAPSHOT_SHA}"
+            printf -- '- Current main: `%s`\n' "$(git rev-parse HEAD)"
+            printf -- '- Changes detected: `%s`\n' "${changes_detected}"
+            printf -- '- Apply requested: `%s`\n' "${{ inputs.apply }}"
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: Retain the restore preview for 60 days
+        uses: actions/upload-artifact@v4
+        with:
+          name: restore-preview-${{ steps.snapshot.outputs.snapshot_tag }}-${{ github.run_number }}
+          path: |
+            restore-preview.patch
+            restore-preview.txt
+          if-no-files-found: error
+          retention-days: 60
+
+      - name: Commit and publish the restoration
+        if: inputs.apply && steps.candidate.outputs.has_changes == 'true'
+        env:
+          SNAPSHOT_TAG: ${{ steps.snapshot.outputs.snapshot_tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          snapshot_tag="${SNAPSHOT_TAG}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Restore website to ${snapshot_tag}"
+          git push origin HEAD:main
