@@ -2,4 +2,3 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-# Private recovery deploy-key smoke test; removed by the tested restore.
