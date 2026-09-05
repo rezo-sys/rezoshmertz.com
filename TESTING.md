@@ -24,7 +24,7 @@ python -m http.server 8080 --bind 127.0.0.1
 Check all changed pages at desktop and narrow phone widths, especially:
 
 - About expansion, keyboard traversal, Escape, and child destinations.
-- Homepage headline rotation, Pause/Play, reduced motion, and tab visibility.
+- Homepage character-by-character typing/deletion, blinking caret, no Play/Pause control, reduced motion, and tab visibility. The hero suite compares exact character-change timestamps against Rezo's original animation over 30 seconds, not just completed phrases.
 - Media modal cleanup and original-source links when a platform blocks embedding.
 - Research summary refresh, per-field observation dates, dashboard navigation, and research downloads.
 - Normal indexing on canonical pages; noindex only on aliases and 404.
