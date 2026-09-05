@@ -45,7 +45,7 @@ function classifyIndicator(name, value) {
 
 function derivePhase(snapshot) {
   const indicators = Array.isArray(snapshot.valuationIndicators) ? snapshot.valuationIndicators : [];
-  const findIndicator = (pattern) => indicators.find(({ name = "" }) => pattern.test(name))?.value;
+  const findIndicator = (pattern) => indicators.find((entry) => entry && pattern.test(entry.name ?? ""))?.value;
   const values = {
     mvrv: snapshot.mvrv?.value,
     nupl: findIndicator(/nupl|net\s*unrealized/i),
@@ -69,25 +69,47 @@ function derivePhase(snapshot) {
   return PHASE_PRIORITY.map((name) => votes[name]).find((phase) => leaders.includes(phase)) ?? "unknown";
 }
 
-function utcDay(date) {
-  return Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
-}
-
 export function deriveBitcoinReadout(document, now = new Date()) {
   const snapshot = decodeDocument(document);
-  const cycleDay = Math.max(0, Math.floor((utcDay(now) - CYCLE_TOP_UTC) / DAY_MS));
-  const updatedAtMs = Date.parse(snapshot.updatedAt);
-  const requiredDataIsStale = [snapshot.price, snapshot.drawdownPct].some((entry) => !entry || entry.stale === true);
-  const indicatorIsStale = [snapshot.mvrv, snapshot.lthSupply].some((entry) => entry?.stale === true);
-  const snapshotIsOld = !Number.isFinite(updatedAtMs) || now.valueOf() - updatedAtMs > MAX_SNAPSHOT_AGE_MS;
+  const updatedAt = validDate(snapshot.updatedAt, now);
+  if (!updatedAt) throw new Error("Snapshot has no valid update timestamp");
+  const price = observation(snapshot.price, now, (value) => value > 0);
+  const drawdown = observation(snapshot.drawdownPct, now, (value) => value >= -100 && value <= 0);
+  if (price.value === null && drawdown.value === null) throw new Error("Snapshot has no usable market observations");
+  // Match the dashboard: nearest elapsed day, not completed UTC calendar days.
+  const cycleDay = Math.max(0, Math.round((now.valueOf() - CYCLE_TOP_UTC) / DAY_MS));
   return {
+    // Preserve the existing dashboard's indicator rules. Do not relabel this a current market phase.
     phase: derivePhase(snapshot),
     cycleDay,
     daysLeft: Math.max(0, HISTORICAL_AVERAGE_BEAR_DAYS - cycleDay),
-    price: snapshot.price?.value ?? null,
-    drawdownPct: snapshot.drawdownPct?.value ?? null,
-    updatedAt: snapshot.updatedAt ?? null,
-    isDelayed: requiredDataIsStale || indicatorIsStale || snapshotIsOld,
+    calendarDate: now.toISOString(),
+    price: price.value,
+    priceAsOf: price.asOf,
+    priceRetained: price.retained,
+    drawdownPct: drawdown.value,
+    drawdownAsOf: drawdown.asOf,
+    drawdownRetained: drawdown.retained,
+    updatedAt,
+  };
+}
+
+function validDate(value, now) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(value)) return null;
+  const [year, month, day] = value.slice(0, 10).split("-").map(Number);
+  const calendar = new Date(Date.UTC(year, month - 1, day));
+  if (calendar.getUTCFullYear() !== year || calendar.getUTCMonth() !== month - 1 || calendar.getUTCDate() !== day) return null;
+  const ms = Date.parse(value);
+  return Number.isFinite(ms) && ms <= now.valueOf() + 300_000 ? new Date(ms).toISOString() : null;
+}
+
+function observation(entry, now, inRange) {
+  const asOf = validDate(entry?.asOf, now);
+  const valid = asOf && Number.isFinite(entry?.value) && inRange(entry.value);
+  return {
+    value: valid ? entry.value : null,
+    asOf: valid ? asOf : null,
+    retained: entry?.stale !== false || !asOf || now.valueOf() - Date.parse(asOf) > MAX_SNAPSHOT_AGE_MS,
   };
 }
 
@@ -100,17 +122,21 @@ const dateFormatter = new Intl.DateTimeFormat("en-GB", {
 });
 
 export function formatBitcoinReadout(readout) {
-  const updated = readout.updatedAt ? new Date(readout.updatedAt) : null;
+  const formatDate = (value) => dateFormatter.format(new Date(value)).toUpperCase();
+  const note = (asOf, retained) => asOf
+    ? `As of ${formatDate(asOf)}${retained ? " · Retained observation" : ""}` : "Observation date unavailable";
   return {
-    phase: readout.phase === "unknown" ? "—" : readout.phase.replaceAll("-", " ").toUpperCase(),
+    phase: readout.phase === "unknown" ? "Unavailable" : readout.phase.replaceAll("-", " ").toUpperCase(),
     cycleDay: integerFormatter.format(readout.cycleDay),
     daysLeft: `≈${integerFormatter.format(readout.daysLeft)}`,
-    price: Number.isFinite(readout.price) ? `$${integerFormatter.format(readout.price)}` : "—",
-    drawdown: Number.isFinite(readout.drawdownPct) ? `${readout.drawdownPct.toFixed(1)}%` : "—",
-    updatedDate: updated && !Number.isNaN(updated.valueOf())
-      ? `${readout.isDelayed ? "UPDATED" : "LIVE"} ${dateFormatter.format(updated).toUpperCase()}`
-      : "DATA STATUS UNKNOWN",
-    status: readout.isDelayed ? "DELAYED DATA" : "LIVE DATA",
+    calendarDate: `Calendar as of ${formatDate(readout.calendarDate)} UTC`,
+    price: Number.isFinite(readout.price) ? `$${integerFormatter.format(readout.price)}` : "Unavailable",
+    drawdown: Number.isFinite(readout.drawdownPct) ? `${readout.drawdownPct.toFixed(1)}%` : "Unavailable",
+    priceNote: note(readout.priceAsOf, readout.priceRetained),
+    drawdownNote: note(readout.drawdownAsOf, readout.drawdownRetained),
+    updatedDate: `Snapshot updated ${formatDate(readout.updatedAt)}`,
+    status: "Snapshot data",
+    sourceNote: "Checks the tracker source every five minutes while this page is visible. Market observations have their own dates; the snapshot update is not their observation time. The recorded phase uses the dashboard's indicator rules and may include older inputs.",
   };
 }
 
@@ -121,31 +147,67 @@ function renderFields(values) {
     element.textContent = value;
     if (element instanceof HTMLTimeElement && values.updatedAt) element.dateTime = values.updatedAt;
   });
-  document.documentElement.dataset.btcDataStatus = "live";
+  document.documentElement.dataset.btcDataStatus = "snapshot";
 }
 
-async function refreshBitcoinReadout() {
-  try {
-    const response = await fetch(FIRESTORE_URL, {
-      cache: "no-store",
-      signal: AbortSignal.timeout(10_000),
-    });
-    if (!response.ok) throw new Error(`Bitcoin data request failed with HTTP ${response.status}`);
-    const readout = deriveBitcoinReadout(await response.json(), new Date());
-    const formatted = formatBitcoinReadout(readout);
-    renderFields({ ...formatted, updatedAt: readout.updatedAt });
-  } catch {
-    document.documentElement.dataset.btcDataStatus = "fallback";
-    document.querySelectorAll('[data-btc-field="status"]').forEach((element) => {
-      element.textContent = "CACHED SCENARIO";
-    });
+export function createBitcoinUpdater({ fetchImpl = fetch, onUpdate, onError,
+  now = () => new Date(), timers = window, isVisible = () => document.visibilityState === "visible" }) {
+  let timer = null;
+  let request = null;
+  let generation = 0;
+
+  function stop() {
+    generation++;
+    timers.clearTimeout(timer);
+    timer = null;
+    if (request) {
+      timers.clearTimeout(request.timeout);
+      request.controller.abort();
+      request = null;
+    }
   }
+
+  async function refresh() {
+    if (request || !isVisible()) return;
+    timers.clearTimeout(timer);
+    timer = null;
+    const version = generation;
+    const controller = new AbortController();
+    const timeout = timers.setTimeout(() => controller.abort(), 10_000);
+    request = { controller, timeout };
+    try {
+      const response = await fetchImpl(FIRESTORE_URL, { cache: "no-store", signal: controller.signal });
+      if (!response.ok) throw new Error(`Bitcoin data request failed with HTTP ${response.status}`);
+      const readout = deriveBitcoinReadout(await response.json(), now());
+      if (version === generation && !controller.signal.aborted) onUpdate(readout);
+    } catch (error) {
+      if (version === generation) onError(error);
+    } finally {
+      timers.clearTimeout(timeout);
+      if (version === generation) {
+        request = null;
+        if (isVisible()) timer = timers.setTimeout(refresh, POLL_INTERVAL_MS);
+      }
+    }
+  }
+  return { refresh, stop };
 }
 
-if (typeof window !== "undefined" && typeof document !== "undefined") {
-  refreshBitcoinReadout();
-  window.setInterval(refreshBitcoinReadout, POLL_INTERVAL_MS);
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") refreshBitcoinReadout();
+if (typeof window !== "undefined" && typeof document !== "undefined" && document.querySelector("[data-btc-field]")) {
+  const updater = createBitcoinUpdater({
+    onUpdate(readout) { renderFields({ ...formatBitcoinReadout(readout), updatedAt: readout.updatedAt }); },
+    onError() {
+      document.documentElement.dataset.btcDataStatus = "fallback";
+      document.querySelectorAll('[data-btc-field="sourceNote"]').forEach((element) => {
+        element.textContent = "Could not refresh the tracker source. The last displayed snapshot and observation dates are retained. Automatic checks resume while this page is visible; you can also open the dashboard below.";
+      });
+    },
   });
+  updater.refresh();
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") updater.refresh();
+    else updater.stop();
+  });
+  window.addEventListener("pagehide", updater.stop);
+  window.addEventListener("pageshow", () => updater.refresh());
 }

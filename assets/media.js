@@ -66,4 +66,3 @@
  document.querySelector('.close-media').addEventListener('click', () => dialog.close());
  dialog.addEventListener('close', () => {generation++; player.replaceChildren(); document.body.classList.remove('media-open'); opener?.focus();});
 })();
-
