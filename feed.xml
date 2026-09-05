@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Rezo Shmertz — Writing and Research</title>
+  <title>Rezo Shmertz · Writing and Research</title>
   <id>https://rezoshmertz.com/</id>
   <link href="https://rezoshmertz.com/feed.xml" rel="self"/>
   <link href="https://rezoshmertz.com/"/>
   <updated>2026-08-10T00:00:00Z</updated>
   <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
   <entry>
-    <title>Bitcoin Cycle Roadmap and Bear-Market Scenario — Rezo Shmertz</title>
+    <title>Bitcoin Cycle Roadmap and Bear-Market Scenario · Rezo Shmertz</title>
     <id>https://rezoshmertz.com/research/</id>
     <link href="https://rezoshmertz.com/research/"/>
     <published>2026-07-15T00:00:00Z</published>
     <updated>2026-08-10T00:00:00Z</updated>
     <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
-    <summary>A historical Bitcoin cycle scenario framework with cycle timing, drawdown context, and a live market readout. An analyst scenario, not a prediction.</summary>
+    <summary>A historical Bitcoin cycle scenario framework with cycle timing, drawdown context, and a dated snapshot readout. An analyst scenario, not a prediction.</summary>
   </entry>
   <entry>
-    <title>What Money Would AI Choose? 1,260 Model Decisions — Rezo Shmertz</title>
+    <title>What Money Would AI Choose? 1,260 Model Decisions · Rezo Shmertz</title>
     <id>https://rezoshmertz.com/research/ai-money/</id>
     <link href="https://rezoshmertz.com/research/ai-money/"/>
     <published>2026-07-15T00:00:00Z</published>
