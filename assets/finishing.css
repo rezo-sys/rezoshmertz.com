@@ -8,6 +8,12 @@
 
 .portfolio-card img.verified-brand { height: 64px; }
 .verified-brand.brand-on-light { background: #f1f0eb; padding: 10px; }
+.verified-brand.brand-transak,
+.verified-brand.brand-meta-cartel { background: transparent; }
+.appearance-photo { margin: 28px 0 0; }
+.appearance-photo img { display: block; width: 100%; height: auto; }
+.appearance-photo figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.appearance-photo figcaption a { text-decoration: underline; text-underline-offset: 3px; }
 .verified-brand.brand-on-dark { background: #080b0c; padding: 10px; }
 .portfolio-card img.brand-paladin { background: transparent; padding: 0; }
 .portfolio-card img.brand-meta-cartel { width: 84px; height: 64px; }
