@@ -37,6 +37,13 @@ test('new stylesheet is loaded once and all selectors are homepage scoped', () =
   assert.match(css, /\.site-description \{[^}]*font-size: 12px;/);
 });
 
+test('featured columns grow with the section while paragraph measure and mobile layout stay bounded', () => {
+  assert.match(css, /\.lead \.summary \{\s*max-width: none;/);
+  assert.match(css, /\.featured-excerpt blockquote p \{ max-width: 75ch;/);
+  assert.match(css, /\.lead \.summary \{ max-width: 54ch; \}/);
+  assert.match(css, /\.featured-excerpt blockquote \{ display: block; \}/);
+});
+
 test('approved original openings are present without generated replacements', () => {
   const excerpts = Array.from(html.matchAll(/<p class="card-excerpt">(.*?)<\/p>/g), m => m[1]);
   assert.deepEqual(excerpts, [

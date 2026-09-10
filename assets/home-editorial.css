@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 }
 .home-page .editorial-additions .lead .summary {
-  max-width: 80ch;
+  max-width: none;
   margin: 0 0 14px;
 }
 .home-page .editorial-additions .featured-excerpt {
@@ -36,7 +36,7 @@
   border: 0;
   font: inherit;
 }
-.home-page .editorial-additions .featured-excerpt blockquote p { margin: 0; }
+.home-page .editorial-additions .featured-excerpt blockquote p { max-width: 75ch; margin: 0; }
 .home-page .editorial-additions .writing-index {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
