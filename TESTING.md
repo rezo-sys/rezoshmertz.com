@@ -11,12 +11,17 @@ node --test tests/btc-live.test.mjs
 node tests/hero.test.mjs
 node tests/navigation.test.mjs
 node tests/links.test.mjs
+node --test tests/home-editorial.test.mjs
 git diff --check
 ```
 
 The tracker tests use deterministic source-shaped fixtures and mocked requests/timers. They do not access or modify Firebase. The other suites exercise the actual navigation and headline scripts with event/DOM mocks.
 
 The link suite checks internal HTML destinations and anchors against the case-sensitive repository inventory, parses structured data, and guards against retired summit URLs. It runs offline; external URLs still require a separate HTTP check. A social platform blocking automated access is not evidence that its link is broken.
+
+The homepage editorial suite guards the approved excerpts, 12px footer, homepage-only CSS scope, indexing directives and fingerprints of the unchanged hero/navigation/research and media-player regions. Intentional future changes to those regions require an explicit fingerprint update after review, not removal of the protection. Desktop/mobile layout is checked separately in a browser.
+
+Writing openings are retained source text, not generated summaries. The featured passage is explicitly from the original conclusion, not the opening. Preserve the source URL and label. Future content refreshes must verify the original text, stop before unrelated sections and cut openings at word boundaries; do not infer a new excerpt from the title. The media descriptions are short editorial context, not transcript quotations. No browser-time scraping or new automation is introduced by this release.
 
 ## Manual preview
 
