@@ -47,6 +47,14 @@ The recorded phase preserves the dashboard's existing indicator classification r
 
 During September 6 integration QA (Manila time), the source returned market observations dated August 30 and reported a CoinGlass access-plan error for some inputs. That upstream limitation cannot be repaired in this repository. Firebase administration and provider subscription changes require the owner's separate action. No alternative market provider was substituted.
 
+## AI Money interactive research page
+
+Run `node --test tests/ai-money.test.mjs` alongside the existing suites. The test independently groups the 1,260 public CSV classifications, checks all four chart count vectors and all 20 model cells, including tied leaders, and checks static fallback content and the preserved navigation fingerprint.
+
+The HTML contains the default chart and full model table. The page-only script progressively enables sorting and a mobile role picker; it does not fetch, regenerate or alter the research dataset. Without JavaScript, the labeled static chart, horizontally scrollable model table, methodology and downloads remain available.
+
+Browser release checks: all four sort categories, all four mobile model roles, rapid switching, keyboard focus, native disclosures, About menu, 320px through 1920px viewports, doubled root text size, and readable no-script fallback. Automated checks do not certify every assistive technology or physical device.
+
 ## Release boundaries
 
 This integration is proposed on a branch for review. No production deployment is implied by local tests. Before merging, rerun the checks against the final branch and reconcile concurrent main changes. After an approved merge, verify the GitHub Pages deployment and the actual public pages. A provider outage, third-party embed restriction, native device/browser difference, or later source-project overwrite is not covered by mocked tests.

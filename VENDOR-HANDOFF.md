@@ -100,6 +100,10 @@ Rezo can use the **Restore website snapshot** workflow in the separate private r
 
 The workflow creates and pushes an ordinary restore commit, which triggers a new GitHub Pages build through its normal push. It does not reset, erase, or force-push history. If the selected snapshot already matches production, it safely makes no commit.
 
+## September 11 AI Money page integration
+
+The approved research redesign is implemented in `research/ai-money/index.html`, with page-scoped `assets/ai-money.css` and progressive enhancement in `assets/ai-money.js`. Preserve these changes when reconciling the separate source project. The page's default chart and model comparison are static HTML, checked against `data/ai-money/judgments.csv` by `tests/ai-money.test.mjs`. Nemotron's unit-of-account cell explicitly shows the Bitcoin/stablecoin tie rather than arbitrarily selecting one leader. Public datasets, homepage, Bitcoin tracker, shared navigation and deployment settings were not changed.
+
 ## Escalation boundaries
 
 Pause and contact Rezo before proceeding if a change requires any of the following:
