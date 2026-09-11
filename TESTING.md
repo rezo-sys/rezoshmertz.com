@@ -67,6 +67,16 @@ Keep the compatibility anchors for `/conversations/`, `/press/` and `/appearance
 
 ## Release boundaries
 
+### Media archive maintenance
+
+The Media page is generated from `data/media.json` with `node scripts/build-media.mjs`. Commit both the list and the generated `media/index.html`. Run `node scripts/build-media.mjs --check` and `node --test tests/*.test.mjs` before publishing. No new dependency, browser-time content fetch or automatic publishing is introduced.
+
+For each addition, verify the original title, publisher, date, source URL and short factual description. These descriptions are editorial context, not transcript quotes. Dates use UTC publication dates; Episode 03 is July 13, 2026 UTC (July 14 in Manila). Never infer a video recording from an event photograph. Only verified recordings have durations and players. Keep original-source links even when embedding is available.
+
+Use unique `featuredOrder` values from 1 to 6 to curate featured items, with genuine imagery and alt text. Featured entries are excluded from the regular lists. Additional podcasts and press records sort newest first. Adding an episode does not automatically feature it or alter the homepage. This release preserves all existing Media summary routes. Review source records and their test digest together when updating content.
+
+Check desktop, tablet and phone layouts; all three player types; Escape and focus restoration; ordinary and modified-click source links; and platform-blocked fallback. Images are original publisher-hosted assets and may need a verified replacement if their URLs expire. The page uses static HTML and a CollectionPage ItemList reflecting the visible records. No fabricated video schema is added. The shared homepage player and site navigation are unchanged.
+
 This integration is proposed on a branch for review. No production deployment is implied by local tests. Before merging, rerun the checks against the final branch and reconcile concurrent main changes. After an approved merge, verify the GitHub Pages deployment and the actual public pages. A provider outage, third-party embed restriction, native device/browser difference, or later source-project overwrite is not covered by mocked tests.
 
 Use ordinary revert commits for rollback. Do not force-push, change domain/deployment controls, or modify owner-controlled recovery workflows.

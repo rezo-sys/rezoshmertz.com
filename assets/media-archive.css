@@ -1,0 +1,76 @@
+/* Page-scoped Media archive. Shared navigation, footer and player styles stay unchanged. */
+.media-archive { max-width:1440px; margin:auto; padding:0 32px 64px; }
+.media-archive .preview-intro { padding:56px 0 42px; }
+.media-archive .kicker, .media-archive .date, .media-archive .action,
+.media-archive .section-head > span, .media-archive .section-head > a { font-family:var(--mono); }
+.media-archive .kicker { font-size:12px; font-weight:700; line-height:1.5; color:var(--yellow); letter-spacing:.025em; margin:0 0 14px; }
+.media-archive .preview-intro h1 { font-size:clamp(44px,5vw,68px); line-height:1; letter-spacing:-.045em; text-transform:uppercase; margin:0 0 20px; }
+.media-archive .preview-intro > p:last-child { font-size:19px; line-height:1.6; max-width:64ch; color:var(--muted); margin:0; }
+.media-archive .section { margin:48px 0 0; scroll-margin-top:24px; }
+.media-archive .section.opening { margin-top:0; }
+.media-archive .section-head { border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:0 0 18px; margin-bottom:28px; }
+.media-archive .section-head h2 { font-size:24px; line-height:1.25; letter-spacing:-.025em; margin:0; }
+.media-archive .section-head > span, .media-archive .section-head > a { font-size:12px; color:var(--muted); }
+.media-archive .feature-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
+.media-archive .feature { display:flex; flex-direction:column; min-width:0; }
+.media-archive .visual { display:block; position:relative; margin-bottom:22px; aspect-ratio:16/9; background:#141a1c; overflow:hidden; }
+.media-archive .visual img { display:block; width:100%; height:100%; object-fit:cover; }
+.media-archive .format { position:absolute; bottom:10px; left:10px; background:var(--ink); color:var(--paper); font:700 12px/1.4 var(--mono); padding:7px 9px; }
+.media-archive .feature-copy { display:flex; flex-direction:column; flex:1; min-width:0; }
+.media-archive .feature h3, .media-archive .episode h3, .media-archive .press-grid h3 { font-size:24px; line-height:1.2; letter-spacing:-.025em; margin:0 0 14px; }
+.media-archive .summary { font-size:16px; line-height:1.6; color:var(--muted); margin:0 0 16px; max-width:70ch; }
+.media-archive .date { font-size:12px; line-height:1.5; color:var(--muted); margin:0 0 12px; }
+.media-archive .feature-footer { margin-top:auto; }
+.media-archive .feature-footer .date { margin:0 0 8px; }
+.media-archive .action { font-size:14px; line-height:1.5; font-weight:700; display:inline-flex; align-items:center; min-height:44px; gap:8px; }
+.media-archive .action span { color:var(--yellow); }
+.media-archive .summary-link { font:14px/1.5 var(--mono); color:var(--muted); display:block; min-height:36px; padding-top:8px; }
+.media-archive .feature-footer .summary-link { padding-top:0; }
+.media-archive .summary-link:hover { color:var(--yellow); }
+.media-archive .episode { display:grid; grid-template-columns:42px minmax(0,1fr) 116px; gap:20px; border-bottom:1px solid var(--line); padding:24px 0; align-items:start; }
+.media-archive .episode:first-of-type { padding-top:0; }
+.media-archive .episode-no { font:700 18px/1.5 var(--mono); color:var(--yellow); }
+.media-archive .episode h3 { font-size:22px; margin-bottom:10px; }
+.media-archive .episode .summary { margin-bottom:0; }
+.media-archive .episode > .action { justify-self:end; white-space:nowrap; }
+.media-archive .episode > .summary-link { grid-column:2; margin-top:-10px; }
+.media-archive .press-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; }
+.media-archive .press-grid > article + article { border-left:1px solid var(--line); padding-left:44px; }
+.media-archive .archive-context { display:grid; grid-template-columns:1fr 2fr; gap:44px; border-top:1px solid var(--line); margin-top:56px; padding-top:28px; }
+.media-archive .archive-context h2 { font-size:17px; margin:0; line-height:1.5; }
+.media-archive .archive-context p { font-size:14px; line-height:1.7; color:var(--muted); max-width:85ch; margin:0 0 14px; }
+.media-archive .archive-context a { text-decoration:underline; text-underline-offset:3px; }
+.media-archive a:focus-visible { outline:2px solid var(--yellow); outline-offset:5px; }
+@media (min-width:901px) {
+  .media-archive .feature-footer { min-height:106px; }
+}
+@media (min-width:621px) and (max-width:900px) {
+  .media-archive .feature-grid { grid-template-columns:1fr; gap:28px; }
+  .media-archive .feature { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:24px; align-items:start; }
+  .media-archive .feature + .feature { border-top:1px solid var(--line); padding-top:28px; }
+  .media-archive .feature .visual { margin:0; }
+}
+@media (max-width:850px) {
+  .media-archive { padding-inline:24px; }
+  .media-archive .section-head > span { display:none; }
+  .media-archive .episode { grid-template-columns:32px minmax(0,1fr); gap:14px; }
+  .media-archive .episode > .action { grid-column:2; justify-self:start; }
+  .media-archive .archive-context { grid-template-columns:1fr; gap:16px; }
+  .media-archive .press-grid { gap:24px; }
+  .media-archive .press-grid > article + article { padding-left:24px; }
+}
+@media (max-width:620px) {
+  .media-archive { padding-inline:20px; }
+  .media-archive .preview-intro { padding:38px 0 32px; }
+  .media-archive .preview-intro > p:last-child { font-size:17px; }
+  .media-archive .feature-grid, .media-archive .press-grid { grid-template-columns:1fr; gap:32px; }
+  .media-archive .feature + .feature { border-top:1px solid var(--line); padding-top:28px; }
+  .media-archive .feature .visual { margin-bottom:18px; }
+  .media-archive .section { margin-top:40px; }
+  .media-archive .section-head { gap:16px; margin-bottom:24px; }
+  .media-archive .section-head h2 { font-size:22px; }
+  .media-archive .section-head > a { max-width:100px; text-align:right; }
+  .media-archive .press-grid > article + article { border-left:0; border-top:1px solid var(--line); padding:26px 0 0; }
+  .media-archive .archive-context { margin-top:40px; }
+  .media-archive .episode h3 { font-size:21px; }
+}

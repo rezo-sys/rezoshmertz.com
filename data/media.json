@@ -1,0 +1,133 @@
+{
+  "title": "Rezo Shmertz: Podcasts, Panels & Media",
+  "description": "BR Labs podcasts, industry panels and press commentary featuring Rezo Shmertz on crypto markets, investing and financial technology.",
+  "intro": "Alongside his work at BR Labs, Rezo Shmertz participates in industry panels and contributes commentary on crypto markets, investing and financial technology. This page brings together podcast episodes, public appearances and press coverage of that work.",
+  "records": [
+    {
+      "id": "podcast",
+      "title": "Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets",
+      "description": "Bitcoin from the perspectives of a holder and a trading desk, market triggers, and wrappers versus native on-chain assets.",
+      "url": "https://x.com/brlabsxyz/status/2094493882885263659",
+      "image": "https://pbs.twimg.com/amplify_video_thumb/2094492666394460160/img/cxVm3Vbq4rBkxV30?format=webp&name=medium",
+      "alt": "BR Labs Episode 07 video thumbnail",
+      "date": "2026-08-31",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 7,
+      "duration": "23:01",
+      "featuredOrder": 1,
+      "player": "x"
+    },
+    {
+      "id": "panel",
+      "title": "Stablecoins Under the Hood: Architecture for Global Liquidity",
+      "description": "A panel conversation on stablecoin infrastructure and global liquidity.",
+      "url": "https://www.youtube.com/watch?v=OH33Er6q3KA",
+      "image": "https://i.ytimg.com/vi/OH33Er6q3KA/maxresdefault.jpg",
+      "alt": "Stablecoins Under the Hood panel recording thumbnail",
+      "date": "2025-11-25",
+      "kind": "panel",
+      "publisher": "Epic Web3",
+      "duration": "42:47",
+      "featuredOrder": 2,
+      "player": "youtube"
+    },
+    {
+      "id": "event",
+      "title": "What’s Next for Stablecoins in the Region",
+      "description": "An appearance at the Tbilisi Finance Summit, documented in GFTN’s event gallery.",
+      "url": "https://www.linkedin.com/posts/globalfinance-technologynetwork_what-a-start-to-the-tbilisi-finance-summit-activity-7386978911454167040-knqc",
+      "image": "https://media.licdn.com/dms/image/v2/D5622AQGVww-JC5NJ5w/feedshare-shrink_800/B56ZoPRw.YHQAg-/0/1761192953730?e=2147483647&v=beta&t=-rrZL8PhsoQ8IJWWvmx-WylDIcgmRBB5SSaK1qvcDaU",
+      "alt": "Speakers at a Tbilisi Finance Summit roundtable, from GFTN’s event gallery",
+      "summaryUrl": "/writing/appearances/stablecoins-tbilisi-finance-summit/",
+      "date": "2025-10-22",
+      "kind": "photo",
+      "publisher": "GFTN",
+      "featuredOrder": 3,
+      "player": "photo"
+    },
+    {
+      "id": "ep06",
+      "title": "Intent Economy, Solvers & Agentic Trading",
+      "description": "Intent-based trading, solver auctions and BRRRolver’s work on Base and Ethereum.",
+      "url": "https://x.com/brlabsxyz/status/2089358086830170244",
+      "date": "2026-08-17",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 6
+    },
+    {
+      "id": "ep05",
+      "title": "Tokenized RWAs, Open vs Permissioned DeFi & Retail’s New Role",
+      "description": "Tokenized assets, institutional distribution versus composability, and retail’s changing role in DeFi.",
+      "url": "https://x.com/brlabsxyz/status/2084302937980129659",
+      "date": "2026-08-03",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 5
+    },
+    {
+      "id": "ep04",
+      "title": "Robinhood’s Gated DeFi, Ethereum Rails & Nation-State Bitcoin",
+      "description": "Robinhood’s gated DeFi distribution, Ethereum’s settlement role and lessons from El Salvador’s Bitcoin adoption experiments.",
+      "url": "https://x.com/brlabsxyz/status/2081758038474793031",
+      "date": "2026-07-27",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 4
+    },
+    {
+      "id": "ep03",
+      "title": "Solana After FTX, OUSD Redistribution & Retail Conviction",
+      "description": "Solana after FTX, OUSD redistribution and the role of retail conviction.",
+      "url": "https://x.com/brlabsxyz/status/2076739994056892776",
+      "summaryUrl": "/writing/conversations/solana-ousd-retail-conviction/",
+      "date": "2026-07-13",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 3
+    },
+    {
+      "id": "ep02",
+      "title": "AI as the New Baseline, Trust Over UX & Sharpening Conviction",
+      "description": "AI in crypto, institutional trust and how investment conviction develops.",
+      "url": "https://x.com/brlabsxyz/status/2074158922156707895",
+      "summaryUrl": "/writing/conversations/ai-trust-conviction/",
+      "date": "2026-07-06",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 2
+    },
+    {
+      "id": "ep01",
+      "title": "Ethereum, Conviction & What Gets Passed to the Next Generation",
+      "description": "Ethereum’s role, conviction through market cycles and what gets passed to the next generation.",
+      "url": "https://x.com/brlabsxyz/status/2071609639737643247",
+      "summaryUrl": "/writing/conversations/ethereum-conviction-next-generation/",
+      "date": "2026-06-29",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 1
+    },
+    {
+      "id": "cryptobriefing",
+      "title": "Strategy, Bitcoin, and the cost of conviction",
+      "description": "Crypto Briefing cited Rezo’s response to Peter Schiff’s comparison of Strategy’s Bitcoin returns, including the timing of its purchases.",
+      "url": "https://cryptobriefing.com/saylor-strategy-better-without-bitcoin-says-schiff/",
+      "summaryUrl": "/writing/press/strategy-bitcoin-cost-of-conviction/",
+      "date": "2025-12-29",
+      "kind": "press",
+      "publisher": "Crypto Briefing"
+    },
+    {
+      "id": "cryptoslate",
+      "title": "Corporate L1s and regulatory arbitrage",
+      "description": "CryptoSlate quotes Rezo’s contrasting view in a debate on public and corporate blockchains.",
+      "url": "https://cryptoslate.com/legal-expert-affirms-public-blockchains-remain-regulatory-standard-despite-corporate-l1-launches/",
+      "summaryUrl": "/writing/press/public-blockchains-regulatory-standard/",
+      "date": "2025-09-05",
+      "kind": "press",
+      "publisher": "CryptoSlate"
+    }
+  ]
+}
