@@ -55,6 +55,16 @@ The HTML contains the default chart and full model table. The page-only script p
 
 Browser release checks: all four sort categories, all four mobile model roles, rapid switching, keyboard focus, native disclosures, About menu, 320px through 1920px viewports, doubled root text size, and readable no-script fallback. Automated checks do not certify every assistive technology or physical device.
 
+## Writings archive
+
+Run `node --test tests/writing-archive.test.mjs` or all suites with `node --test tests/*.test.mjs`.
+
+The archive is static HTML in `writing/index.html`, with page-scoped styles and a progressive year-navigation script. It adds no dependency, browser-time source scraping or backend. Tests freeze the 18 approved source records and unchanged header/footer, and cover metadata, legacy anchors, scroll selection and absent ResizeObserver. All excerpts and source links remain available without JavaScript.
+
+When adding a writing, verify the original text, truncate at a word boundary to no more than 400 Unicode characters including the continuation ellipsis, and retain its actual source date. The Non-Custodial passage is explicitly a conclusion excerpt. Update the visible year groups/counts and CollectionPage ItemList together. The 2023-and-earlier grouping retains actual years on entries. Update the frozen record digest only after reviewing the new records against their sources.
+
+Keep the compatibility anchors for `/conversations/`, `/press/` and `/appearances/`; they lead to the existing Media handoff. Individual article/summary pages remain intact. Reconcile this static implementation into the separate source project before any later source-project deployment.
+
 ## Release boundaries
 
 This integration is proposed on a branch for review. No production deployment is implied by local tests. Before merging, rerun the checks against the final branch and reconcile concurrent main changes. After an approved merge, verify the GitHub Pages deployment and the actual public pages. A provider outage, third-party embed restriction, native device/browser difference, or later source-project overwrite is not covered by mocked tests.
