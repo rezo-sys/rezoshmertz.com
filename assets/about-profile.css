@@ -1,4 +1,6 @@
 /* About only. Reuse the site's type, palette and untouched shared navigation. */
+.about-profile { width: 100%; }
+.about-profile > :not(.about-intro) { max-width: 1400px; margin-inline: auto; }
 .about-profile .about-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
@@ -32,7 +34,6 @@
 .about-profile .about-portrait {
   background: var(--yellow);
   width: 100%;
-  max-width: 560px;
   justify-self: end;
 }
 .about-profile .about-portrait img {
@@ -93,7 +94,7 @@
 .about-profile .about-context a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width:900px) {
   .about-profile .about-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 32px; }
-  .about-profile .about-portrait { justify-self: start; max-width: 480px; }
+  .about-profile .about-portrait { justify-self: start; }
   .about-profile .about-body { max-width: none; }
   .about-profile .about-paths a { padding-inline: 18px; }
   .about-profile .about-record-grid article { padding-inline: 18px; }

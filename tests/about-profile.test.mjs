@@ -57,6 +57,9 @@ test('About retains canonical profile metadata and scoped, wrapping styles', () 
     for (const selector of match[1].split(',')) assert.ok(selector.trim().startsWith('.about-profile'), selector);
   }
   assert.match(css, /height: auto/);
+  assert.match(css, /\.about-profile \{ width: 100%; \}/);
+  assert.doesNotMatch(css, /max-width: (?:480|560)px/);
+  assert.match(css, /max-width: 1400px; margin-inline: auto/);
   assert.match(css, /align-items: start/);
   assert.match(css, /min-height: 44px/);
   assert.match(css, /max-width:620px/);
