@@ -1,0 +1,114 @@
+/* About only. Reuse the site's type, palette and untouched shared navigation. */
+.about-profile .about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 56px);
+  padding: 48px 0 40px;
+}
+.about-profile .about-biography { min-width: 0; }
+.about-profile h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(2rem, 3.7vw, 3.375rem);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+.about-profile .about-tagline {
+  margin: 0 0 28px;
+  font-size: clamp(1.375rem, 2.1vw, 1.875rem);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+.about-profile .about-body { max-width: 72ch; font-size: 18px; }
+.about-profile .about-body p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.about-profile .about-portrait {
+  background: var(--yellow);
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
+}
+.about-profile .about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.about-profile .about-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 32px;
+  margin-top: 20px;
+}
+.about-profile .about-socials a,
+.about-profile .about-record-grid a,
+.about-profile .about-section-head > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font: 700 13px/1.5 var(--mono);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.about-profile .about-paths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid var(--line);
+  padding-block: 24px;
+}
+.about-profile .about-paths a { display: grid; gap: 12px; padding: 4px 24px; }
+.about-profile .about-paths a + a { border-left: 1px solid var(--line); }
+.about-profile .about-paths a:first-child { padding-left: 0; }
+.about-profile .about-paths a:last-child { padding-right: 0; }
+.about-profile .about-paths strong {
+  font-size: clamp(1.375rem, 2.4vw, 1.875rem);
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.about-profile .about-paths span { font-size: 16px; line-height: 1.5; }
+.about-profile .about-records { padding: 32px 0; border-bottom: 1px solid var(--line); }
+.about-profile .about-section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; margin-bottom: 24px; }
+.about-profile .about-section-head h2 { font-size: 26px; line-height: 1.2; margin: 0; letter-spacing: -.025em; }
+.about-profile .about-record-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.about-profile .about-record-grid article { display: flex; flex-direction: column; align-items: start; min-width: 0; padding-inline: 28px; }
+.about-profile .about-record-grid article + article { border-left: 1px solid var(--line); }
+.about-profile .about-record-grid article:first-child { padding-left: 0; }
+.about-profile .about-record-grid article:last-child { padding-right: 0; }
+.about-profile .about-record-grid h3 { margin: 6px 0 10px; font-size: 22px; line-height: 1.25; letter-spacing: -.02em; }
+.about-profile .about-record-grid p { margin: 0 0 12px; font-size: 17px; line-height: 1.55; color: var(--muted); }
+.about-profile .about-record-grid a { margin-top: auto; }
+.about-profile .about-context { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 32px; padding: 32px 0 12px; }
+.about-profile .about-context h2 { font-size: 22px; line-height: 1.3; margin: 0; }
+.about-profile .about-context > div { border-left: 1px solid var(--line); padding-left: 32px; }
+.about-profile .about-context p { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 0 0 16px; }
+.about-profile .about-context p:last-child { margin-bottom: 0; }
+.about-profile .about-context a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width:900px) {
+  .about-profile .about-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 32px; }
+  .about-profile .about-portrait { justify-self: start; max-width: 480px; }
+  .about-profile .about-body { max-width: none; }
+  .about-profile .about-paths a { padding-inline: 18px; }
+  .about-profile .about-record-grid article { padding-inline: 18px; }
+  .about-profile .about-context { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .about-profile .about-context > div { border: 0; padding-left: 0; }
+}
+@media (max-width:620px) {
+  .about-profile .about-body p { font-size: 17px; }
+  .about-profile .about-socials { gap: 4px 24px; }
+  .about-profile .about-paths,
+  .about-profile .about-record-grid { grid-template-columns: minmax(0, 1fr); }
+  .about-profile .about-paths { padding-block: 0; }
+  .about-profile .about-paths a { padding: 22px 0; }
+  .about-profile .about-paths a + a { border-left: 0; border-top: 1px solid var(--line); }
+  .about-profile .about-record-grid { gap: 24px; }
+  .about-profile .about-record-grid article { padding: 0; }
+  .about-profile .about-record-grid article + article { border-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+}

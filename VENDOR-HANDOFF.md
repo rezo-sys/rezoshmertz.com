@@ -100,6 +100,10 @@ Rezo can use the **Restore website snapshot** workflow in the separate private r
 
 The workflow creates and pushes an ordinary restore commit, which triggers a new GitHub Pages build through its normal push. It does not reset, erase, or force-push history. If the selected snapshot already matches production, it safely makes no commit.
 
+## September 15 About profile integration
+
+The approved expanded biography, equal Build/Believe/Back links, concise public evidence and linked bottom context are in `about/index.html`, styled only by `assets/about-profile.css`. Preserve the existing `rezo-speaking-cutout-v4-hero.png` photograph, shared header/footer and `#media` anchor. No AI-generated portrait is used. Reconcile these changes into the separate source project before redeployment. Run `node --test tests/*.test.mjs` and perform responsive browser checks before future updates.
+
 ## September 11 AI Money page integration
 
 The approved research redesign is implemented in `research/ai-money/index.html`, with page-scoped `assets/ai-money.css` and progressive enhancement in `assets/ai-money.js`. Preserve these changes when reconciling the separate source project. The page's default chart and model comparison are static HTML, checked against `data/ai-money/judgments.csv` by `tests/ai-money.test.mjs`. Nemotron's unit-of-account cell explicitly shows the Bitcoin/stablecoin tie rather than arbitrarily selecting one leader. Public datasets, homepage, Bitcoin tracker, shared navigation and deployment settings were not changed.

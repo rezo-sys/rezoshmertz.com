@@ -67,6 +67,12 @@ Keep the compatibility anchors for `/conversations/`, `/press/` and `/appearance
 
 ## Release boundaries
 
+### About profile
+
+Run `node --test tests/about-profile.test.mjs` or the full suite. The approved biography, concise public records and contextual links are static HTML in `about/index.html`; `assets/about-profile.css` is scoped to its main element. No new script or dependency is required. Tests protect the original photograph bytes/dimensions, shared header/footer, source destinations and metadata. Browser checks must cover 320px through 1920px, both sides of 620px and 900px, keyboard navigation, menu expansion, and photograph proportions. Static tests alone do not certify visual reflow or assistive technology. Keep the image intrinsic ratio; do not stretch the yellow portrait panel to the biography's height.
+
+Reconcile this generated-page change into the source project before a later source deployment. Update About's structured-data modification date and sitemap entry together when its content changes.
+
 ### Media archive maintenance
 
 The Media page is generated from `data/media.json` with `node scripts/build-media.mjs`. Commit both the list and the generated `media/index.html`. Run `node scripts/build-media.mjs --check` and `node --test tests/*.test.mjs` before publishing. No new dependency, browser-time content fetch or automatic publishing is introduced.
