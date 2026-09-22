@@ -1,0 +1,373 @@
+/* Detail pages only. Version: 20260923-detail-a */
+/* Approved option-A rules scoped to body.detail-page. Does not alter shared CSS. */
+
+body.detail-page .page-shell {
+  width: min(1320px, 100%);
+}
+
+body.detail-page .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 24px 0 0;
+  font: 700 12px/1.4 var(--mono);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+body.detail-page .breadcrumbs a {
+  color: var(--muted);
+}
+
+body.detail-page .breadcrumbs a:hover {
+  color: var(--yellow);
+}
+
+body.detail-page .breadcrumbs [aria-current="page"] {
+  color: var(--paper);
+}
+
+body.detail-page .page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 0 48px;
+  border-top: 1px solid var(--line);
+  font: 700 12px/1.4 var(--mono);
+  text-transform: uppercase;
+}
+
+body.detail-page .page-footer a {
+  color: var(--yellow);
+}
+
+body.detail-page .source-action a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font: 700 12px/1.3 var(--mono);
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+body.detail-page .record-title {
+  margin: 0 0 16px;
+  max-width: 30ch;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  font-weight: 700;
+}
+
+body.detail-page .page-context {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 32px;
+  margin: 48px 0 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+body.detail-page .page-context h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+body.detail-page .page-context > div {
+  border-left: 1px solid var(--line);
+  padding-left: 32px;
+  max-width: 85ch;
+}
+
+body.detail-page .page-context p {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+body.detail-page .page-context p:last-child {
+  margin-bottom: 0;
+}
+
+body.detail-page .page-context a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.detail-page .page-context a:hover {
+  color: var(--yellow);
+}
+
+body.detail-page .essay-shell,
+body.detail-page .media-shell {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+}
+
+body.detail-page .essay-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 740px) 220px;
+  gap: 48px;
+  padding: 28px 0 0;
+  justify-content: center;
+}
+
+body.detail-page .essay-main {
+  min-width: 0;
+}
+
+body.detail-page .format-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font: 700 12px/1.4 var(--mono);
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+body.detail-page .essay-lead,
+body.detail-page .record-hero .lead {
+  margin: 0 0 16px;
+  max-width: 58ch;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+body.detail-page .essay-byline {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+body.detail-page .essay-byline a {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.detail-page .source-action {
+  margin: 0 0 28px;
+}
+
+body.detail-page .essay-body {
+  max-width: 68ch;
+}
+
+body.detail-page .essay-body h2,
+body.detail-page .record-body h2 {
+  margin: 28px 0 12px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+body.detail-page .essay-body p,
+body.detail-page .essay-body li,
+body.detail-page .record-body p,
+body.detail-page .record-body li {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+body.detail-page .essay-body p,
+body.detail-page .record-body p {
+  margin: 0 0 14px;
+}
+
+body.detail-page .essay-body ul,
+body.detail-page .record-body ul {
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+}
+
+body.detail-page .essay-rail {
+  padding-top: 8px;
+}
+
+body.detail-page .essay-rail h2 {
+  margin: 0 0 12px;
+  font: 700 12px/1.4 var(--mono);
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+body.detail-page .essay-rail dl {
+  margin: 0 0 24px;
+}
+
+body.detail-page .essay-rail dt {
+  font: 700 11px/1.4 var(--mono);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+body.detail-page .essay-rail dd {
+  margin: 4px 0 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body.detail-page .essay-rail ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.detail-page .essay-rail li {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body.detail-page .essay-rail a {
+  color: var(--yellow);
+}
+
+body.detail-page .record-hero {
+  padding: 28px 0 0;
+}
+
+body.detail-page .fact-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 18px;
+  margin: 0 0 18px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font: 700 12px/1.4 var(--mono);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+body.detail-page .fact-band span:first-child {
+  color: var(--yellow);
+}
+
+body.detail-page .record-body {
+  max-width: 68ch;
+  padding: 8px 0 0;
+}
+
+body.detail-page .record-body a {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.detail-page .appearance-photo {
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+body.detail-page .appearance-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 533;
+  object-fit: cover;
+  background: #121618;
+}
+
+body.detail-page .appearance-photo figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+body.detail-page .appearance-photo a {
+  color: var(--yellow);
+}
+
+body.detail-page .source-visual {
+  margin: 0 0 24px;
+  max-width: 100%;
+}
+
+body.detail-page .source-visual.visual-a {
+  max-width: min(740px, 100%);
+}
+
+body.detail-page .source-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  background: #121618;
+}
+
+body.detail-page .visual-link {
+  display: block;
+  outline-offset: 3px;
+}
+
+body.detail-page .visual-link:focus-visible {
+  outline: 2px solid var(--yellow);
+}
+
+body.detail-page .source-visual figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+body.detail-page .source-visual figcaption a {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.detail-page .source-visual figcaption a:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+body.detail-page .visual-fallback {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+body.detail-page .visual-fallback a {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body.detail-page .source-visual.is-broken .visual-link,
+body.detail-page .source-visual.is-broken figcaption,
+body.detail-page .appearance-photo.is-broken img,
+body.detail-page .appearance-photo.is-broken figcaption {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  body.detail-page .essay-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body.detail-page .fact-band {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  body.detail-page .page-context {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  body.detail-page .page-context > div {
+    border: 0;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "note": "Local copies of Rezo/BR Labs original covers and posters for durability. Exact unmodified bytes fetched 2026-09-23, except quantum.webp which is a verified lossless WebP re-encoding of the original PNG bytes with identical decoded pixels. Attribution is not a reuse license for third-party press imagery, which remains source-hosted.",
+  "assets": [
+    {
+      "id": "monetary",
+      "file": "monetary.jpg",
+      "sourceUrl": "https://www.linkedin.com/pulse/bitcoin-doesnt-compete-ethereum-solana-250b-vs-4t-thesis-shmertz-2ldje",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E12AQFIjlP0mTpy_w/article-cover_image-shrink_600_2000/B4EZhno2StGoAQ-/0/1754085419115?e=2147483647&v=beta&t=eSL9-ckK5Y9eN8IOczJXcI-CucTFysv9bVbGKRNDQnw",
+      "credit": "Original article cover · Rezo Shmertz",
+      "width": 1024,
+      "height": 576,
+      "mime": "image/jpeg"
+    },
+    {
+      "id": "quantum",
+      "file": "quantum.webp",
+      "sourceUrl": "https://www.linkedin.com/pulse/quantum-threat-bitcoin-we-cant-predict-timeline-revaz-rezo-shmertz-p6g7c",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5612AQFowyF3V6eMWQ/article-cover_image-shrink_720_1280/B56ZxJHQmwH0AM-/0/1770753169210?e=2147483647&v=beta&t=q5lk_uEMwRxC9-jehxpKXnMwIKwXzTwoy0KQ6k_E7Vo",
+      "credit": "Original article cover · Rezo Shmertz",
+      "width": 1280,
+      "height": 720,
+      "mime": "image/webp",
+      "note": "Lossless WebP of the original PNG cover (identical decoded pixels; smaller than quantum.png). Prefer this file in page markup."
+    },
+    {
+      "id": "perp",
+      "file": "perp.jpg",
+      "sourceUrl": "https://x.com/rezosh/status/2015867583610945999",
+      "imageUrl": "https://pbs.twimg.com/media/G_nMzrmbAAQr-4l?format=jpg&name=medium",
+      "credit": "Original article cover · Rezo Shmertz",
+      "width": 1200,
+      "height": 480,
+      "mime": "image/jpeg"
+    },
+    {
+      "id": "buffett",
+      "file": "buffett.jpg",
+      "sourceUrl": "https://x.com/rezosh/status/2024850538916085872",
+      "imageUrl": "https://pbs.twimg.com/media/HBm1ck6bYAE38Z3?format=jpg&name=medium",
+      "credit": "Original article cover · Rezo Shmertz",
+      "width": 1200,
+      "height": 480,
+      "mime": "image/jpeg"
+    },
+    {
+      "id": "ai-trust",
+      "file": "ai-trust.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2074158922156707895",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2074157922737852416/img/VcWDCvQI6zuIYsIL?format=jpg&name=large",
+      "credit": "BR Labs · Episode 02",
+      "width": 1920,
+      "height": 1080,
+      "mime": "image/jpeg"
+    },
+    {
+      "id": "ethereum",
+      "file": "ethereum.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2071609639737643247",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2071601149598449664/img/xrBV5OJFCZ6Yr476?format=jpg&name=large",
+      "credit": "BR Labs · Episode 01",
+      "width": 1920,
+      "height": 1080,
+      "mime": "image/jpeg"
+    },
+    {
+      "id": "solana",
+      "file": "solana.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2076739994056892776",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2076730609620377600/img/FUKgqcGnhVQ71q1m?format=jpg&name=large",
+      "credit": "BR Labs · Episode 03",
+      "width": 1920,
+      "height": 1080,
+      "mime": "image/jpeg"
+    }
+  ],
+  "remoteOnly": [
+    {
+      "id": "cryptoslate",
+      "imageUrl": "https://cryptoslate.com/wp-content/uploads/2025/08/defi-rails.jpg",
+      "sourceUrl": "https://cryptoslate.com/legal-expert-affirms-public-blockchains-remain-regulatory-standard-despite-corporate-l1-launches/",
+      "credit": "Article illustration: CryptoSlate",
+      "width": 1200,
+      "height": 630,
+      "mime": "image/jpeg",
+      "note": "Publisher-hosted; not rehosted. Actual image ratio 1200x630."
+    },
+    {
+      "id": "cryptobriefing",
+      "imageUrl": "https://static.cryptobriefing.com/wp-content/uploads/2025/12/29130331/873dab6b-191b-4018-bd68-a02b3a5f3022-800x420.jpg",
+      "sourceUrl": "https://cryptobriefing.com/saylor-strategy-better-without-bitcoin-says-schiff/",
+      "credit": "Article image: Crypto Briefing",
+      "width": 800,
+      "height": 420,
+      "mime": "image/jpeg",
+      "note": "Publisher-hosted; not rehosted."
+    },
+    {
+      "id": "tbilisi",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQGVww-JC5NJ5w/feedshare-shrink_800/B56ZoPRw.YHQAg-/0/1761192953730?e=2147483647&v=beta&t=-rrZL8PhsoQ8IJWWvmx-WylDIcgmRBB5SSaK1qvcDaU",
+      "sourceUrl": "https://www.linkedin.com/posts/globalfinance-technologynetwork_what-a-start-to-the-tbilisi-finance-summit-activity-7386978911454167040-knqc",
+      "credit": "Global Finance & Technology Network (GFTN)",
+      "width": 800,
+      "height": 533,
+      "mime": "image/jpeg",
+      "note": "Existing production Tbilisi source unchanged; not rehosted into detail-pages/. Pages add image-error fallback only."
+    }
+  ]
+}

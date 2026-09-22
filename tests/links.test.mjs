@@ -40,9 +40,9 @@ for (const [path, source] of html) {
 }
 assert.deepEqual(failures, [], failures.join('\n'));
 const appearance = html.get('writing/appearances/stablecoins-tbilisi-finance-summit/index.html');
-assert.match(appearance, /<figure class="appearance-photo">/);
+assert.match(appearance, /<figure class="appearance-photo" data-visual-fallback>/);
 assert.match(appearance, /width="800" height="533"/);
-assert.match(appearance, /View GFTN event recap/);
+assert.match(appearance, /View GFTN event gallery/);
 assert.match(appearance, /not a recording or transcript/);
 console.log(`PASS: ${checked} internal href/src references across ${html.size} HTML pages; anchors, structured data and event source regressions.`);
 console.log('External availability is checked separately; this offline test does not certify third-party uptime.');

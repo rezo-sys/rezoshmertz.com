@@ -86,3 +86,13 @@ Check desktop, tablet and phone layouts; all three player types; Escape and focu
 This integration is proposed on a branch for review. No production deployment is implied by local tests. Before merging, rerun the checks against the final branch and reconcile concurrent main changes. After an approved merge, verify the GitHub Pages deployment and the actual public pages. A provider outage, third-party embed restriction, native device/browser difference, or later source-project overwrite is not covered by mocked tests.
 
 Use ordinary revert commits for rollback. Do not force-push, change domain/deployment controls, or modify owner-controlled recovery workflows.
+
+### Writing and media detail pages
+
+The ten approved detail pages are generated from `data/detail-pages.json` with `node scripts/build-detail-pages.mjs`. Commit both the records and generated HTML. Run `node scripts/build-detail-pages.mjs --check`, `node scripts/build-media.mjs --check`, and `node --test` before publishing. The detail builder only writes its ten allowlisted routes; it does not regenerate the homepage, archives, research, About, portfolio pages or external dashboard.
+
+Keep the original publication date, source link, content type, source credit and extended context when updating a record. The four authored articles use Article schema; podcast, press and appearance summaries do not claim to be articles written by Rezo. Source summaries are not transcripts. Event photographs are not recordings. The existing URL paths remain unchanged even where a media record lives under `/writing/`.
+
+Image provenance is recorded in `assets/detail-pages/SOURCES.json`. Seven owned article/podcast covers are local; publisher press covers and the event photograph remain externally hosted. Attribution does not grant reproduction rights. Verify image permissions before any future rehosting, and retain the original-source fallback if a third-party image expires or blocks access. The quantum cover uses a pixel-identical, lossless WebP conversion. Update image metadata and visible alt text together if a cover changes.
+
+The page-scoped styles and small image-failure handler do not replace shared navigation or player scripts. Browser checks must cover phone, tablet and wide desktop widths, full header-to-footer reflow, original image proportions, source and related links, About navigation, and image-failure fallback. The automated detail suites check the generated output, route boundaries, metadata, image signatures and failure-handler behavior; they do not certify all browsers or third-party availability. Reconcile these static changes into the separate source project before any later source-project deployment.
