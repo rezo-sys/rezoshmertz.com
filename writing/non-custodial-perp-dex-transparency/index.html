@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Why Non-Custodial Perp DEXs Still Need Transparency · Rezo Shmertz</title>
-<link href="https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/" rel="canonical"/>
-<link href="/feed.xml" rel="alternate" title="Rezo Shmertz · Writing and Research" type="application/atom+xml"/>
-<meta content="Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency." name="description"/>
-<meta content="Rezo Shmertz" name="author"/>
-<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
-<meta content="article" property="og:type"/>
-<meta content="Rezo Shmertz" property="og:site_name"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="Why Non-Custodial Perp DEXs Still Need Transparency · Rezo Shmertz" property="og:title"/>
-<meta content="Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency." property="og:description"/>
-<meta content="https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/" property="og:url"/>
-<meta content="https://rezoshmertz.com/og/writing-non-custodial-perp-dex-transparency.png" property="og:image"/>
-<meta content="1600" property="og:image:width"/>
-<meta content="900" property="og:image:height"/>
-<meta content="Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency" property="og:image:alt"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Why Non-Custodial Perp DEXs Still Need Transparency · Rezo Shmertz" name="twitter:title"/>
-<meta content="Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency." name="twitter:description"/>
-<meta content="https://rezoshmertz.com/og/writing-non-custodial-perp-dex-transparency.png" name="twitter:image"/>
-<meta content="Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency" name="twitter:image:alt"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rezoshmertz.com/#website","url":"https://rezoshmertz.com/","name":"Rezo Shmertz","inLanguage":"en","publisher":{"@id":"https://rezoshmertz.com/about/#rezo-shmertz"}},{"@type":"Person","@id":"https://rezoshmertz.com/about/#rezo-shmertz","name":"Rezo Shmertz","alternateName":"Revaz (Rezo) Shmertz","url":"https://rezoshmertz.com/about/","image":"https://rezoshmertz.com/rezo-speaking-cutout-v4-hero.png","jobTitle":["Founder","Investor","Researcher"],"sameAs":["https://x.com/rezosh","https://www.linkedin.com/in/rsbit"]},{"@type":"WebPage","@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#webpage","url":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/","name":"Why Non-Custodial Perp DEXs Still Need Transparency · Rezo Shmertz","description":"Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.","inLanguage":"en","isPartOf":{"@id":"https://rezoshmertz.com/#website"},"datePublished":"2026-01-27","dateModified":"2026-08-10","primaryImageOfPage":{"@type":"ImageObject","url":"https://rezoshmertz.com/og/writing-non-custodial-perp-dex-transparency.png"}},{"@type":"Article","@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#article","headline":"Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency","description":"Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.","image":"https://rezoshmertz.com/og/writing-non-custodial-perp-dex-transparency.png","mainEntityOfPage":{"@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#webpage"},"author":{"@id":"https://rezoshmertz.com/about/#rezo-shmertz"},"datePublished":"2026-01-27","dateModified":"2026-08-10","inLanguage":"en","isBasedOn":"https://x.com/rezosh/status/2015867583610945999"}]}</script>
-<link href="/favicon.ico?v=rs-rounded-20260906" rel="icon" sizes="16x16 32x32 48x48"/><link href="/favicon.svg?v=rs-rounded-20260906" rel="icon" type="image/svg+xml" sizes="any"/>
-<link href="/assets/inner.css" rel="stylesheet"/><link href="/assets/refinements.css" rel="stylesheet"/><link href="/assets/finishing.css?v=20260906-final" rel="stylesheet"/><link href="/assets/about-nav.css?v=20260906-final" rel="stylesheet"/><script src="/assets/about-nav.js?v=20260906-final" defer></script></head>
-<body class="summary-page">
-<a class="skip-link" href="#main-content">Skip to content</a><header class="site-header">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Perp DEX Transparency | Rezo Shmertz</title>
+<link rel="canonical" href="https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/"/>
+<link rel="alternate" href="/feed.xml" title="Rezo Shmertz · Writing and Research" type="application/atom+xml"/>
+<meta name="description" content="Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency."/>
+<meta name="author" content="Rezo Shmertz"/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="Rezo Shmertz"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:title" content="Perp DEX Transparency | Rezo Shmertz"/>
+<meta property="og:description" content="Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency."/>
+<meta property="og:url" content="https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/"/>
+<meta property="og:image" content="https://rezoshmertz.com/assets/detail-pages/perp.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="480"/>
+<meta property="og:image:type" content="image/jpeg"/>
+<meta property="og:image:alt" content="Original cover of Rezo Shmertz's article on perpetual DEX transparency"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Perp DEX Transparency | Rezo Shmertz"/>
+<meta name="twitter:description" content="Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency."/>
+<meta name="twitter:image" content="https://rezoshmertz.com/assets/detail-pages/perp.jpg"/>
+<meta name="twitter:image:alt" content="Original cover of Rezo Shmertz's article on perpetual DEX transparency"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rezoshmertz.com/#website","url":"https://rezoshmertz.com/","name":"Rezo Shmertz","inLanguage":"en","publisher":{"@id":"https://rezoshmertz.com/about/#rezo-shmertz"}},{"@type":"Person","@id":"https://rezoshmertz.com/about/#rezo-shmertz","name":"Rezo Shmertz","alternateName":"Revaz (Rezo) Shmertz","url":"https://rezoshmertz.com/about/","image":"https://rezoshmertz.com/rezo-speaking-cutout-v4-hero.png","jobTitle":["Founder","Investor","Researcher"],"sameAs":["https://x.com/rezosh","https://www.linkedin.com/in/rsbit"]},{"@type":"WebPage","@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#webpage","url":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/","name":"Perp DEX Transparency | Rezo Shmertz","description":"Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.","inLanguage":"en","isPartOf":{"@id":"https://rezoshmertz.com/#website"},"datePublished":"2026-01-27","dateModified":"2026-09-23","primaryImageOfPage":{"@type":"ImageObject","url":"https://rezoshmertz.com/assets/detail-pages/perp.jpg","width":1200,"height":480,"contentUrl":"https://rezoshmertz.com/assets/detail-pages/perp.jpg","encodingFormat":"image/jpeg","name":"Original cover of Rezo Shmertz's article on perpetual DEX transparency"}},{"@type":"BreadcrumbList","@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rezoshmertz.com/"},{"@type":"ListItem","position":2,"name":"Writings","item":"https://rezoshmertz.com/writing/"},{"@type":"ListItem","position":3,"name":"DeFi · Market structure"}]},{"@type":"Article","@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#article","headline":"Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency","description":"Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.","image":"https://rezoshmertz.com/assets/detail-pages/perp.jpg","mainEntityOfPage":{"@id":"https://rezoshmertz.com/writing/non-custodial-perp-dex-transparency/#webpage"},"author":{"@id":"https://rezoshmertz.com/about/#rezo-shmertz"},"datePublished":"2026-01-27","dateModified":"2026-09-23","inLanguage":"en","isBasedOn":"https://x.com/rezosh/status/2015867583610945999"}]}</script>
+<link rel="icon" href="/favicon.ico?v=rs-rounded-20260906" sizes="16x16 32x32 48x48"/>
+<link rel="icon" href="/favicon.svg?v=rs-rounded-20260906" type="image/svg+xml" sizes="any"/>
+<link rel="stylesheet" href="/assets/inner.css"/>
+<link rel="stylesheet" href="/assets/refinements.css"/>
+<link rel="stylesheet" href="/assets/finishing.css?v=20260906-final"/>
+<link rel="stylesheet" href="/assets/about-nav.css?v=20260906-final"/>
+<link rel="stylesheet" href="/assets/detail-pages.css?v=20260923-detail-a-qa1"/>
+<script src="/assets/about-nav.js?v=20260906-final" defer></script>
+<script src="/assets/detail-image-fallback.js?v=20260923-detail-a-qa1" defer></script>
+</head>
+<body class="detail-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
 <a aria-label="Rezo Shmertz home" class="wordmark" href="/">
 <span class="wordmark-mark">RS</span>
 <span>Rezo Shmertz</span>
@@ -34,37 +46,57 @@
 <nav aria-label="Primary navigation" class="primary-nav">
 <a href="/">Home</a>
 <details class="about-nav"><summary>About<span aria-hidden="true" class="about-chevron"></span></summary><div class="about-links"><a href="/about/">About Rezo</a><a href="/what-i-build/">What I Build</a><a href="/what-i-believe/">What I Believe</a><a href="/what-i-back/">What I Back</a></div></details>
-<a aria-current="location" href="/writing/">Writings</a>
+<a href="/writing/" aria-current="page">Writings</a>
 <a href="/media/">Media</a>
 </nav>
-</header><main class="page-shell article-shell" id="main-content">
+</header>
+<main class="page-shell" id="main-content">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/writing/">Writings</a><span>/</span><span aria-current="page">DeFi · Market structure</span></nav>
-<article>
-<header class="bento-card article-hero">
-<span class="eyebrow">DeFi · Market structure</span>
-<h1 class="display">Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency</h1>
-<p class="article-lead">Self-custody solves custody risk. It does not, by itself, make a derivatives market transparent, solvent, or fair.</p>
-<p class="article-byline">By <a href="/about/">Rezo Shmertz</a> · <time datetime="2026-01-27">January 27, 2026</time></p>
-<div class="record-actions"><a class="text-action" href="https://x.com/rezosh/status/2015867583610945999" rel="noopener noreferrer" target="_blank">Read the original on X ↗</a></div></header>
-<div class="article-body">
-<section class="bento-card article-section">
-<h2>One risk layer is not the whole market</h2>
-<p>A non-custodial venue can let traders retain control of assets while leaving other mechanisms difficult to verify. Execution priority, oracle design, liquidation rules, insurance funds, market-maker incentives, and the treatment of bad debt still determine whether the system is credible.</p>
-<p>The important distinction is between control of collateral and transparency of the complete market structure.</p>
-</section>
-<section class="bento-card article-section">
-<h2>What should be verifiable</h2>
-<p>A serious perpetual market should make the rules legible before stress arrives and make outcomes auditable after it does.</p>
-<ul><li>How orders are matched and prioritized</li><li>How prices and funding rates are formed</li><li>How liquidations and bad debt are handled</li><li>How market makers and token incentives are compensated</li><li>Whether reserves and risk parameters can be independently checked</li></ul>
-</section>
-<section class="bento-card article-section">
-<h2>The standard</h2>
-<p>Self-custody is necessary progress, but the stronger standard is verifiable market structure. Users should not have to exchange custodial opacity for protocol opacity.</p>
-<p>The market earns trust when its risk, execution, and incentives can be inspected rather than merely promised.</p>
-</section>
-<aside class="bento-card source-card"><span class="card-label">Primary source</span><p>This page preserves a first-party, searchable summary. The original publication remains the complete source of record.</p><a href="https://x.com/rezosh/status/2015867583610945999" rel="noopener noreferrer" target="_blank">Read the original on X ↗</a></aside>
-</div>
+<div class="essay-shell">
+<div class="essay-layout">
+<article class="essay-main">
+<span class="format-label">Article summary</span>
+<h1 class="record-title">Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency</h1>
+<p class="essay-lead">Self-custody solves custody risk. It does not, by itself, make a derivatives market transparent, solvent, or fair.</p>
+<p class="essay-byline">By <a href="/about/">Rezo Shmertz</a> · <time datetime="2026-01-27">January 27, 2026</time> · X</p>
+<p class="source-action"><a href="https://x.com/rezosh/status/2015867583610945999" rel="noopener noreferrer" target="_blank">Read original on X ↗</a></p>
+<figure class="source-visual visual-a" data-visual-fallback>
+<a class="visual-link" href="https://x.com/rezosh/status/2015867583610945999" rel="noopener noreferrer" target="_blank">
+<img src="/assets/detail-pages/perp.jpg" alt="Original cover of Rezo Shmertz's article on perpetual DEX transparency" width="1200" height="480" loading="lazy" decoding="async" style="aspect-ratio: 1200 / 480" data-visual-img/>
+</a>
+<figcaption>
+<span class="visual-credit">Original article cover · Rezo Shmertz</span>
+<span class="visual-sep" aria-hidden="true"> · </span>
+<a href="https://x.com/rezosh/status/2015867583610945999" rel="noopener noreferrer" target="_blank">Read original on X ↗</a>
+</figcaption>
+<p class="visual-fallback" hidden><a href="https://x.com/rezosh/status/2015867583610945999" rel="noopener noreferrer" target="_blank">Read original on X ↗</a></p>
+</figure>
+<div class="essay-body"><section><h2>One risk layer is not the whole market</h2><p>A non-custodial venue can let traders retain control of assets while leaving other mechanisms difficult to verify. Execution priority, oracle design, liquidation rules, insurance funds, market-maker incentives, and the treatment of bad debt still determine whether the system is credible.</p><p>The important distinction is between control of collateral and transparency of the complete market structure.</p></section>
+<section><h2>What should be verifiable</h2><p>A serious perpetual market should make the rules legible before stress arrives and make outcomes auditable after it does.</p><ul><li>How orders are matched and prioritized</li><li>How prices and funding rates are formed</li><li>How liquidations and bad debt are handled</li><li>How market makers and token incentives are compensated</li><li>Whether reserves and risk parameters can be independently checked</li></ul></section>
+<section><h2>The standard</h2><p>Self-custody is necessary progress, but the stronger standard is verifiable market structure. Users should not have to exchange custodial opacity for protocol opacity.</p><p>The market earns trust when its risk, execution, and incentives can be inspected rather than merely promised.</p></section></div>
 </article>
+<aside class="essay-rail" aria-label="Record details">
+<h2>Record</h2>
+<dl>
+<dt>Format</dt><dd>Article summary</dd>
+<dt>Published</dt><dd><time datetime="2026-01-27">January 27, 2026</time></dd>
+<dt>Source</dt><dd>X</dd>
+</dl>
+<h2>Related reading</h2>
+<ul><li><a href="/what-i-believe/">What I Believe</a></li>
+<li><a href="/writing/">Writings archive</a></li></ul>
+</aside>
+</div>
+<section class="page-context" aria-labelledby="context-heading">
+<h2 id="context-heading">Transparency in decentralized markets</h2>
+<div>
+<p>Self-custody is one part of decentralized finance. The operation of a trading venue raises separate questions about execution, liquidations, solvency and the information available to participants. This essay examines those market-structure questions in perpetual futures, where control of assets alone does not explain how the wider system works.</p>
+<p>Related writing on <a href="/writing/bitcoin-ethereum-solana-monetary-systems/">Bitcoin, Ethereum and Solana</a> considers the different roles of financial networks. Rezo Shmertz's <a href="/what-i-believe/">working principles</a> connect these subjects to openness, infrastructure and incentives.</p>
+</div>
+</section>
+</div>
 <footer class="page-footer"><a href="/writing/">← ALL WRITINGS</a><a href="/research/">RESEARCH →</a></footer>
-</main><footer class="site-footer"><div class="brand"><span class="rs">RS</span>Rezo Shmertz</div><div class="footer-links"><a href="https://x.com/rezosh">X @rezosh ↗</a><a href="https://www.linkedin.com/in/rsbit">LinkedIn ↗</a><a href="https://grokipedia.com/page/rezo-shmertz">Grokipedia ↗</a></div></footer>
-</body></html>
+</main>
+<footer class="site-footer"><div class="brand"><span class="rs">RS</span>Rezo Shmertz</div><div class="footer-links"><a href="https://x.com/rezosh">X @rezosh ↗</a><a href="https://www.linkedin.com/in/rsbit">LinkedIn ↗</a><a href="https://grokipedia.com/page/rezo-shmertz">Grokipedia ↗</a></div></footer>
+</body>
+</html>

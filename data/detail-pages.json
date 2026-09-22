@@ -1,0 +1,588 @@
+{
+  "version": "20260923-detail-a-qa1",
+  "dateModified": "2026-09-23",
+  "pages": [
+    {
+      "id": "monetary",
+      "kind": "article",
+      "route": "/writing/bitcoin-ethereum-solana-monetary-systems/",
+      "out": "writing/bitcoin-ethereum-solana-monetary-systems/index.html",
+      "nav": "writings",
+      "metaTitle": "Bitcoin, Ethereum and Solana | Rezo Shmertz",
+      "description": "Bitcoin behaves like digital gold while Ethereum and Solana resemble productive economic layers. Rezo Shmertz explains why the systems are complementary.",
+      "crumb": "Digital assets · Thesis",
+      "h1": "Bitcoin Doesn't Compete with Ethereum and Solana",
+      "lead": "Treating Bitcoin, Ethereum, and Solana as interchangeable assets hides the different economic jobs their systems are designed to perform.",
+      "dateISO": "2025-08-02",
+      "dateLabel": "August 2, 2025",
+      "sourceLabel": "LinkedIn",
+      "sourceHref": "https://www.linkedin.com/pulse/bitcoin-doesnt-compete-ethereum-solana-250b-vs-4t-thesis-shmertz-2ldje",
+      "sourceAction": "Read original on LinkedIn ↗",
+      "visual": {
+        "local": "/assets/detail-pages/monetary.jpg",
+        "mime": "image/jpeg",
+        "alt": "Original article illustration showing Bitcoin with gold and Ethereum and Solana on oil barrels",
+        "credit": "Original article cover · Rezo Shmertz",
+        "action": "Read original on LinkedIn ↗",
+        "width": 1024,
+        "height": 576
+      },
+      "sections": [
+        {
+          "h2": "Digital gold and digital oil",
+          "paras": [
+            "Bitcoin's singular monetary proposition is scarcity, security, and settlement assurance. Its economy is optimized around extracting, securing, and holding a monetary asset.",
+            "Ethereum and Solana are productive layers. Their value is tied to applications, staking, transaction demand, stablecoins, tokenized assets, and the economic activity that can be built on top."
+          ]
+        },
+        {
+          "h2": "Different systems, different measures",
+          "paras": ["The relevant success metrics are therefore not identical."],
+          "list": [
+            "Bitcoin: institutional adoption, monetary credibility, security, and settlement volume",
+            "Ethereum: fees, staking, composability, developer activity, and application value",
+            "Solana: throughput, cost efficiency, consumer applications, payments, and high-frequency markets"
+          ]
+        },
+        {
+          "h2": "Specialization, not a single winner",
+          "paras": [
+            "Gold miners and oil producers participate in different economies. In the same way, a monetary store of value does not need to win the application-platform race, and a productive smart-contract network does not need to become digital gold.",
+            "The more useful question is not which one eliminates the others, but how large each specialized economy can become."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/research/ai-money/", "label": "AI Money research" },
+        { "href": "/what-i-believe/", "label": "What I Believe" }
+      ],
+      "contextHeading": "Different systems, different jobs",
+      "contextParas": [
+        "Bitcoin, Ethereum and Solana raise different questions about money and digital infrastructure. This essay separates monetary scarcity from demand for computation, and considers why those roles need different measures of value. It is an argument about how to compare systems, not a ranking of their tokens.",
+        "The <a href=\"/research/ai-money/\">AI Money study</a> approaches a related question by comparing classified AI responses across four monetary functions. For Rezo Shmertz's broader views on Bitcoin and open financial infrastructure, see <a href=\"/what-i-believe/\">What I Believe</a>."
+      ],
+      "footerLeft": { "href": "/writing/", "label": "← ALL WRITINGS" },
+      "footerRight": { "href": "/research/", "label": "RESEARCH →" },
+      "feedTitle": "Bitcoin Doesn't Compete with Ethereum and Solana",
+      "feedSummary": "Bitcoin behaves like digital gold while Ethereum and Solana resemble productive economic layers. Rezo Shmertz explains why the systems are complementary.",
+      "llmsTitle": "Bitcoin Doesn't Compete with Ethereum and Solana",
+      "llmsSummary": "Bitcoin behaves like digital gold while Ethereum and Solana resemble productive economic layers. Rezo Shmertz explains why the systems are complementary."
+    },
+    {
+      "id": "perp",
+      "kind": "article",
+      "route": "/writing/non-custodial-perp-dex-transparency/",
+      "out": "writing/non-custodial-perp-dex-transparency/index.html",
+      "nav": "writings",
+      "metaTitle": "Perp DEX Transparency | Rezo Shmertz",
+      "description": "Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.",
+      "crumb": "DeFi · Market structure",
+      "h1": "Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency",
+      "lead": "Self-custody solves custody risk. It does not, by itself, make a derivatives market transparent, solvent, or fair.",
+      "dateISO": "2026-01-27",
+      "dateLabel": "January 27, 2026",
+      "sourceLabel": "X",
+      "sourceHref": "https://x.com/rezosh/status/2015867583610945999",
+      "sourceAction": "Read original on X ↗",
+      "visual": {
+        "local": "/assets/detail-pages/perp.jpg",
+        "mime": "image/jpeg",
+        "alt": "Original cover of Rezo Shmertz's article on perpetual DEX transparency",
+        "credit": "Original article cover · Rezo Shmertz",
+        "action": "Read original on X ↗",
+        "width": 1200,
+        "height": 480
+      },
+      "sections": [
+        {
+          "h2": "One risk layer is not the whole market",
+          "paras": [
+            "A non-custodial venue can let traders retain control of assets while leaving other mechanisms difficult to verify. Execution priority, oracle design, liquidation rules, insurance funds, market-maker incentives, and the treatment of bad debt still determine whether the system is credible.",
+            "The important distinction is between control of collateral and transparency of the complete market structure."
+          ]
+        },
+        {
+          "h2": "What should be verifiable",
+          "paras": ["A serious perpetual market should make the rules legible before stress arrives and make outcomes auditable after it does."],
+          "list": [
+            "How orders are matched and prioritized",
+            "How prices and funding rates are formed",
+            "How liquidations and bad debt are handled",
+            "How market makers and token incentives are compensated",
+            "Whether reserves and risk parameters can be independently checked"
+          ]
+        },
+        {
+          "h2": "The standard",
+          "paras": [
+            "Self-custody is necessary progress, but the stronger standard is verifiable market structure. Users should not have to exchange custodial opacity for protocol opacity.",
+            "The market earns trust when its risk, execution, and incentives can be inspected rather than merely promised."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/what-i-believe/", "label": "What I Believe" },
+        { "href": "/writing/", "label": "Writings archive" }
+      ],
+      "contextHeading": "Transparency in decentralized markets",
+      "contextParas": [
+        "Self-custody is one part of decentralized finance. The operation of a trading venue raises separate questions about execution, liquidations, solvency and the information available to participants. This essay examines those market-structure questions in perpetual futures, where control of assets alone does not explain how the wider system works.",
+        "Related writing on <a href=\"/writing/bitcoin-ethereum-solana-monetary-systems/\">Bitcoin, Ethereum and Solana</a> considers the different roles of financial networks. Rezo Shmertz's <a href=\"/what-i-believe/\">working principles</a> connect these subjects to openness, infrastructure and incentives."
+      ],
+      "footerLeft": { "href": "/writing/", "label": "← ALL WRITINGS" },
+      "footerRight": { "href": "/research/", "label": "RESEARCH →" },
+      "feedTitle": "Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency",
+      "feedSummary": "Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency.",
+      "llmsTitle": "Non-Custodial Isn't Enough: Why Perp DEXs Need Transparency",
+      "llmsSummary": "Self-custody removes one class of exchange risk, but credible perpetual markets also require transparent execution, liquidations, incentives, and solvency."
+    },
+    {
+      "id": "quantum",
+      "kind": "article",
+      "route": "/writing/quantum-threat-to-bitcoin/",
+      "out": "writing/quantum-threat-to-bitcoin/index.html",
+      "nav": "writings",
+      "metaTitle": "Bitcoin and Quantum Risk | Rezo Shmertz",
+      "description": "Bitcoin's quantum risk has an unknowable deadline. Rezo Shmertz argues for address hygiene, post-quantum research, and upgrade optionality without panic.",
+      "crumb": "Bitcoin · Security",
+      "h1": "The Quantum Threat to Bitcoin: We Can't Predict the Timeline",
+      "lead": "The hard problem is not choosing one confident quantum deadline. It is preparing for asymmetric risk when the deadline cannot be known.",
+      "dateISO": "2026-02-10",
+      "dateLabel": "February 10, 2026",
+      "sourceLabel": "LinkedIn",
+      "sourceHref": "https://www.linkedin.com/pulse/quantum-threat-bitcoin-we-cant-predict-timeline-revaz-rezo-shmertz-p6g7c",
+      "sourceAction": "Read original on LinkedIn ↗",
+      "visual": {
+        "local": "/assets/detail-pages/quantum.webp",
+        "mime": "image/webp",
+        "alt": "Original cover of Rezo Shmertz's article on the quantum threat to Bitcoin",
+        "credit": "Original article cover · Rezo Shmertz",
+        "action": "Read original on LinkedIn ↗",
+        "width": 1280,
+        "height": 720
+      },
+      "sections": [
+        {
+          "h2": "Two rigorous views, one missing variable",
+          "paras": [
+            "Estimates of Bitcoin's quantum exposure differ because they count vulnerable coins differently and assume different trajectories for quantum computing. A linear projection can imply decades; investment and breakthrough-driven projections can imply much less time.",
+            "Both approaches face the same limitation: breakthrough technologies do not follow a schedule we can forecast reliably."
+          ]
+        },
+        {
+          "h2": "Prepare without panicking",
+          "paras": [
+            "Moving too slowly risks catastrophic loss if usable quantum systems arrive early. Moving too quickly risks deploying immature cryptography and creating a new vulnerability in the attempt to solve the old one."
+          ],
+          "list": [
+            "Stop address reuse and improve address hygiene",
+            "Continue protocol-level post-quantum research",
+            "Monitor algorithmic breakthroughs, not only qubit counts",
+            "Develop multiple upgrade and fallback paths",
+            "Avoid treating a speculative date as certainty"
+          ]
+        },
+        {
+          "h2": "The middle ground",
+          "paras": [
+            "Uncertainty is not permission to ignore the threat. It is also not a reason to rush untested cryptography.",
+            "Bitcoin can treat quantum computing as a tail risk with unclear timing: build optionality now, improve operational hygiene, and preserve the ability to migrate deliberately when evidence changes."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/research/", "label": "Bitcoin cycle research" },
+        { "href": "/writing/bitcoin-ethereum-solana-monetary-systems/", "label": "Monetary systems article" }
+      ],
+      "contextHeading": "Bitcoin security and uncertainty",
+      "contextParas": [
+        "Quantum computing raises a different question from Bitcoin's day-to-day price movements: how a monetary network prepares for a security risk with an uncertain timeline. This essay focuses on that uncertainty, the choices available to holders and developers, and the difference between acknowledging a risk and claiming to know when it will arrive.",
+        "For a separate view of market history, the <a href=\"/research/\">Bitcoin Cycle Tracker</a> presents cycle timing and drawdown context. It does not model quantum risk. Further essays are collected in <a href=\"/writing/\">Writings</a>."
+      ],
+      "footerLeft": { "href": "/writing/", "label": "← ALL WRITINGS" },
+      "footerRight": { "href": "/research/", "label": "RESEARCH →" },
+      "feedTitle": "The Quantum Threat to Bitcoin: We Can't Predict the Timeline",
+      "feedSummary": "Bitcoin's quantum risk has an unknowable deadline. Rezo Shmertz argues for address hygiene, post-quantum research, and upgrade optionality without panic.",
+      "llmsTitle": "The Quantum Threat to Bitcoin: We Can't Predict the Timeline",
+      "llmsSummary": "Bitcoin's quantum risk has an unknowable deadline. Rezo Shmertz argues for address hygiene, post-quantum research, and upgrade optionality without panic."
+    },
+    {
+      "id": "buffett",
+      "kind": "article",
+      "route": "/writing/warren-buffett-ai-agents-edge/",
+      "out": "writing/warren-buffett-ai-agents-edge/index.html",
+      "nav": "writings",
+      "metaTitle": "AI Agents and Investment Judgment | Rezo Shmertz",
+      "description": "Rezo Shmertz on what remains scarce when AI makes analysis abundant: judgment, trust, distribution, responsibility, and the ability to act.",
+      "crumb": "AI · Investing",
+      "h1": "Warren Buffett, AI Agents, and Why Your Edge Was Never About Thinking",
+      "lead": "When machine intelligence makes analysis cheaper, the durable edge moves toward judgment, trust, distribution, and the ability to act.",
+      "dateISO": "2026-02-20",
+      "dateLabel": "February 20, 2026",
+      "sourceLabel": "X",
+      "sourceHref": "https://x.com/rezosh/status/2024850538916085872",
+      "sourceAction": "Read original on X ↗",
+      "visual": {
+        "local": "/assets/detail-pages/buffett.jpg",
+        "mime": "image/jpeg",
+        "alt": "Original cover of Rezo Shmertz's article on Warren Buffett, AI agents and market advantages",
+        "credit": "Original article cover · Rezo Shmertz",
+        "action": "Read original on X ↗",
+        "width": 1200,
+        "height": 480
+      },
+      "sections": [
+        {
+          "h2": "The thesis",
+          "paras": [
+            "AI agents compress the cost of collecting information, comparing scenarios, and producing competent analysis. That changes the value of thinking as a standalone advantage: an answer is less scarce when thousands of systems can generate one on demand.",
+            "The harder advantage is deciding which question deserves attention, which evidence deserves trust, and which conclusion is important enough to act on."
+          ]
+        },
+        {
+          "h2": "What remains scarce",
+          "paras": [
+            "Judgment carries responsibility. Trust takes time to earn. Distribution determines whether an idea reaches capital and institutions. Action requires permission, relationships, temperament, and a willingness to live with the result.",
+            "Those constraints do not disappear when intelligence becomes abundant. They become more visible."
+          ],
+          "list": [
+            "Judgment over raw output",
+            "Trust over interface polish",
+            "Distribution over isolated insight",
+            "Disciplined action over endless analysis"
+          ]
+        },
+        {
+          "h2": "Why Buffett still matters",
+          "paras": [
+            "The Buffett lesson was never simply that one person could process more information than the market. It was that temperament, incentives, patience, reputation, and capital allocation compound together.",
+            "AI can strengthen the analytical layer. It does not automatically supply the conviction or institutional trust required to deploy capital through a full cycle."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/what-i-believe/", "label": "What I Believe" },
+        { "href": "/research/ai-money/", "label": "AI Money research" }
+      ],
+      "contextHeading": "AI, judgment and investment decisions",
+      "contextParas": [
+        "As AI makes analysis more widely available, this essay asks where an investor's advantage comes from. Its focus is on the work beyond producing an answer: judgment, trust, distribution, responsibility and the ability to act.",
+        "The <a href=\"/writing/conversations/ai-trust-conviction/\">BR Labs episode on AI and trust</a> explores related questions about builders and institutional adoption. The <a href=\"/research/ai-money/\">AI Money study</a> examines a different application of AI, comparing model responses across monetary functions."
+      ],
+      "footerLeft": { "href": "/writing/", "label": "← ALL WRITINGS" },
+      "footerRight": { "href": "/research/", "label": "RESEARCH →" },
+      "feedTitle": "Warren Buffett, AI Agents, and Why Your Edge Was Never About Thinking",
+      "feedSummary": "Rezo Shmertz on what remains scarce when AI makes analysis abundant: judgment, trust, distribution, responsibility, and the ability to act.",
+      "llmsTitle": "Warren Buffett, AI Agents, and Why Your Edge Was Never About Thinking",
+      "llmsSummary": "Rezo Shmertz on what remains scarce when AI makes analysis abundant: judgment, trust, distribution, responsibility, and the ability to act."
+    },
+    {
+      "id": "ai-trust",
+      "kind": "podcast",
+      "route": "/writing/conversations/ai-trust-conviction/",
+      "out": "writing/conversations/ai-trust-conviction/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: AI, Trust and Conviction | Rezo Shmertz",
+      "description": "A BR Labs conversation with Rezo Shmertz about AI leverage, hiring, institutional distribution, invisible interfaces, wallet adoption, and trust.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "AI as the New Baseline, Trust Over UX & Sharpening Conviction",
+      "lead": "AI in crypto, institutional trust and how investment conviction develops.",
+      "dateISO": "2026-07-06",
+      "dateLabel": "July 6, 2026",
+      "publisher": "BR Labs",
+      "episode": "Episode 02",
+      "sourceHref": "https://x.com/brlabsxyz/status/2074158922156707895",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "This is a summary of the episode. Watch the original recording for the full discussion.",
+      "visual": {
+        "local": "/assets/detail-pages/ai-trust.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 02 video thumbnail: AI, trust and conviction",
+        "credit": "BR Labs · Episode 02",
+        "action": "Watch episode on X ↗",
+        "width": 1920,
+        "height": 1080
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "The episode examines how AI changes the leverage of a strong builder, what hiring means after that baseline shifts, and why institutional distribution can matter more than a technically elegant interface."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/warren-buffett-ai-agents-edge/", "label": "AI agents and judgment article" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "AI adoption and institutional trust",
+      "contextParas": [
+        "This BR Labs discussion places AI alongside the practical questions of building and distributing products in crypto. Builder productivity, hiring and institutional trust are different parts of adoption: a more capable tool does not, by itself, explain how an organization chooses to use it.",
+        "Rezo Shmertz examines a related question in <a href=\"/writing/warren-buffett-ai-agents-edge/\">Warren Buffett, AI Agents, and Why Your Edge Was Never About Thinking</a>, an essay on judgment and investment advantage. For other BR Labs episodes and public appearances, browse <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "AI as the New Baseline, Trust Over UX & Sharpening Conviction",
+      "feedSummary": "A BR Labs conversation with Rezo Shmertz about AI leverage, hiring, institutional distribution, invisible interfaces, wallet adoption, and trust.",
+      "llmsTitle": "AI as the New Baseline, Trust Over UX & Sharpening Conviction",
+      "llmsSummary": "A BR Labs conversation with Rezo Shmertz about AI leverage, hiring, institutional distribution, invisible interfaces, wallet adoption, and trust."
+    },
+    {
+      "id": "ethereum",
+      "kind": "podcast",
+      "route": "/writing/conversations/ethereum-conviction-next-generation/",
+      "out": "writing/conversations/ethereum-conviction-next-generation/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Ethereum and Conviction | Rezo Shmertz",
+      "description": "A BR Labs conversation with Rezo Shmertz on Ethereum neutrality, institutional wrappers, stablecoins, self-custody, and inherited conviction.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Ethereum, Conviction & What Gets Passed to the Next Generation",
+      "lead": "Ethereum's role, conviction through market cycles and what gets passed to the next generation.",
+      "dateISO": "2026-06-29",
+      "dateLabel": "June 29, 2026",
+      "publisher": "BR Labs",
+      "episode": "Episode 01",
+      "sourceHref": "https://x.com/brlabsxyz/status/2071609639737643247",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "This is a summary of the episode. Watch the original recording for the full discussion.",
+      "visual": {
+        "local": "/assets/detail-pages/ethereum.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 01 video thumbnail: Ethereum and conviction",
+        "credit": "BR Labs · Episode 01",
+        "action": "Watch episode on X ↗",
+        "width": 1920,
+        "height": 1080
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "The episode moves from Ethereum's claim to neutrality and foundation funding into the way institutions adopt wrappers around open systems. It then connects stablecoins and self-custody with what kind of conviction can be passed to the next generation."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/bitcoin-ethereum-solana-monetary-systems/", "label": "Monetary systems article" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Ethereum and monetary systems",
+      "contextParas": [
+        "Ethereum's claim to neutrality, institutional access and self-custody connect this episode to a broader question: what people expect a financial network to do. The conversation also considers conviction across generations, extending beyond the immediate conditions of a market cycle.",
+        "For a written treatment of different network roles, read <a href=\"/writing/bitcoin-ethereum-solana-monetary-systems/\">Bitcoin Doesn't Compete with Ethereum and Solana</a>. The <a href=\"/research/ai-money/\">AI Money study</a> examines classified AI responses about monetary functions. More BR Labs podcast episodes are collected in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Ethereum, Conviction & What Gets Passed to the Next Generation",
+      "feedSummary": "A BR Labs conversation with Rezo Shmertz on Ethereum neutrality, institutional wrappers, stablecoins, self-custody, and inherited conviction.",
+      "llmsTitle": "Ethereum, Conviction & What Gets Passed to the Next Generation",
+      "llmsSummary": "A BR Labs conversation with Rezo Shmertz on Ethereum neutrality, institutional wrappers, stablecoins, self-custody, and inherited conviction."
+    },
+    {
+      "id": "solana",
+      "kind": "podcast",
+      "route": "/writing/conversations/solana-ousd-retail-conviction/",
+      "out": "writing/conversations/solana-ousd-retail-conviction/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Solana and Retail Conviction | Rezo Shmertz",
+      "description": "A BR Labs conversation with Rezo Shmertz on Solana after FTX, value capture, OUSD redistribution, payment rails, and retail conviction.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Solana After FTX, OUSD Redistribution & Retail Conviction",
+      "lead": "Solana after FTX, OUSD redistribution and the role of retail conviction.",
+      "dateISO": "2026-07-13",
+      "dateLabel": "July 13, 2026",
+      "publisher": "BR Labs",
+      "episode": "Episode 03",
+      "sourceHref": "https://x.com/brlabsxyz/status/2076739994056892776",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "This is a summary of the episode. Watch the original recording for the full discussion.",
+      "visual": {
+        "local": "/assets/detail-pages/solana.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 03 video thumbnail: Solana, OUSD and retail conviction",
+        "credit": "BR Labs · Episode 03",
+        "action": "Watch episode on X ↗",
+        "width": 1920,
+        "height": 1080
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "The episode revisits an early Solana position, the ecosystem's survival after FTX, how value can be redistributed through systems such as OUSD, and the role of payments and retail participation in durable adoption."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/bitcoin-ethereum-solana-monetary-systems/", "label": "Monetary systems article" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Network use and value capture",
+      "contextParas": [
+        "The Solana discussion connects ecosystem resilience with payments, retail participation and the way value moves through a network. These are different questions from token price alone. The episode's OUSD discussion adds the issue of redistribution: how the design of a system affects the people who use it.",
+        "Rezo Shmertz's essay on <a href=\"/writing/bitcoin-ethereum-solana-monetary-systems/\">Bitcoin, Ethereum and Solana</a> provides a related comparison of monetary and computing networks. Other episodes are available in the <a href=\"/media/\">Media archive</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Solana After FTX, OUSD Redistribution & Retail Conviction",
+      "feedSummary": "A BR Labs conversation with Rezo Shmertz on Solana after FTX, value capture, OUSD redistribution, payment rails, and retail conviction.",
+      "llmsTitle": "Solana After FTX, OUSD Redistribution & Retail Conviction",
+      "llmsSummary": "A BR Labs conversation with Rezo Shmertz on Solana after FTX, value capture, OUSD redistribution, payment rails, and retail conviction."
+    },
+    {
+      "id": "cryptoslate",
+      "kind": "press",
+      "route": "/writing/press/public-blockchains-regulatory-standard/",
+      "out": "writing/press/public-blockchains-regulatory-standard/index.html",
+      "nav": "media",
+      "metaTitle": "Corporate L1s: Rezo Shmertz in CryptoSlate",
+      "description": "CryptoSlate quotes Rezo's contrasting view in a debate on public and corporate blockchains.",
+      "crumb": "Press",
+      "formatLabel": "Press coverage",
+      "h1": "Corporate L1s and regulatory arbitrage",
+      "lead": "CryptoSlate reports on a debate about public and corporate blockchains, including Rezo Shmertz's contrasting view on corporate L1s and regulatory arbitrage.",
+      "dateISO": "2025-09-05",
+      "dateLabel": "September 5, 2025",
+      "publisher": "CryptoSlate",
+      "sourceHref": "https://cryptoslate.com/legal-expert-affirms-public-blockchains-remain-regulatory-standard-despite-corporate-l1-launches/",
+      "sourceAction": "Read the CryptoSlate article ↗",
+      "summaryNote": "Quoted in CryptoSlate. The article is not authored by Rezo Shmertz.",
+      "visual": {
+        "remote": "https://cryptoslate.com/wp-content/uploads/2025/08/defi-rails.jpg",
+        "mime": "image/jpeg",
+        "alt": "CryptoSlate article cover illustration of decentralized finance payment rails",
+        "credit": "Article illustration: CryptoSlate",
+        "action": "Read on CryptoSlate ↗",
+        "width": 1200,
+        "height": 630
+      },
+      "bodySections": [
+        {
+          "h2": "Coverage",
+          "paras": [
+            "CryptoSlate reported on a debate between Jake Chervinsky and Rezo Shmertz over corporate layer-one blockchains. Rezo argued that companies can use these networks to respond to regulatory uncertainty, with corporate chains serving institutional needs alongside neutral public protocols."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/bitcoin-ethereum-solana-monetary-systems/", "label": "Monetary systems article" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Public and corporate blockchain infrastructure",
+      "contextParas": [
+        "The coverage concerns a distinction between neutral public protocols and networks developed around corporate needs. Rezo Shmertz's contribution addresses how corporate layer-one blockchains might respond to regulatory uncertainty. That position is part of the debate reported by CryptoSlate, not the conclusion of every participant.",
+        "For related first-person writing on the roles of financial networks, see <a href=\"/writing/bitcoin-ethereum-solana-monetary-systems/\">Bitcoin Doesn't Compete with Ethereum and Solana</a>. Further interviews, podcast episodes and third-party coverage are collected in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Corporate L1s and regulatory arbitrage",
+      "feedSummary": "CryptoSlate quotes Rezo's contrasting view in a debate on public and corporate blockchains.",
+      "llmsTitle": "Corporate L1s and regulatory arbitrage",
+      "llmsSummary": "CryptoSlate quotes Rezo's contrasting view in a debate on public and corporate blockchains."
+    },
+    {
+      "id": "cryptobriefing",
+      "kind": "press",
+      "route": "/writing/press/strategy-bitcoin-cost-of-conviction/",
+      "out": "writing/press/strategy-bitcoin-cost-of-conviction/index.html",
+      "nav": "media",
+      "metaTitle": "Strategy and Bitcoin: Rezo Shmertz in Crypto Briefing",
+      "description": "Crypto Briefing cited Rezo's response to Peter Schiff's comparison of Strategy's Bitcoin returns, including the timing of its purchases.",
+      "crumb": "Press",
+      "formatLabel": "Press coverage",
+      "h1": "Strategy, Bitcoin, and the cost of conviction",
+      "lead": "Crypto Briefing cited Rezo's response to Peter Schiff's comparison of Strategy's Bitcoin returns, including the timing of its purchases.",
+      "dateISO": "2025-12-29",
+      "dateLabel": "December 29, 2025",
+      "publisher": "Crypto Briefing",
+      "sourceHref": "https://cryptobriefing.com/saylor-strategy-better-without-bitcoin-says-schiff/",
+      "sourceAction": "Read the Crypto Briefing article ↗",
+      "summaryNote": "Quoted in Crypto Briefing. The article is not authored by Rezo Shmertz.",
+      "visual": {
+        "remote": "https://static.cryptobriefing.com/wp-content/uploads/2025/12/29130331/873dab6b-191b-4018-bd68-a02b3a5f3022-800x420.jpg",
+        "mime": "image/jpeg",
+        "alt": "Crypto Briefing article cover for its report on Strategy's Bitcoin returns",
+        "credit": "Article image: Crypto Briefing",
+        "action": "Read on Crypto Briefing ↗",
+        "width": 800,
+        "height": 420
+      },
+      "bodySections": [
+        {
+          "h2": "Coverage",
+          "paras": [
+            "Crypto Briefing covered Peter Schiff's claim that Strategy would have performed better without Bitcoin, and cited Rezo on purchase timing and return methodology."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/research/", "label": "Bitcoin cycle research" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Bitcoin exposure and investment comparisons",
+      "contextParas": [
+        "Comparisons of Bitcoin investments depend on when capital was committed and which period is being measured. This coverage records Rezo Shmertz's contribution to that discussion about Strategy. The publisher's article provides the surrounding reporting; this page does not present an independent calculation of Strategy's returns.",
+        "For historical market context rather than company performance analysis, explore the <a href=\"/research/\">Bitcoin Cycle Tracker</a>. Rezo's own essays on money, markets and investment judgment are collected in <a href=\"/writing/\">Writings</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Strategy, Bitcoin, and the cost of conviction",
+      "feedSummary": "Crypto Briefing cited Rezo's response to Peter Schiff's comparison of Strategy's Bitcoin returns, including the timing of its purchases.",
+      "llmsTitle": "Strategy, Bitcoin, and the cost of conviction",
+      "llmsSummary": "Crypto Briefing cited Rezo's response to Peter Schiff's comparison of Strategy's Bitcoin returns, including the timing of its purchases."
+    },
+    {
+      "id": "tbilisi",
+      "kind": "event",
+      "route": "/writing/appearances/stablecoins-tbilisi-finance-summit/",
+      "out": "writing/appearances/stablecoins-tbilisi-finance-summit/index.html",
+      "nav": "media",
+      "metaTitle": "Rezo Shmertz at the Tbilisi Finance Summit",
+      "description": "Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance.",
+      "crumb": "Appearance",
+      "formatLabel": "Event appearance",
+      "h1": "Stablecoins at the Tbilisi Finance Summit",
+      "eventTitle": "What's Next for Stablecoins in the Region",
+      "lead": "Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance.",
+      "dateISO": "2025-10-22",
+      "dateLabel": "October 22, 2025",
+      "publisher": "GFTN",
+      "sourceHref": "https://www.linkedin.com/posts/globalfinance-technologynetwork_what-a-start-to-the-tbilisi-finance-summit-activity-7386978911454167040-knqc",
+      "sourceAction": "View GFTN event gallery ↗",
+      "summaryNote": "GFTN's recap is an event photo gallery, not a recording or transcript.",
+      "visual": {
+        "remote": "https://media.licdn.com/dms/image/v2/D5622AQGVww-JC5NJ5w/feedshare-shrink_800/B56ZoPRw.YHQAg-/0/1761192953730?e=2147483647&v=beta&t=-rrZL8PhsoQ8IJWWvmx-WylDIcgmRBB5SSaK1qvcDaU",
+        "mime": "image/jpeg",
+        "alt": "Speakers seated at a Tbilisi Finance Summit roundtable, from GFTN's event gallery",
+        "credit": "Global Finance & Technology Network (GFTN)",
+        "action": "View GFTN event gallery ↗",
+        "width": 800,
+        "height": 533,
+        "appearance": true
+      },
+      "bodySections": [],
+      "related": [
+        {
+          "href": "https://www.youtube.com/watch?v=OH33Er6q3KA",
+          "label": "Separate recording: Stablecoins Under the Hood panel ↗",
+          "external": true
+        },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Stablecoins and financial infrastructure",
+      "contextParas": [
+        "For a recorded discussion of stablecoin infrastructure and global liquidity, watch <a href=\"https://www.youtube.com/watch?v=OH33Er6q3KA\">Stablecoins Under the Hood</a>. The panel is a separate appearance from the Tbilisi roundtable.",
+        "The <a href=\"/research/ai-money/\">AI Money study</a> compares classified model responses across four monetary functions: medium of exchange, settlement, store of value and unit of account. It provides a separate research view of stablecoins alongside Bitcoin and fiat. Browse <a href=\"/media/\">Media</a> for other public appearances and BR Labs podcast episodes."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Stablecoins at the Tbilisi Finance Summit",
+      "feedSummary": "Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance.",
+      "llmsTitle": "Stablecoins at the Tbilisi Finance Summit",
+      "llmsSummary": "Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance."
+    }
+  ]
+}

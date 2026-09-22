@@ -26,9 +26,9 @@
 - [Ethereum, Conviction & What Gets Passed to the Next Generation](https://rezoshmertz.com/writing/conversations/ethereum-conviction-next-generation/): A BR Labs conversation with Rezo Shmertz on Ethereum neutrality, institutional wrappers, stablecoins, self-custody, and inherited conviction.
 - [AI as the New Baseline, Trust Over UX & Sharpening Conviction](https://rezoshmertz.com/writing/conversations/ai-trust-conviction/): A BR Labs conversation with Rezo Shmertz about AI leverage, hiring, institutional distribution, invisible interfaces, wallet adoption, and trust.
 - [Solana After FTX, OUSD Redistribution & Retail Conviction](https://rezoshmertz.com/writing/conversations/solana-ousd-retail-conviction/): A BR Labs conversation with Rezo Shmertz on Solana after FTX, value capture, OUSD redistribution, payment rails, and retail conviction.
-- [Public Blockchains Remain the Regulatory Standard](https://rezoshmertz.com/writing/press/public-blockchains-regulatory-standard/): CryptoSlate cited Rezo Shmertz on compliant corporate chains, neutral public protocols, and why regulatory arbitrage does not replace open infrastructure.
-- [Strategy, Bitcoin, and the Cost of Conviction](https://rezoshmertz.com/writing/press/strategy-bitcoin-cost-of-conviction/): Crypto Briefing cited Rezo Shmertz on staggered Bitcoin purchases and the return methodology behind comparisons of Strategy's performance.
-- [What's Next for Stablecoins in the Region](https://rezoshmertz.com/writing/appearances/stablecoins-tbilisi-finance-summit/): Rezo Shmertz joined the Tbilisi Finance Summit roundtable on the GENIUS Act, compliance, product roadmaps, and regional stablecoin infrastructure.
+- [Corporate L1s and regulatory arbitrage](https://rezoshmertz.com/writing/press/public-blockchains-regulatory-standard/): CryptoSlate quotes Rezo's contrasting view in a debate on public and corporate blockchains.
+- [Strategy, Bitcoin, and the cost of conviction](https://rezoshmertz.com/writing/press/strategy-bitcoin-cost-of-conviction/): Crypto Briefing cited Rezo's response to Peter Schiff's comparison of Strategy's Bitcoin returns, including the timing of its purchases.
+- [Stablecoins at the Tbilisi Finance Summit](https://rezoshmertz.com/writing/appearances/stablecoins-tbilisi-finance-summit/): Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance.
 
 ## Machine-readable resources
 
