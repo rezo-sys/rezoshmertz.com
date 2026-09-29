@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import vm from 'node:vm';
-import { buildAll, loadDetailData, validateDetailData } from '../scripts/build-detail-pages.mjs';
+import { buildAll, loadDetailData, resolvedDetailOutput, validateDetailData } from '../scripts/build-detail-pages.mjs';
+import { relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFileSync(new URL(path, root), 'utf8');
@@ -11,7 +13,10 @@ const data = loadDetailData();
 
 test('detail source records preserve approved copy, source URLs, dates and image identity', () => {
   // Change this fingerprint only after checking deliberate edits against their sources.
-  assert.equal(createHash('sha256').update(JSON.stringify(data.pages)).digest('hex'), 'b6aeae6c33acbfe3108de942c94f5973a5879eef5cfa26f7f30a4cc9646c7df2');
+  assert.equal(createHash('sha256').update(JSON.stringify(data.pages.slice(0, 10))).digest('hex'), 'b6aeae6c33acbfe3108de942c94f5973a5879eef5cfa26f7f30a4cc9646c7df2');
+  assert.equal(data.pages.slice(10).map(page => page.id).join(','), 'ep04,ep05,ep06,ep07,ep08,ep09,ep10');
+  // Episodes 4 to 10 reviewed against publisher descriptions and actual served image dimensions.
+  assert.equal(createHash('sha256').update(JSON.stringify(data.pages.slice(10))).digest('hex'), 'b11f772584b5013d20dc79737186576607219a9b02cd7000367d590459c690e3');
 });
 
 test('every checked-in detail page exactly matches the deterministic builder', () => {
@@ -19,7 +24,7 @@ test('every checked-in detail page exactly matches the deterministic builder', (
 });
 
 test('invalid paths, unsafe source links and missing image metadata fail before writing', () => {
-  for (const mutate of [p => { p.out = '../index.html'; }, p => { p.route = '/'; }, p => { p.visual.alt = ''; }, p => { p.sourceHref = 'javascript:alert(1)'; }, p => { p.visual.width = 0; }, p => { p.contextParas[0] = '<script>alert(1)</script>'; }, p => { p.contextParas[0] = '<a href="javascript:alert(1)">Unsafe</a>'; }, p => { p.visual.local = '/assets/../../index.html'; }, p => { p.dateISO = '2026-02-30'; }]) {
+  for (const mutate of [p => { p.out = '../index.html'; }, p => { p.route = '/'; }, p => { p.visual.alt = ''; }, p => { p.sourceHref = 'javascript:alert(1)'; }, p => { p.visual.width = 0; }, p => { p.contextParas[0] = '<script>alert(1)</script>'; }, p => { p.contextParas[0] = '<a href="javascript:alert(1)">Unsafe</a>'; }, p => { p.visual.local = '/assets/../../index.html'; }, p => { p.dateISO = '2026-02-30'; }, p => { p.dateModified = '2026-09-31'; }]) {
     const invalid = structuredClone(data);
     mutate(invalid.pages[0]);
     assert.throws(() => validateDetailData(invalid));
@@ -29,7 +34,7 @@ test('invalid paths, unsafe source links and missing image metadata fail before 
 test('local image files have MIME-appropriate signatures and match the source manifest', () => {
   const sources = JSON.parse(read('assets/detail-pages/SOURCES.json'));
   assert.equal(sources.assets.length, 7);
-  assert.equal(sources.remoteOnly.length, 3);
+  assert.equal(sources.remoteOnly.length, 10);
   for (const item of sources.assets) {
     const page = data.pages.find(p => p.id === item.id);
     assert.equal(page.visual.local, `/assets/detail-pages/${item.file}`);
@@ -42,7 +47,13 @@ test('local image files have MIME-appropriate signatures and match the source ma
       assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
     }
   }
-  for (const item of sources.remoteOnly) assert.equal(data.pages.find(p => p.id === item.id).visual.remote, item.imageUrl);
+  for (const item of sources.remoteOnly) {
+    const visual = data.pages.find(p => p.id === item.id).visual;
+    assert.equal(visual.remote, item.imageUrl);
+    assert.equal(visual.width, item.width);
+    assert.equal(visual.height, item.height);
+    assert.equal(visual.mime, item.mime);
+  }
 });
 
 test('detail CSS is scoped and preserves existing link hit areas without concealing overflow', () => {
@@ -78,13 +89,32 @@ test('visible sources, structured data and canonical identity stay aligned', () 
     const webpage = graph.find(n => n['@type'] === 'WebPage');
     assert.equal(webpage.url, `https://rezoshmertz.com${page.route}`);
     assert.equal(webpage.datePublished, page.dateISO);
-    assert.equal(webpage.dateModified, data.dateModified);
+    const modified = page.dateModified ?? data.dateModified;
+    assert.equal(webpage.dateModified, modified);
     assert.equal(webpage.primaryImageOfPage.url, page.visual.local ? `https://rezoshmertz.com${page.visual.local}` : page.visual.remote);
     assert.equal((html.match(/<h1\b/g) || []).length, 1);
     assert.equal(graph.filter(n => n['@type'] === 'BreadcrumbList').length, 1);
     const article = graph.find(n => n['@type'] === 'Article');
-    if (page.kind === 'article') assert.equal(article.isBasedOn, page.sourceHref);
+    if (page.kind === 'article') {
+      assert.equal(article.dateModified, page.dateModified ?? data.dateModified);
+      assert.equal(article.isBasedOn, page.sourceHref);
+    }
     else { assert.equal(article, undefined); assert.equal(webpage.citation, page.sourceHref); }
     assert.doesNotMatch(html, /<iframe\b|<video\b|<a\b(?=[^>]*href="\/)(?=[^>]*target="_blank")[^>]*>/);
   }
+});
+
+test('new detail output parents stay inside the repository and check mode does not create them', () => {
+  const base = fileURLToPath(new URL('../', import.meta.url));
+  const file = resolvedDetailOutput('writing/conversations/robinhood-gated-defi-ethereum-bitcoin/index.html');
+  const rel = relative(base, file);
+  assert.equal(rel.startsWith('..') || rel.includes('..'), false);
+  assert.match(rel.replaceAll('\\', '/'), /^writing\/conversations\/robinhood-gated-defi-ethereum-bitcoin\/index\.html$/);
+  for (const bad of ['../index.html', '/tmp/index.html', 'writing/../../index.html', 'writing/conversations/../../index.html', 'C:/Windows/index.html']) {
+    assert.throws(() => resolvedDetailOutput(bad));
+  }
+  const source = read('scripts/build-detail-pages.mjs');
+  const checkBranch = source.split("if (process.argv.includes('--check'))")[1].split('else if')[0];
+  assert.doesNotMatch(checkBranch, /mkdirSync/);
+  assert.match(source, /buildAll\(data\);[\s\S]*else if \(previous !== html\) \{\r?\n\s*mkdirSync\(dirname\(resolvedDetailOutput\(out\)\), \{ recursive: true \}\);/);
 });

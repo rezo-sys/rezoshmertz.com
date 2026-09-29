@@ -4,7 +4,7 @@
   <id>https://rezoshmertz.com/</id>
   <link href="https://rezoshmertz.com/feed.xml" rel="self"/>
   <link href="https://rezoshmertz.com/"/>
-  <updated>2026-09-23T00:00:00Z</updated>
+  <updated>2026-09-29T00:00:00Z</updated>
   <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
   <entry>
     <title>Bitcoin Cycle Roadmap and Bear-Market Scenario · Rezo Shmertz</title>
@@ -113,5 +113,68 @@
     <updated>2026-09-23T00:00:00Z</updated>
     <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
     <summary>Bitcoin behaves like digital gold while Ethereum and Solana resemble productive economic layers. Rezo Shmertz explains why the systems are complementary.</summary>
+  </entry>
+  <entry>
+    <title>Robinhood’s Gated DeFi, Ethereum Rails &amp; Nation-State Bitcoin</title>
+    <id>https://rezoshmertz.com/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/"/>
+    <published>2026-07-27T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz on Robinhood&apos;s gated DeFi distribution, Ethereum settlement and lessons from El Salvador&apos;s Bitcoin adoption in BR Labs Episode 4.</summary>
+  </entry>
+  <entry>
+    <title>Tokenized RWAs, Open vs Permissioned DeFi &amp; Retail’s New Role</title>
+    <id>https://rezoshmertz.com/writing/conversations/tokenized-rwas-open-permissioned-defi/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/tokenized-rwas-open-permissioned-defi/"/>
+    <published>2026-08-03T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz discusses tokenized real-world assets, institutional distribution, DeFi composability and retail participation in BR Labs Episode 5.</summary>
+  </entry>
+  <entry>
+    <title>Intent Economy, Solvers &amp; Agentic Trading</title>
+    <id>https://rezoshmertz.com/writing/conversations/intent-economy-solvers-agentic-trading/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/intent-economy-solvers-agentic-trading/"/>
+    <published>2026-08-17T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz explains intent-based trading, solver auctions, BRRRolver on Base and Ethereum, and the role of capital in BR Labs Episode 6.</summary>
+  </entry>
+  <entry>
+    <title>Bitcoin at $80K, Market Triggers &amp; Wrappers vs Native Assets</title>
+    <id>https://rezoshmertz.com/writing/conversations/bitcoin-market-triggers-native-assets/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/bitcoin-market-triggers-native-assets/"/>
+    <published>2026-08-31T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz discusses Bitcoin from holder and trading-desk perspectives, market triggers and asset wrappers versus native tokens in BR Labs Episode 7.</summary>
+  </entry>
+  <entry>
+    <title>Tokenized Equities, Robinhood Distribution &amp; Crypto Still King</title>
+    <id>https://rezoshmertz.com/writing/conversations/tokenized-equities-robinhood-distribution/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/tokenized-equities-robinhood-distribution/"/>
+    <published>2026-09-07T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz discusses tokenized stocks, Robinhood&apos;s distribution, crypto market flows and wrappers versus native assets in BR Labs Episode 8.</summary>
+  </entry>
+  <entry>
+    <title>Early Bets, Liquid vs Venture &amp; Why Math Is Honest</title>
+    <id>https://rezoshmertz.com/writing/conversations/early-bets-liquid-venture-investing/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/early-bets-liquid-venture-investing/"/>
+    <published>2026-09-14T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz reflects on early investments, CoW Swap, Pave Bank and the different feedback cycles of liquid and venture investing in BR Labs Episode 9.</summary>
+  </entry>
+  <entry>
+    <title>VC After AI Concentration, the Desk Map &amp; One Unified Book</title>
+    <id>https://rezoshmertz.com/writing/conversations/vc-ai-concentration-unified-book/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/vc-ai-concentration-unified-book/"/>
+    <published>2026-09-28T00:00:00Z</published>
+    <updated>2026-09-29T00:00:00Z</updated>
+    <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
+    <summary>Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10.</summary>
   </entry>
 </feed>

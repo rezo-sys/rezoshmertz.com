@@ -9,12 +9,12 @@ const read = (rel) => readFileSync(join(root, rel), 'utf8');
 
 const data = loadDetailData();
 validateDetailData(data);
-assert.equal(data.pages.length, 10);
+assert.equal(data.pages.length, 17);
 
 const articles = data.pages.filter((p) => p.kind === 'article');
 const media = data.pages.filter((p) => p.kind !== 'article');
 assert.equal(articles.length, 4);
-assert.equal(media.length, 6);
+assert.equal(media.length, 13);
 
 for (const page of data.pages) {
   const html = read(page.out);
@@ -85,7 +85,7 @@ assert.match(llms, /Corporate L1s and regulatory arbitrage/);
 assert.match(llms, /Stablecoins at the Tbilisi Finance Summit/);
 
 const built = buildAll(data);
-assert.equal(built.length, 10);
+assert.equal(built.length, 17);
 for (const { html, page } of built) {
   assert.match(html, /body class="detail-page"/);
   const h1Html = page.h1.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -93,4 +93,4 @@ for (const { html, page } of built) {
   assert.match(html, /BreadcrumbList/);
 }
 
-console.log('PASS: ten detail pages, labels, nav, metadata, covers, Tbilisi fallback, CSS scope, feed/llms sync, builder render.');
+console.log('PASS: 17 allowlisted detail pages, labels, nav, metadata, covers, Tbilisi fallback, CSS scope, feed/llms sync, builder render.');

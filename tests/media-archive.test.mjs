@@ -13,10 +13,10 @@ const clone = () => structuredClone(data);
 
 test('14 reviewed Media records preserve approved sources, copy and UTC dates', () => {
   assert.equal(data.records.length,14);
-  // Reviewed Episode 08–10 additions and Episode 07's move into the archive.
-  assert.equal(hash(JSON.stringify(data.records)),'c3dbfd880cdb2741d8891e68b6b4a51dcc95cf6fbfe5e9cdfb6e6ab7adf201c4');
+  // Reviewed seven new summary links; all other source record fields remain unchanged.
+  assert.equal(hash(JSON.stringify(data.records)),'3ed6595e5bd462edf6dc25b251158aca26f9aeb16ad53af47abe18552ef968fc');
   assert.equal(data.intro,'Alongside his work at BR Labs, Rezo Shmertz participates in industry panels and contributes commentary on crypto markets, investing and financial technology. This page brings together podcast episodes, public appearances and press coverage of that work.');
-  assert.equal(data.records.filter(r=>r.summaryUrl).length,6);
+  assert.equal(data.records.filter(r=>r.summaryUrl).length,13);
   assert.equal(data.records.find(r=>r.id==='ep03').date,'2026-07-13');
 });
 
@@ -54,6 +54,15 @@ test('episodes 1 through 10 occur once, with Episode 10 featured and 9 through 1
     '/writing/conversations/solana-ousd-retail-conviction/',
     '/writing/conversations/ai-trust-conviction/',
     '/writing/conversations/ethereum-conviction-next-generation/',
+  ]);
+  assert.deepEqual(['podcast', 'ep09', 'ep08', 'ep07', 'ep06', 'ep05', 'ep04'].map(id => byId(id).summaryUrl), [
+    '/writing/conversations/vc-ai-concentration-unified-book/',
+    '/writing/conversations/early-bets-liquid-venture-investing/',
+    '/writing/conversations/tokenized-equities-robinhood-distribution/',
+    '/writing/conversations/bitcoin-market-triggers-native-assets/',
+    '/writing/conversations/intent-economy-solvers-agentic-trading/',
+    '/writing/conversations/tokenized-rwas-open-permissioned-defi/',
+    '/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/',
   ]);
 });
 

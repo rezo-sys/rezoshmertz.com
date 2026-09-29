@@ -1,12 +1,12 @@
 /**
- * Bounded detail-page builder for the ten approved option-A summaries.
+ * Bounded detail-page builder for the explicit approvedRoutes allowlist.
  * Source of truth: data/detail-pages.json
  * Usage:
  *   node scripts/build-detail-pages.mjs
  *   node scripts/build-detail-pages.mjs --check
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { dirname, isAbsolute, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
@@ -23,6 +23,13 @@ const approvedRoutes = new Map([
   ['cryptoslate', '/writing/press/public-blockchains-regulatory-standard/'],
   ['cryptobriefing', '/writing/press/strategy-bitcoin-cost-of-conviction/'],
   ['tbilisi', '/writing/appearances/stablecoins-tbilisi-finance-summit/'],
+  ['ep04', '/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/'],
+  ['ep05', '/writing/conversations/tokenized-rwas-open-permissioned-defi/'],
+  ['ep06', '/writing/conversations/intent-economy-solvers-agentic-trading/'],
+  ['ep07', '/writing/conversations/bitcoin-market-triggers-native-assets/'],
+  ['ep08', '/writing/conversations/tokenized-equities-robinhood-distribution/'],
+  ['ep09', '/writing/conversations/early-bets-liquid-venture-investing/'],
+  ['ep10', '/writing/conversations/vc-ai-concentration-unified-book/'],
 ]);
 
 function validDate(value) {
@@ -116,6 +123,7 @@ function coverMeta(page) {
 
 function schemaGraph(page) {
   const cover = coverMeta(page);
+  const modified = page.dateModified ?? dateModified;
   const webpageId = `${SITE}${page.route}#webpage`;
   const crumbs =
     page.nav === 'writings'
@@ -158,7 +166,7 @@ function schemaGraph(page) {
       inLanguage: 'en',
       isPartOf: { '@id': `${SITE}/#website` },
       datePublished: page.dateISO,
-      dateModified,
+      dateModified: modified,
       primaryImageOfPage: {
         '@type': 'ImageObject',
         url: cover.url,
@@ -192,7 +200,7 @@ function schemaGraph(page) {
       mainEntityOfPage: { '@id': webpageId },
       author: { '@id': `${SITE}/about/#rezo-shmertz` },
       datePublished: page.dateISO,
-      dateModified,
+      dateModified: modified,
       inLanguage: 'en',
       isBasedOn: page.sourceHref,
     });
@@ -347,8 +355,8 @@ export function validateDetailData(data) {
   if (!/^[a-z0-9-]+$/.test(data.version) || !validDate(data.dateModified)) {
     throw new Error('Invalid detail build version or date');
   }
-  if (!Array.isArray(data.pages) || data.pages.length !== 10) {
-    throw new Error('Expected exactly ten detail pages');
+  if (!Array.isArray(data.pages) || data.pages.length !== approvedRoutes.size) {
+    throw new Error(`Expected exactly ${approvedRoutes.size} detail pages`);
   }
   const ids = new Set();
   const routes = new Set();
@@ -364,6 +372,7 @@ export function validateDetailData(data) {
       if (typeof page[key] !== 'string' || !page[key].trim()) throw new Error(`Missing ${key}: ${page.id}`);
     }
     if (!validDate(page.dateISO) || !validLink(page.sourceHref)) throw new Error(`Invalid date or source: ${page.id}`);
+    if (page.dateModified !== undefined && !validDate(page.dateModified)) throw new Error(`Invalid dateModified: ${page.id}`);
     if (page.nav !== (page.kind === 'article' ? 'writings' : 'media')) throw new Error(`Invalid navigation: ${page.id}`);
     if (!Array.isArray(page.contextParas) || page.contextParas.length !== 2) throw new Error(`Missing context: ${page.id}`);
     for (const paragraph of page.contextParas) {
@@ -399,6 +408,16 @@ export function validateDetailData(data) {
   return data;
 }
 
+export function resolvedDetailOutput(out) {
+  if (typeof out !== 'string' || !out.endsWith('/index.html') || out.includes('\\') || out.includes(':') || out.startsWith('/') || out.split('/').includes('..')) {
+    throw new Error(`Unsafe detail output path: ${out}`);
+  }
+  const file = fileURLToPath(new URL(out, root));
+  const rel = relative(fileURLToPath(root), file);
+  if (!rel || rel.startsWith('..') || isAbsolute(rel)) throw new Error(`Unsafe detail output path: ${out}`);
+  return file;
+}
+
 export function buildAll(data = loadDetailData()) {
   validateDetailData(data);
   const results = [];
@@ -419,6 +438,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     if (process.argv.includes('--check')) {
       if (previous !== html) throw new Error(`Stale detail page: ${out}`);
     } else if (previous !== html) {
+      mkdirSync(dirname(resolvedDetailOutput(out)), { recursive: true });
       writeFileSync(path, html);
       changed += 1;
     }

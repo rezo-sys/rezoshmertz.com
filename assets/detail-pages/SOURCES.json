@@ -103,6 +103,76 @@
       "height": 533,
       "mime": "image/jpeg",
       "note": "Existing production Tbilisi source unchanged; not rehosted into detail-pages/. Pages add image-error fallback only."
+    },
+    {
+      "id": "ep04",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2081756380667789312/img/64M90BObeeG_CAVw.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2081758038474793031",
+      "credit": "BR Labs · Episode 04",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep05",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2084302639001751552/img/40nHbDe7enHiVkM9.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2084302937980129659",
+      "credit": "BR Labs · Episode 05",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep06",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2089357286758379520/img/kp4JBC05k5tAMsTc.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2089358086830170244",
+      "credit": "BR Labs · Episode 06",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep07",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2094492666394460160/img/cxVm3Vbq4rBkxV30.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2094493882885263659",
+      "credit": "BR Labs · Episode 07",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep08",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2096980609474428929/img/9Xy__T4PfXP8my0Y.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2096982927553048826",
+      "credit": "BR Labs · Episode 08",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep09",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2099485282072444930/img/01KGJTQ-5QYRT-ti.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2099496764088746142",
+      "credit": "BR Labs · Episode 09",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep10",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2104586824328888451",
+      "credit": "BR Labs · Episode 10",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
     }
   ]
 }

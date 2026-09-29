@@ -109,11 +109,18 @@ test('homepage Episode 10 card and player constants match the featured record', 
   assert.match(html, /src="\/assets\/hero-motion\.js\?v=20260906-typewriter"/);
 });
 
-test('homepage and Media sitemap modification dates are 2026-09-29', () => {
+test('homepage and Media retain their dates alongside the seven new podcast sitemap entries', () => {
   const sitemap = readFileSync(new URL('../sitemap.xml', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
   const entries = [...sitemap.matchAll(/<loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod>/g)].map(match => [match[1], match[2]]);
   assert.deepEqual(entries.filter(([, date]) => date === '2026-09-29').map(([loc]) => loc), [
     'https://rezoshmertz.com/',
     'https://rezoshmertz.com/media/',
+    'https://rezoshmertz.com/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/',
+    'https://rezoshmertz.com/writing/conversations/tokenized-rwas-open-permissioned-defi/',
+    'https://rezoshmertz.com/writing/conversations/intent-economy-solvers-agentic-trading/',
+    'https://rezoshmertz.com/writing/conversations/bitcoin-market-triggers-native-assets/',
+    'https://rezoshmertz.com/writing/conversations/tokenized-equities-robinhood-distribution/',
+    'https://rezoshmertz.com/writing/conversations/early-bets-liquid-venture-investing/',
+    'https://rezoshmertz.com/writing/conversations/vc-ai-concentration-unified-book/',
   ]);
 });

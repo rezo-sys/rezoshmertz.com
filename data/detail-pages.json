@@ -583,6 +583,384 @@
       "feedSummary": "Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance.",
       "llmsTitle": "Stablecoins at the Tbilisi Finance Summit",
       "llmsSummary": "Rezo Shmertz took part in a roundtable on stablecoins at the Tbilisi Finance Summit in October 2025. GFTN's event gallery documents the appearance."
+    },
+    {
+      "id": "ep04",
+      "kind": "podcast",
+      "route": "/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/",
+      "out": "writing/conversations/robinhood-gated-defi-ethereum-bitcoin/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Robinhood, DeFi and Ethereum | Rezo Shmertz",
+      "description": "Rezo Shmertz on Robinhood's gated DeFi distribution, Ethereum settlement and lessons from El Salvador's Bitcoin adoption in BR Labs Episode 4.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Robinhood’s Gated DeFi, Ethereum Rails & Nation-State Bitcoin",
+      "lead": "Robinhood's distribution, Ethereum's settlement role and the different ways Bitcoin is adopted by a country.",
+      "dateISO": "2026-07-27",
+      "dateLabel": "July 27, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 04",
+      "sourceHref": "https://x.com/brlabsxyz/status/2081758038474793031",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2081756380667789312/img/64M90BObeeG_CAVw.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 04 video thumbnail: Robinhood, gated DeFi, Ethereum and nation-state Bitcoin",
+        "credit": "BR Labs · Episode 04",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "Rezo Shmertz discusses open and permissioned DeFi through Robinhood's distribution and Ethereum-based infrastructure. The episode then turns to El Salvador, distinguishing Bitcoin's use in payments from its role in national reserves."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/bitcoin-ethereum-solana-monetary-systems/", "label": "Bitcoin, Ethereum and Solana" },
+        { "href": "/writing/conversations/tokenized-rwas-open-permissioned-defi/", "label": "Episode 5: Tokenized RWAs and DeFi" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "DeFi distribution and Bitcoin adoption",
+      "contextParas": [
+        "This episode connects access to financial products with the infrastructure underneath them. Robinhood's distribution raises questions about who can use a DeFi service and under what conditions. The discussion of Ethereum and El Salvador considers settlement, payments and reserves as distinct uses of a financial network.",
+        "For a related comparison, read Rezo Shmertz's essay on <a href=\"/writing/bitcoin-ethereum-solana-monetary-systems/\">Bitcoin, Ethereum and Solana</a>. <a href=\"/writing/conversations/tokenized-rwas-open-permissioned-defi/\">Episode 5</a> continues the discussion of access and composability in tokenized assets. Browse <a href=\"/media/\">Media</a> for the full BR Labs podcast series."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Robinhood’s Gated DeFi, Ethereum Rails & Nation-State Bitcoin",
+      "feedSummary": "Rezo Shmertz on Robinhood's gated DeFi distribution, Ethereum settlement and lessons from El Salvador's Bitcoin adoption in BR Labs Episode 4.",
+      "llmsTitle": "Robinhood’s Gated DeFi, Ethereum Rails & Nation-State Bitcoin",
+      "llmsSummary": "Rezo Shmertz on Robinhood's gated DeFi distribution, Ethereum settlement and lessons from El Salvador's Bitcoin adoption in BR Labs Episode 4."
+    },
+    {
+      "id": "ep05",
+      "kind": "podcast",
+      "route": "/writing/conversations/tokenized-rwas-open-permissioned-defi/",
+      "out": "writing/conversations/tokenized-rwas-open-permissioned-defi/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Tokenized RWAs and DeFi | Rezo Shmertz",
+      "description": "Rezo Shmertz discusses tokenized real-world assets, institutional distribution, DeFi composability and retail participation in BR Labs Episode 5.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Tokenized RWAs, Open vs Permissioned DeFi & Retail’s New Role",
+      "lead": "Tokenized real-world assets, access to DeFi and the changing role of retail participants.",
+      "dateISO": "2026-08-03",
+      "dateLabel": "August 3, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 05",
+      "sourceHref": "https://x.com/brlabsxyz/status/2084302937980129659",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2084302639001751552/img/40nHbDe7enHiVkM9.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 05 video thumbnail: tokenized real-world assets and open versus permissioned DeFi",
+        "credit": "BR Labs · Episode 05",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "The episode examines the difference between putting an asset on-chain and making it accessible within DeFi. Rezo Shmertz discusses institutional distribution, permissioned and permissionless products, and the shift in retail participation from market making toward depositing and longer-term holding."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/", "label": "Episode 4: Robinhood and gated DeFi" },
+        { "href": "/writing/non-custodial-perp-dex-transparency/", "label": "Transparency in perpetual markets" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Tokenized assets and DeFi access",
+      "contextParas": [
+        "Tokenization, distribution and composability describe different parts of an asset's use. This BR Labs episode focuses on whether on-chain products can participate in decentralized finance, not simply whether they have been issued on a blockchain. Retail participation is considered alongside the role of institutions and professional market makers.",
+        "The conversation builds on <a href=\"/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/\">Episode 4's discussion of open and gated DeFi</a>. For Rezo Shmertz's related writing on market transparency, read <a href=\"/writing/non-custodial-perp-dex-transparency/\">Non-Custodial Isn't Enough</a>. More episodes and public appearances are available in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Tokenized RWAs, Open vs Permissioned DeFi & Retail’s New Role",
+      "feedSummary": "Rezo Shmertz discusses tokenized real-world assets, institutional distribution, DeFi composability and retail participation in BR Labs Episode 5.",
+      "llmsTitle": "Tokenized RWAs, Open vs Permissioned DeFi & Retail’s New Role",
+      "llmsSummary": "Rezo Shmertz discusses tokenized real-world assets, institutional distribution, DeFi composability and retail participation in BR Labs Episode 5."
+    },
+    {
+      "id": "ep06",
+      "kind": "podcast",
+      "route": "/writing/conversations/intent-economy-solvers-agentic-trading/",
+      "out": "writing/conversations/intent-economy-solvers-agentic-trading/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Intents, Solvers and Trading | Rezo Shmertz",
+      "description": "Rezo Shmertz explains intent-based trading, solver auctions, BRRRolver on Base and Ethereum, and the role of capital in BR Labs Episode 6.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Intent Economy, Solvers & Agentic Trading",
+      "lead": "How users specify a trading outcome, how solvers compete to execute it and where capital still matters.",
+      "dateISO": "2026-08-17",
+      "dateLabel": "August 17, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 06",
+      "sourceHref": "https://x.com/brlabsxyz/status/2089358086830170244",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2089357286758379520/img/kp4JBC05k5tAMsTc.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 06 video thumbnail: the intent economy, solvers and agentic trading",
+        "credit": "BR Labs · Episode 06",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "Rezo Shmertz explains the intent economy through solver competition and sealed auctions. The episode covers BRRRolver's work on Base and Ethereum, then considers solvers as autonomous agents and the continuing need for capital and inventory in competitive execution."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/what-i-build/", "label": "Companies and systems Rezo builds" },
+        { "href": "/writing/conversations/vc-ai-concentration-unified-book/", "label": "Episode 10: The trading desk and one unified book" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Intent-based trading and execution",
+      "contextParas": [
+        "Intent-based trading separates a user's desired outcome from the route used to achieve it. This episode looks at the solvers competing to provide that execution, with BRRRolver as an operating example. Auctions, pricing and available capital make the discussion relevant to both DeFi users and the teams building trading infrastructure.",
+        "Explore <a href=\"/what-i-build/\">What I Build</a> for the companies and systems behind Rezo Shmertz's work. <a href=\"/writing/conversations/vc-ai-concentration-unified-book/\">Episode 10</a> returns to the trading desk and its goal of a unified book across centralized and decentralized markets. The full series is available in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Intent Economy, Solvers & Agentic Trading",
+      "feedSummary": "Rezo Shmertz explains intent-based trading, solver auctions, BRRRolver on Base and Ethereum, and the role of capital in BR Labs Episode 6.",
+      "llmsTitle": "Intent Economy, Solvers & Agentic Trading",
+      "llmsSummary": "Rezo Shmertz explains intent-based trading, solver auctions, BRRRolver on Base and Ethereum, and the role of capital in BR Labs Episode 6."
+    },
+    {
+      "id": "ep07",
+      "kind": "podcast",
+      "route": "/writing/conversations/bitcoin-market-triggers-native-assets/",
+      "out": "writing/conversations/bitcoin-market-triggers-native-assets/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Bitcoin and Native Assets | Rezo Shmertz",
+      "description": "Rezo Shmertz discusses Bitcoin from holder and trading-desk perspectives, market triggers and asset wrappers versus native tokens in BR Labs Episode 7.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets",
+      "lead": "Bitcoin from a holder's perspective and a trading desk's perspective, followed by the difference between asset wrappers and native tokens.",
+      "dateISO": "2026-08-31",
+      "dateLabel": "August 31, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 07",
+      "sourceHref": "https://x.com/brlabsxyz/status/2094493882885263659",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2094492666394460160/img/cxVm3Vbq4rBkxV30.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 07 video thumbnail: Bitcoin market triggers, wrappers and native assets",
+        "credit": "BR Labs · Episode 07",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "The episode separates a Bitcoin holder's reaction to a price move from the operating perspective of a trading desk. Rezo Shmertz discusses accumulation and market triggers, then turns to tokenized assets and the distinction between a wrapper and the underlying asset it represents."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/tokenized-equities-robinhood-distribution/", "label": "Episode 8: Tokenized equities and distribution" },
+        { "href": "/research/", "label": "Bitcoin cycle research" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Bitcoin markets and asset wrappers",
+      "contextParas": [
+        "The Bitcoin price in this episode's title belongs to the discussion published on August 31, 2026; it is not a current market quote. The episode also examines why the relationship between a token and its underlying asset matters when discussing ownership and the rules governing that asset.",
+        "For the continuation on tokenized stocks and distribution, watch <a href=\"/writing/conversations/tokenized-equities-robinhood-distribution/\">Episode 8</a>. Rezo Shmertz's <a href=\"/research/\">research page</a> provides separate, dated Bitcoin cycle context. Other BR Labs episodes are collected in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets",
+      "feedSummary": "Rezo Shmertz discusses Bitcoin from holder and trading-desk perspectives, market triggers and asset wrappers versus native tokens in BR Labs Episode 7.",
+      "llmsTitle": "Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets",
+      "llmsSummary": "Rezo Shmertz discusses Bitcoin from holder and trading-desk perspectives, market triggers and asset wrappers versus native tokens in BR Labs Episode 7."
+    },
+    {
+      "id": "ep08",
+      "kind": "podcast",
+      "route": "/writing/conversations/tokenized-equities-robinhood-distribution/",
+      "out": "writing/conversations/tokenized-equities-robinhood-distribution/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Tokenized Equities and Distribution | Rezo Shmertz",
+      "description": "Rezo Shmertz discusses tokenized stocks, Robinhood's distribution, crypto market flows and wrappers versus native assets in BR Labs Episode 8.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Tokenized Equities, Robinhood Distribution & Crypto Still King",
+      "lead": "Tokenized stocks, Robinhood's reach and why distribution matters alongside the size of each customer account.",
+      "dateISO": "2026-09-07",
+      "dateLabel": "September 7, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 08",
+      "sourceHref": "https://x.com/brlabsxyz/status/2096982927553048826",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2096980609474428929/img/9Xy__T4PfXP8my0Y.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 08 video thumbnail: tokenized equities and Robinhood distribution",
+        "credit": "BR Labs · Episode 08",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "Rezo Shmertz discusses tokenized equities as a destination for market flows and compares Robinhood's distribution with other routes into tokenized stocks. The episode also returns to the distinction between a stock wrapper and a native crypto asset, including the different rights and uses associated with each."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/bitcoin-market-triggers-native-assets/", "label": "Episode 7: Wrappers and native assets" },
+        { "href": "/writing/conversations/tokenized-rwas-open-permissioned-defi/", "label": "Episode 5: Tokenized RWAs and DeFi" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Tokenized equities and market distribution",
+      "contextParas": [
+        "Tokenized equities connect stock-market exposure with crypto trading infrastructure. This episode considers how distribution, account sizes and trading outside stock-market hours shape their use. It also keeps the question of what a token represents separate from how many people can access it.",
+        "For the preceding discussion of asset wrappers, see <a href=\"/writing/conversations/bitcoin-market-triggers-native-assets/\">Episode 7</a>. <a href=\"/writing/conversations/tokenized-rwas-open-permissioned-defi/\">Episode 5</a> covers the related question of whether tokenized real-world assets are usable in DeFi. Browse <a href=\"/media/\">Media</a> for more discussions featuring Rezo Shmertz."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Tokenized Equities, Robinhood Distribution & Crypto Still King",
+      "feedSummary": "Rezo Shmertz discusses tokenized stocks, Robinhood's distribution, crypto market flows and wrappers versus native assets in BR Labs Episode 8.",
+      "llmsTitle": "Tokenized Equities, Robinhood Distribution & Crypto Still King",
+      "llmsSummary": "Rezo Shmertz discusses tokenized stocks, Robinhood's distribution, crypto market flows and wrappers versus native assets in BR Labs Episode 8."
+    },
+    {
+      "id": "ep09",
+      "kind": "podcast",
+      "route": "/writing/conversations/early-bets-liquid-venture-investing/",
+      "out": "writing/conversations/early-bets-liquid-venture-investing/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Early Bets, Liquid and Venture | Rezo Shmertz",
+      "description": "Rezo Shmertz reflects on early investments, CoW Swap, Pave Bank and the different feedback cycles of liquid and venture investing in BR Labs Episode 9.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Early Bets, Liquid vs Venture & Why Math Is Honest",
+      "lead": "The fund's early investments, the overlap between investing and building, and the decision to focus more on liquid markets.",
+      "dateISO": "2026-09-14",
+      "dateLabel": "September 14, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 09",
+      "sourceHref": "https://x.com/brlabsxyz/status/2099496764088746142",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2099485282072444930/img/01KGJTQ-5QYRT-ti.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 09 video thumbnail: early bets, liquid markets and venture investing",
+        "credit": "BR Labs · Episode 09",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "Rezo Shmertz revisits the fund's launch in 2018 and investments that developed into operating relationships, including CoW Swap and Pave Bank. The episode compares liquid and venture investing, with particular attention to how quickly each provides feedback on a decision."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/what-i-back/", "label": "Selected investments" },
+        { "href": "/writing/conversations/vc-ai-concentration-unified-book/", "label": "Episode 10: AI investing and the trading desk" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Investment conviction and operating experience",
+      "contextParas": [
+        "This BR Labs episode places the move toward liquid markets in the context of an existing venture practice. Early investments, founder relationships and work on CoW connect capital allocation with building. The comparison between venture and liquid investing centers on experience, relative strengths and the time it takes to assess an outcome.",
+        "Explore <a href=\"/what-i-back/\">What I Back</a> for selected investments and <a href=\"/what-i-build/\">What I Build</a> for Rezo Shmertz's companies and systems. <a href=\"/writing/conversations/vc-ai-concentration-unified-book/\">Episode 10</a> follows with a discussion of AI investing and the trading desk. The full podcast series is in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Early Bets, Liquid vs Venture & Why Math Is Honest",
+      "feedSummary": "Rezo Shmertz reflects on early investments, CoW Swap, Pave Bank and the different feedback cycles of liquid and venture investing in BR Labs Episode 9.",
+      "llmsTitle": "Early Bets, Liquid vs Venture & Why Math Is Honest",
+      "llmsSummary": "Rezo Shmertz reflects on early investments, CoW Swap, Pave Bank and the different feedback cycles of liquid and venture investing in BR Labs Episode 9."
+    },
+    {
+      "id": "ep10",
+      "kind": "podcast",
+      "route": "/writing/conversations/vc-ai-concentration-unified-book/",
+      "out": "writing/conversations/vc-ai-concentration-unified-book/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: AI Investing and One Unified Book | Rezo Shmertz",
+      "description": "Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "VC After AI Concentration, the Desk Map & One Unified Book",
+      "lead": "What remains investable as AI capabilities change, and how the trading desk is working toward one book across CeFi and DeFi.",
+      "dateISO": "2026-09-28",
+      "dateLabel": "September 28, 2026",
+      "dateModified": "2026-09-29",
+      "publisher": "BR Labs",
+      "episode": "Episode 10",
+      "sourceHref": "https://x.com/brlabsxyz/status/2104586824328888451",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 10 video thumbnail: AI investing, BRRRolver and one unified trading book",
+        "credit": "BR Labs · Episode 10",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "Rezo Shmertz discusses the concentration of AI investment and the challenge of building products that remain useful after the next major model release. The episode then turns to founder adaptability, BRRRolver and the trading desk's goal of bringing centralized and decentralized activity into one book."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/early-bets-liquid-venture-investing/", "label": "Episode 9: Liquid and venture investing" },
+        { "href": "/writing/conversations/intent-economy-solvers-agentic-trading/", "label": "Episode 6: Intents and solvers" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "AI investing and trading infrastructure",
+      "contextParas": [
+        "This episode brings together two areas of BR Labs' work: assessing companies in a fast-changing AI market and operating across crypto trading venues. The investment discussion focuses on founder adaptability and product durability. The desk discussion describes a unified CeFi and DeFi book as a goal, not a completed integration.",
+        "For the earlier discussion of liquid and venture investing, see <a href=\"/writing/conversations/early-bets-liquid-venture-investing/\">Episode 9</a>. <a href=\"/writing/conversations/intent-economy-solvers-agentic-trading/\">Episode 6</a> explains intents, solvers and BRRRolver. Rezo Shmertz's <a href=\"/what-i-build/\">What I Build</a> page provides company context, with all episodes available in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "VC After AI Concentration, the Desk Map & One Unified Book",
+      "feedSummary": "Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10.",
+      "llmsTitle": "VC After AI Concentration, the Desk Map & One Unified Book",
+      "llmsSummary": "Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10."
     }
   ]
 }
