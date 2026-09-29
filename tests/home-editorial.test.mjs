@@ -13,11 +13,13 @@ test('hero, navigation, research, metadata and media player remain unchanged', (
   // Update deliberately only when a later task intentionally changes these regions.
   assert.equal(hash(html.split('<div class="editorial-additions">')[0].replace(stylesheet, '')),
     '49f1d9d822caf7f7ca751db9ac805bc6d8aaf49695a918923de26d445b1a802b');
+  // Reviewed media.js cache query; dialog markup and hero script are unchanged.
   assert.equal(hash(html.slice(html.indexOf('<dialog aria-labelledby="dialog-title"'))),
-    'b1e6310cf99e7b389e8e1799a5cdd03c3f803af6b0b11c490b80da4f9687a9a9');
+    '72ca22f56d382a404d752e8390d6816ea9da70efbecc356eba6ddc0d617e8c63');
   const originalDestinations = Array.from(html.replace(stylesheet, '').matchAll(/\b(?:href|src)="([^"]+)"/g), m => m[1]);
+  // Reviewed Episode 10 links/thumbnail and media.js cache query.
   assert.equal(hash(JSON.stringify(originalDestinations)),
-    'c8d0ce99e6412851fc3d73e7b56862e70cb5a7f7881dce50a0c39a8ba6a59a1a');
+    '209767f9f8a1f010c02109b34cec823a39bcb09194962a286f0e2e6d5d7f264d');
   assert.match(html, /content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/);
   assert.doesNotMatch(html, /noindex|localhost|127\.0\.0\.1|preview\.css|balanced-writing\.css/);
 });
@@ -74,4 +76,44 @@ test('media descriptions preserve all player hooks and footer remains three para
   assert.equal(Array.from(description.matchAll(/<p>/g)).length, 3);
   assert.doesNotMatch(description, /\b(?:his|he)\b|—/i);
   assert.match(description, /Rezo Shmertz, founder, investor and researcher/);
+});
+
+test('homepage Episode 10 card and player constants match the featured record', () => {
+  const media = JSON.parse(readFileSync(new URL('../data/media.json', import.meta.url), 'utf8'));
+  const player = readFileSync(new URL('../assets/media.js', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+  const featured = media.records.find(record => record.id === 'podcast');
+  assert.equal(featured.episode, 10);
+  assert.equal(featured.player, 'x');
+  assert.equal(featured.featuredOrder, 1);
+  assert.equal(featured.date, '2026-09-28');
+  assert.equal(featured.duration, '11:46');
+  assert.equal(featured.title, 'VC After AI Concentration, the Desk Map & One Unified Book');
+  assert.equal(featured.alt, 'BR Labs Episode 10 video thumbnail');
+  assert.equal(featured.url, 'https://x.com/brlabsxyz/status/2104586824328888451');
+  assert.equal(featured.image, 'https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg');
+  const card = html.match(/<article class="media-item">[\s\S]*?<\/article>/)[0];
+  assert.equal((card.match(/href="https:\/\/x\.com\/brlabsxyz\/status\/2104586824328888451"/g) || []).length, 2);
+  assert.match(card, /aria-label="Watch BR Labs Episode 10"/);
+  assert.ok(card.includes(`src="${featured.image}"`));
+  assert.ok(card.includes(`alt="${featured.alt}"`));
+  assert.ok(card.includes(`▶ ${featured.duration}`));
+  assert.ok(card.includes('VC After AI Concentration, the Desk Map &amp; One Unified Book'));
+  assert.ok(card.includes('Episode 10 · Sep 28, 2026'));
+  assert.ok(card.includes(`<p class="media-description">${featured.description}</p>`));
+  const statusId = featured.url.match(/\/status\/(\d+)$/)[1];
+  const constants = player.match(/podcast: \{title:'([^']+)', credit:'([^']+)'\}/);
+  assert.equal(constants[1], `BR Labs Ep. 10: ${featured.title}`);
+  assert.ok(constants[2].endsWith(featured.duration));
+  assert.match(player, new RegExp(`createTweet\\('${statusId}'`));
+  assert.equal((html.match(/src="\/assets\/media\.js\?v=20260929"/g) || []).length, 1);
+  assert.match(html, /src="\/assets\/hero-motion\.js\?v=20260906-typewriter"/);
+});
+
+test('homepage and Media sitemap modification dates are 2026-09-29', () => {
+  const sitemap = readFileSync(new URL('../sitemap.xml', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+  const entries = [...sitemap.matchAll(/<loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod>/g)].map(match => [match[1], match[2]]);
+  assert.deepEqual(entries.filter(([, date]) => date === '2026-09-29').map(([loc]) => loc), [
+    'https://rezoshmertz.com/',
+    'https://rezoshmertz.com/media/',
+  ]);
 });

@@ -5,16 +5,16 @@
   "records": [
     {
       "id": "podcast",
-      "title": "Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets",
-      "description": "Bitcoin from the perspectives of a holder and a trading desk, market triggers, and wrappers versus native on-chain assets.",
-      "url": "https://x.com/brlabsxyz/status/2094493882885263659",
-      "image": "https://pbs.twimg.com/amplify_video_thumb/2094492666394460160/img/cxVm3Vbq4rBkxV30?format=webp&name=medium",
-      "alt": "BR Labs Episode 07 video thumbnail",
-      "date": "2026-08-31",
+      "title": "VC After AI Concentration, the Desk Map & One Unified Book",
+      "description": "Venture investing after AI concentration, the trading desk’s structure and a unified trading book.",
+      "url": "https://x.com/brlabsxyz/status/2104586824328888451",
+      "image": "https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg",
+      "alt": "BR Labs Episode 10 video thumbnail",
+      "date": "2026-09-28",
       "kind": "podcast",
       "publisher": "BR Labs",
-      "episode": 7,
-      "duration": "23:01",
+      "episode": 10,
+      "duration": "11:46",
       "featuredOrder": 1,
       "player": "x"
     },
@@ -45,6 +45,40 @@
       "publisher": "GFTN",
       "featuredOrder": 3,
       "player": "photo"
+    },
+    {
+      "id": "ep09",
+      "title": "Early Bets, Liquid vs Venture & Why Math Is Honest",
+      "description": "The fund’s early investments, liquid versus venture investing, and lessons from building conviction.",
+      "url": "https://x.com/brlabsxyz/status/2099496764088746142",
+      "date": "2026-09-14",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 9
+    },
+    {
+      "id": "ep08",
+      "title": "Tokenized Equities, Robinhood Distribution & Crypto Still King",
+      "description": "Tokenized equities, Robinhood’s distribution and their implications for crypto market flows.",
+      "url": "https://x.com/brlabsxyz/status/2096982927553048826",
+      "date": "2026-09-07",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 8
+    },
+    {
+      "id": "ep07",
+      "title": "Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets",
+      "description": "Bitcoin from the perspectives of a holder and a trading desk, market triggers, and wrappers versus native on-chain assets.",
+      "url": "https://x.com/brlabsxyz/status/2094493882885263659",
+      "image": "https://pbs.twimg.com/amplify_video_thumb/2094492666394460160/img/cxVm3Vbq4rBkxV30?format=webp&name=medium",
+      "alt": "BR Labs Episode 07 video thumbnail",
+      "date": "2026-08-31",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 7,
+      "duration": "23:01",
+      "player": "x"
     },
     {
       "id": "ep06",

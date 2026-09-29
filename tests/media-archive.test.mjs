@@ -11,12 +11,50 @@ const script = read('assets/media-archive.js'), data = JSON.parse(read('data/med
 const hash = text => createHash('sha256').update(text).digest('hex');
 const clone = () => structuredClone(data);
 
-test('11 reviewed Media records preserve approved sources, copy and UTC dates', () => {
-  assert.equal(data.records.length,11);
-  assert.equal(hash(JSON.stringify(data.records)),'f1632d6689c960878a4daad7ff511a5d9e0e71ba94d91025a913bdcbf5dcbc12');
+test('14 reviewed Media records preserve approved sources, copy and UTC dates', () => {
+  assert.equal(data.records.length,14);
+  // Reviewed Episode 08–10 additions and Episode 07's move into the archive.
+  assert.equal(hash(JSON.stringify(data.records)),'c3dbfd880cdb2741d8891e68b6b4a51dcc95cf6fbfe5e9cdfb6e6ab7adf201c4');
   assert.equal(data.intro,'Alongside his work at BR Labs, Rezo Shmertz participates in industry panels and contributes commentary on crypto markets, investing and financial technology. This page brings together podcast episodes, public appearances and press coverage of that work.');
   assert.equal(data.records.filter(r=>r.summaryUrl).length,6);
   assert.equal(data.records.find(r=>r.id==='ep03').date,'2026-07-13');
+});
+
+test('episodes 1 through 10 occur once, with Episode 10 featured and 9 through 1 newest first', () => {
+  const podcasts = data.records.filter(r => r.kind === 'podcast');
+  assert.equal(data.records.length, 14);
+  assert.equal(podcasts.length, 10);
+  assert.deepEqual(podcasts.map(r => r.episode).sort((a, b) => a - b), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const byId = id => data.records.find(r => r.id === id);
+  assert.deepEqual(['podcast', 'ep09', 'ep08'].map(id => [byId(id).url, byId(id).date, byId(id).title, byId(id).publisher, byId(id).kind]), [
+    ['https://x.com/brlabsxyz/status/2104586824328888451', '2026-09-28', 'VC After AI Concentration, the Desk Map & One Unified Book', 'BR Labs', 'podcast'],
+    ['https://x.com/brlabsxyz/status/2099496764088746142', '2026-09-14', 'Early Bets, Liquid vs Venture & Why Math Is Honest', 'BR Labs', 'podcast'],
+    ['https://x.com/brlabsxyz/status/2096982927553048826', '2026-09-07', 'Tokenized Equities, Robinhood Distribution & Crypto Still King', 'BR Labs', 'podcast'],
+  ]);
+  assert.deepEqual(orderedRecords(data).filter(r => r.kind === 'podcast').map(r => [r.episode, r.featuredOrder || null]), [
+    [10, 1], [9, null], [8, null], [7, null], [6, null], [5, null], [4, null], [3, null], [2, null], [1, null],
+  ]);
+  const ep07 = byId('ep07');
+  assert.equal(ep07.featuredOrder, undefined);
+  assert.equal(ep07.title, 'Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets');
+  assert.equal(ep07.url, 'https://x.com/brlabsxyz/status/2094493882885263659');
+  assert.equal(ep07.date, '2026-08-31');
+  assert.equal(ep07.duration, '23:01');
+  assert.equal(ep07.player, 'x');
+  assert.equal(ep07.image, 'https://pbs.twimg.com/amplify_video_thumb/2094492666394460160/img/cxVm3Vbq4rBkxV30?format=webp&name=medium');
+  assert.equal(ep07.alt, 'BR Labs Episode 07 video thumbnail');
+  for (const id of ['ep09', 'ep08']) {
+    const record = byId(id);
+    assert.equal(record.featuredOrder, undefined);
+    assert.equal(record.image, undefined);
+    assert.equal(record.duration, undefined);
+    assert.equal(record.player, undefined);
+  }
+  assert.deepEqual(['ep03', 'ep02', 'ep01'].map(id => byId(id).summaryUrl), [
+    '/writing/conversations/solana-ousd-retail-conviction/',
+    '/writing/conversations/ai-trust-conviction/',
+    '/writing/conversations/ethereum-conviction-next-generation/',
+  ]);
 });
 
 test('build is deterministic and schema exactly follows the static visible list', () => {
@@ -24,7 +62,7 @@ test('build is deterministic and schema exactly follows the static visible list'
   assert.equal((html.match(/<dialog\b/g)||[]).length,1);
   const schema = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
   assert.equal(schema['@type'],'CollectionPage');
-  assert.equal(schema.mainEntity.numberOfItems,11);
+  assert.equal(schema.mainEntity.numberOfItems,14);
   assert.deepEqual(schema.mainEntity.itemListElement.map(r=>[r.name,r.url]),orderedRecords(data).map(r=>[r.title,r.url]));
   assert.deepEqual([...html.matchAll(/data-record="([^"]+)"/g)].map(m=>m[1]),orderedRecords(data).map(r=>r.id));
   assert.equal(schema.description,data.description);
@@ -33,7 +71,8 @@ test('build is deterministic and schema exactly follows the static visible list'
 test('original shell and homepage player are unchanged, with no preview residue', () => {
   assert.equal(hash(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]),'36d55ea4c2ee97f5a2cbf65b06191b46b6e8504deb295ecc2107bce4d940dbc4');
   assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]),'35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28');
-  assert.equal(hash(read('assets/media.js')),'d46be753b158de3ff6dbeb5ac5d21437a3f744b28a582015518f8f0f718367d1');
+  // Reviewed Episode 10 metadata and tweet ID; player behavior is unchanged.
+  assert.equal(hash(read('assets/media.js')),'679a5650eb17ed4ede0eea3b674a66b2e9ac0a0e81e348dcdb55bf0b2087287b');
   assert.equal((html.match(/<h1\b/g)||[]).length,1);
   assert.doesNotMatch(html,/noindex|127\.0\.0\.1|Local preview|—/);
   assert.match(html,/href="https:\/\/rezoshmertz\.com\/media\/" rel="canonical"/);
@@ -72,9 +111,9 @@ test('invalid records fail rather than silently shipping broken or unsafe conten
 
 test('future curated entries render once, with dynamic sources and escaped text', () => {
   const changed=clone();
-  changed.records.push({...changed.records[0],id:'ep08',episode:8,featuredOrder:4,date:'2026-09-12',url:'https://x.com/brlabsxyz/status/9999999999999999999',title:'<script> & "new"'});
+  changed.records.push({...changed.records[0],id:'ep11',episode:11,featuredOrder:4,date:'2026-09-12',url:'https://x.com/brlabsxyz/status/9999999999999999999',title:'<script> & "new"'});
   const output=renderMain(changed);
-  assert.equal((output.match(/data-record="ep08"/g)||[]).length,1);
+  assert.equal((output.match(/data-record="ep11"/g)||[]).length,1);
   assert.match(output,/&lt;script&gt; &amp; &quot;new&quot;/);
   assert.match(output,/data-media="x"/);
   assert.match(output,/status\/9999999999999999999/);

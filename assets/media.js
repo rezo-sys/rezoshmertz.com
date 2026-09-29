@@ -8,7 +8,7 @@
  const credit = document.querySelector('#media-credit');
  let opener, generation = 0, widgetsPromise;
  const media = {
-  podcast: {title:'BR Labs Ep. 07: Bitcoin at $80K, Market Triggers & Wrappers vs Native Assets', credit:'BR Labs · Full episode · 23:01'},
+  podcast: {title:'BR Labs Ep. 10: VC After AI Concentration, the Desk Map & One Unified Book', credit:'BR Labs · Full episode · 11:46'},
   panel: {title:'Stablecoins Under the Hood: Architecture for Global Liquidity', credit:'Epic Web3 · Panel recording · 42:47'},
   event: {title:"What's Next for Stablecoins in the Region", credit:'Photo: Global Finance & Technology Network (GFTN) · Tbilisi Finance Summit'}
  };
@@ -52,7 +52,7 @@
      const x = await loadX();
      if (token !== generation || !dialog.open) return;
      const embedded = await Promise.race([
-      x.widgets.createTweet('2094493882885263659', host, {theme:'dark',dnt:true,conversation:'none',align:'center'}),
+      x.widgets.createTweet('2104586824328888451', host, {theme:'dark',dnt:true,conversation:'none',align:'center'}),
       new Promise((_,reject) => setTimeout(() => reject(new Error('Embed timeout')),15000))
      ]);
      if (token !== generation || !dialog.open) {host.replaceChildren(); return;}
