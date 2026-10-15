@@ -6,6 +6,8 @@ const root = new URL('../', import.meta.url);
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const dateText = date => new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(`${date}T00:00:00Z`));
 
+const COVERAGE_LABELS = new Set(['Sponsored feature','Published feature','Scheduled moderator','Scheduled panel participant','Event recap']);
+
 export function validateMedia(data) {
   const ids = new Set(), urls = new Set(), positions = new Set();
   for (const field of ['title','description','intro']) if (typeof data[field] !== 'string' || !data[field].trim()) throw new Error(`Missing ${field}`);
@@ -14,15 +16,19 @@ export function validateMedia(data) {
     if (typeof r.id !== 'string' || !/^[a-z0-9-]+$/.test(r.id) || ids.has(r.id)) throw new Error('Invalid or duplicate id');
     ids.add(r.id);
     for (const field of ['title','description','publisher']) if (typeof r[field] !== 'string' || !r[field].trim()) throw new Error(`Missing ${field}: ${r.id}`);
-    if (!['podcast','panel','photo','press'].includes(r.kind)) throw new Error(`Invalid kind: ${r.id}`);
+    if (!['podcast','panel','photo','press','announcement','event'].includes(r.kind)) throw new Error(`Invalid kind: ${r.id}`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(r.date) || !Number.isFinite(Date.parse(r.date)) || new Date(r.date).toISOString().slice(0,10)!==r.date) throw new Error(`Invalid date: ${r.id}`);
     const url = new URL(r.url);
     if (url.protocol !== 'https:' || url.username || url.password || urls.has(url.href)) throw new Error('Invalid or duplicate source URL');
     urls.add(url.href);
     if (r.summaryUrl && !/^\/writing\/[a-z0-9/-]+\/$/.test(r.summaryUrl)) throw new Error('Invalid summary path');
     if (r.image && (!(r.alt?.trim()) || new URL(r.image).protocol !== 'https:')) throw new Error('Image requires HTTPS and alt text');
+    if (r.coverageLabel !== undefined && (typeof r.coverageLabel !== 'string' || !COVERAGE_LABELS.has(r.coverageLabel))) throw new Error(`Invalid coverage label: ${r.id}`);
+    if (r.status !== undefined && r.status !== 'scheduled') throw new Error(`Invalid status: ${r.id}`);
+    if (r.status === 'scheduled' && r.kind !== 'event') throw new Error(`Only events can be scheduled: ${r.id}`);
     if (r.kind === 'podcast' && (!Number.isInteger(r.episode) || r.episode < 1)) throw new Error('Invalid episode number');
     if (r.duration && !/^\d{1,3}:[0-5]\d$/.test(r.duration)) throw new Error('Invalid duration');
+    if ((r.kind === 'event' || r.kind === 'announcement') && (r.duration || r.player)) throw new Error(`Do not label ${r.kind} records as recordings: ${r.id}`);
     if (r.featuredOrder !== undefined) {
       if (!Number.isInteger(r.featuredOrder) || r.featuredOrder < 1 || r.featuredOrder > 6 || positions.has(r.featuredOrder) || !r.image) throw new Error('Featured positions must be unique, 1–6, with real imagery');
       positions.add(r.featuredOrder);
@@ -49,24 +55,40 @@ function feature(r) {
 function episode(r) {
   return `<article class="episode" data-record="${r.id}"><span class="episode-no" aria-label="Episode ${r.episode}">${String(r.episode).padStart(2,'0')}</span><div><p class="date">${esc(r.publisher)} · <time datetime="${r.date}">${dateText(r.date)}</time></p><h3><a href="${esc(r.url)}">${esc(r.title)}</a></h3><p class="summary">${esc(r.description)}</p></div><a class="action" href="${esc(r.url)}">Open on X <span aria-hidden="true">↗</span></a>${summaryLink(r)}</article>`;
 }
+function coverageLabel(r) {
+  if (r.coverageLabel) return r.coverageLabel;
+  if (r.kind === 'press') return 'Quoted commentary';
+  if (r.kind === 'announcement') return 'Company announcement';
+  return r.kind;
+}
 function coverage(r) {
-  return `<article data-record="${r.id}"><p class="kicker">${esc(r.publisher)} · ${r.kind === 'press' ? 'Quoted commentary' : esc(r.kind)}</p><h3><a href="${esc(r.url)}">${esc(r.title)}</a></h3><p class="summary">${esc(r.description)}</p><p class="date"><time datetime="${r.date}">${dateText(r.date)}</time></p><a class="action" href="${esc(r.url)}">${r.kind==='press'?'Read coverage':'Open original'} ↗</a>${summaryLink(r)}</article>`;
+  const when = r.status === 'scheduled'
+    ? `Scheduled for <time datetime="${r.date}">${dateText(r.date)}</time>`
+    : `<time datetime="${r.date}">${dateText(r.date)}</time>`;
+  const action = r.kind === 'press' ? 'Read coverage' : r.kind === 'announcement' ? 'Read announcement' : 'Open original';
+  return `<article data-record="${r.id}"><p class="kicker">${esc(r.publisher)} · ${esc(coverageLabel(r))}</p><h3><a href="${esc(r.url)}">${esc(r.title)}</a></h3><p class="summary">${esc(r.description)}</p><p class="date">${when}</p><a class="action" href="${esc(r.url)}">${action} ↗</a>${summaryLink(r)}</article>`;
 }
 export function orderedRecords(data) {
   const featured = data.records.filter(r=>r.featuredOrder).sort((a,b)=>a.featuredOrder-b.featuredOrder);
-  const rest = data.records.filter(r=>!r.featuredOrder).sort((a,b)=>b.date.localeCompare(a.date));
-  return [...featured,...rest.filter(r=>r.kind==='podcast'),...rest.filter(r=>r.kind!=='podcast'&&r.kind!=='press'),...rest.filter(r=>r.kind==='press')];
+  const rest = data.records.filter(r=>!r.featuredOrder);
+  const newest = (a,b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id);
+  const scheduled = rest.filter(r=>r.kind==='event'&&r.status==='scheduled').sort((a,b)=>a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
+  const appearances = rest.filter(r=>!['podcast','press','announcement'].includes(r.kind)&&!(r.kind==='event'&&r.status==='scheduled')).sort(newest);
+  return [...featured,...rest.filter(r=>r.kind==='podcast').sort(newest),...scheduled,...appearances,...rest.filter(r=>r.kind==='announcement').sort(newest),...rest.filter(r=>r.kind==='press').sort(newest)];
 }
 export function renderMain(data) {
   validateMedia(data);
   const ordered = orderedRecords(data);
   const featured = ordered.filter(r=>r.featuredOrder);
   const podcasts = ordered.filter(r=>!r.featuredOrder&&r.kind==='podcast');
-  const appearances = ordered.filter(r=>!r.featuredOrder&&r.kind!=='podcast'&&r.kind!=='press');
+  const scheduled = ordered.filter(r=>r.kind==='event'&&r.status==='scheduled');
+  const appearances = ordered.filter(r=>!r.featuredOrder&&!['podcast','press','announcement'].includes(r.kind)&&!(r.kind==='event'&&r.status==='scheduled'));
+  const announcements = ordered.filter(r=>r.kind==='announcement');
   const press = ordered.filter(r=>!r.featuredOrder&&r.kind==='press');
   const section = (id,title,body,extra='') => `<section class="section" id="${id}"><div class="section-head"><h2>${title}</h2>${extra}</div>${body}</section>`;
-  return `<main id="main-content" class="media-archive"><section class="preview-intro"><p class="kicker">Podcasts · Panels · Press</p><h1>Media</h1><p>${esc(data.intro)}</p></section>${featured.length?`<section class="section opening" id="media"><div class="section-head"><h2 id="media-title">Featured media</h2><span>Podcasts &amp; appearances</span></div><div class="feature-grid">${featured.map(feature).join('')}</div></section>`:''}${podcasts.length?section('podcasts',featured.some(r=>r.kind==='podcast')?'More BR Labs podcasts':'BR Labs podcasts',podcasts.map(episode).join(''),'<a href="https://x.com/brlabsxyz">BR Labs on X ↗</a>'):''}${appearances.length?section('appearances','More appearances',`<div class="press-grid">${appearances.map(coverage).join('')}</div>`):''}${press.length?section('press','In the press',`<div class="press-grid">${press.map(coverage).join('')}</div>`,'<span>Selected coverage</span>'):''}
-<aside class="archive-context" aria-labelledby="context-title"><h2 id="context-title">Media appearances &amp; podcasts</h2><div><p>Explore BR Labs podcasts, panel discussions and selected press coverage featuring Rezo Shmertz, founder, investor and researcher. The collection brings together BR Labs episodes and appearances at industry events, alongside commentary published by other outlets.</p><p>Topics include Bitcoin, stablecoins, decentralized finance and AI, with discussions of how financial infrastructure, institutional adoption and incentives shape crypto markets. Each entry links to the original recording, publisher or event gallery, so you can watch, listen or read in context.</p><p>For a deeper look at these subjects, browse Rezo’s <a href="/writing/">essays on crypto markets and AI</a> and <a href="/research/">research</a>. The <a href="/about/">About page</a> provides background on the company building and investing behind this work.</p></div></aside></main>`;
+  const compact = records => `<div class="press-grid">${records.map(coverage).join('')}</div>`;
+  return `<main id="main-content" class="media-archive"><section class="preview-intro"><p class="kicker">Podcasts · Appearances · Press</p><h1>Media</h1><p>${esc(data.intro)}</p></section>${featured.length?`<section class="section opening" id="media"><div class="section-head"><h2 id="media-title">Featured media</h2><span>Podcasts &amp; appearances</span></div><div class="feature-grid">${featured.map(feature).join('')}</div></section>`:''}${podcasts.length?section('podcasts',featured.some(r=>r.kind==='podcast')?'More BR Labs podcasts':'BR Labs podcasts',podcasts.map(episode).join(''),'<a href="https://x.com/brlabsxyz">BR Labs on X ↗</a>'):''}${scheduled.length?section('scheduled','Scheduled appearances',compact(scheduled)):''}${appearances.length?section('appearances','More appearances',compact(appearances)):''}${announcements.length?section('announcements','Company announcements',compact(announcements)):''}${press.length?section('press','In the press',compact(press),'<span>Selected coverage</span>'):''}
+<aside class="archive-context" aria-labelledby="context-title"><h2 id="context-title">Media appearances &amp; podcasts</h2><div><p>Explore BR Labs podcasts, including guest and company episodes, scheduled appearances, published features and company announcements featuring Rezo Shmertz, founder, investor and researcher. The collection brings together recordings and event listings with commentary and releases from other publishers.</p><p>Topics include Bitcoin, stablecoins, decentralized finance and AI, with discussions of how financial infrastructure, institutional adoption and incentives shape crypto markets. Each entry links to the original recording, publisher, announcement or event page, so you can watch, listen or read in context.</p><p>For a deeper look at these subjects, browse Rezo’s <a href="/writing/">essays on crypto markets and AI</a> and <a href="/research/">research</a>. The <a href="/about/">About page</a> provides background on the company building and investing behind this work.</p></div></aside></main>`;
 }
 export function buildMedia(html,data) {
   validateMedia(data);

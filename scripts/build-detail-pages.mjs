@@ -30,6 +30,10 @@ const approvedRoutes = new Map([
   ['ep08', '/writing/conversations/tokenized-equities-robinhood-distribution/'],
   ['ep09', '/writing/conversations/early-bets-liquid-venture-investing/'],
   ['ep10', '/writing/conversations/vc-ai-concentration-unified-book/'],
+  ['ep11', '/writing/conversations/desk-building-partners-capital-discipline/'],
+  ['ep12', '/writing/conversations/solvers-intents-alex-vinyas/'],
+  ['cryptopotato-tokenized', '/writing/press/tokenized-securities-ownership/'],
+  ['techtimes-confidential-ai', '/writing/press/confidential-computing-enterprise-ai/'],
 ]);
 
 function validDate(value) {
@@ -399,7 +403,9 @@ export function validateDetailData(data) {
     }
     if (page.visual.remote && !validLink(page.visual.remote)) throw new Error(`Invalid remote image: ${page.id}`);
     if (page.visual.local) {
-      if (!/^\/assets\/detail-pages\/[a-z0-9-]+\.(?:jpg|png|webp)$/.test(page.visual.local)) throw new Error(`Invalid image path: ${page.id}`);
+      const ownedDetail = /^\/assets\/detail-pages\/[a-z0-9-]+\.(?:jpg|png|webp)$/.test(page.visual.local);
+      const acceptedQuantum = page.id === 'quantum' && page.visual.local === '/assets/optimized/quantum-cover.webp';
+      if (!ownedDetail && !acceptedQuantum) throw new Error(`Invalid image path: ${page.id}`);
       const file = page.visual.local.replace(/^\/assets\//, 'assets/');
       if (!existsSync(new URL(file, root))) throw new Error(`Missing local asset: ${file}`);
     }

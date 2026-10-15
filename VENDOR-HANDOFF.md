@@ -108,6 +108,14 @@ The approved expanded biography, equal Build/Believe/Back links, concise public 
 
 The approved research redesign is implemented in `research/ai-money/index.html`, with page-scoped `assets/ai-money.css` and progressive enhancement in `assets/ai-money.js`. Preserve these changes when reconciling the separate source project. The page's default chart and model comparison are static HTML, checked against `data/ai-money/judgments.csv` by `tests/ai-money.test.mjs`. Nemotron's unit-of-account cell explicitly shows the Bitcoin/stablecoin tie rather than arbitrarily selecting one leader. Public datasets, homepage, Bitcoin tracker, shared navigation and deployment settings were not changed.
 
+## October 15 catalogue and maintenance update
+
+The approved update adds BR Labs Episodes 11 and 12, attributed published features, company announcements, scheduled appearances and an event-photo recap using the established templates. Media's data source, generated page and homepage featured podcast must stay synchronized. Company descriptions distinguish BR Labs' research and engineering from T-Digital's quantitative trading work; Axis Eight is described as current building work, not a completed launch.
+
+The Research wrapper waits for its unchanged public source instead of displaying an obsolete initial snapshot. The external dashboard section, backend and deployment configuration are unchanged. Initial and subsequent failure states have separate tests. Original image assets remain preserved alongside optimized derivatives. The Writing archive keeps all 18 source excerpts while adding links to the four existing local article overviews.
+
+Before a later source-project deployment, reconcile this release's HTML, catalogue records, builders, tests, derivative assets, Media share image and recovery aliases. Follow TESTING.md for deterministic builder checks, full regression tests and responsive/public-page verification. Do not interpret the static recovery aliases as server-side 301 redirects.
+
 ## Escalation boundaries
 
 Pause and contact Rezo before proceeding if a change requires any of the following:

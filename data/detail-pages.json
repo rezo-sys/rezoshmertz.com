@@ -149,11 +149,12 @@
       "lead": "The hard problem is not choosing one confident quantum deadline. It is preparing for asymmetric risk when the deadline cannot be known.",
       "dateISO": "2026-02-10",
       "dateLabel": "February 10, 2026",
+      "dateModified": "2026-10-15",
       "sourceLabel": "LinkedIn",
       "sourceHref": "https://www.linkedin.com/pulse/quantum-threat-bitcoin-we-cant-predict-timeline-revaz-rezo-shmertz-p6g7c",
       "sourceAction": "Read original on LinkedIn ↗",
       "visual": {
-        "local": "/assets/detail-pages/quantum.webp",
+        "local": "/assets/optimized/quantum-cover.webp",
         "mime": "image/webp",
         "alt": "Original cover of Rezo Shmertz's article on the quantum threat to Bitcoin",
         "credit": "Original article cover · Rezo Shmertz",
@@ -961,6 +962,223 @@
       "feedSummary": "Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10.",
       "llmsTitle": "VC After AI Concentration, the Desk Map & One Unified Book",
       "llmsSummary": "Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10."
+    },
+    {
+      "id": "ep11",
+      "kind": "podcast",
+      "route": "/writing/conversations/desk-building-partners-capital-discipline/",
+      "out": "writing/conversations/desk-building-partners-capital-discipline/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: Building a Trading Desk | Rezo Shmertz",
+      "description": "Rezo Shmertz discusses building a trading desk, partners' capital, market-neutral strategies and risk discipline in BR Labs Episode 11.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "How the Desk Was Built, Partners' Capital First & Discipline",
+      "lead": "How the desk developed around partners' own capital, quantitative research and responsibility for risk.",
+      "dateISO": "2026-10-05",
+      "dateLabel": "October 5, 2026",
+      "dateModified": "2026-10-15",
+      "publisher": "BR Labs",
+      "episode": "Episode 11",
+      "sourceHref": "https://x.com/brlabsxyz/status/2107085645495853342",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2104932363461660672/img/kvOg1B8ejoocnhJg.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 11 video thumbnail: building a trading desk and capital discipline",
+        "credit": "BR Labs · Episode 11",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "Rezo Shmertz describes how the trading desk developed before accepting outside capital, why its first strategies were market-neutral, and the role of mathematical research and infrastructure. The discussion connects that operating experience with BRRRolver and the discipline of setting risk limits and controlling capital."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/vc-ai-concentration-unified-book/", "label": "Episode 10: AI investing and the trading desk" },
+        { "href": "/what-i-build/", "label": "What I Build" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Building a trading business",
+      "contextParas": [
+        "This episode connects capital allocation with the work required to run a trading operation. The discussion covers partners' capital, the division of responsibilities and the systems behind execution. Risk limits and capital controls remain part of the operating process as strategies develop.",
+        "The operating companies are described on <a href=\"/what-i-build/\">What I Build</a>. <a href=\"/writing/conversations/early-bets-liquid-venture-investing/\">Episode 9</a> looks at earlier investment experience, and <a href=\"/writing/conversations/solvers-intents-alex-vinyas/\">Episode 12</a> discusses solvers and intents. All episodes are in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "How the Desk Was Built, Partners' Capital First & Discipline",
+      "feedSummary": "Rezo Shmertz discusses building a trading desk, partners' capital, market-neutral strategies and risk discipline in BR Labs Episode 11.",
+      "llmsTitle": "How the Desk Was Built, Partners' Capital First & Discipline",
+      "llmsSummary": "Rezo Shmertz discusses building a trading desk, partners' capital, market-neutral strategies and risk discipline in BR Labs Episode 11."
+    },
+    {
+      "id": "ep12",
+      "kind": "podcast",
+      "route": "/writing/conversations/solvers-intents-alex-vinyas/",
+      "out": "writing/conversations/solvers-intents-alex-vinyas/index.html",
+      "nav": "media",
+      "metaTitle": "BR Labs: CoW Swap, Solvers and Intents | Rezo Shmertz",
+      "description": "BR Labs Episode 12 with Alex Vinyas of CoW Swap on batch auctions, solver competition, trading intents and their role in agent-driven execution.",
+      "crumb": "Podcast",
+      "formatLabel": "Podcast episode",
+      "h1": "Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future",
+      "lead": "Alex Vinyas of CoW Swap discusses the origins of the protocol, how solvers compete and what trading intents make possible.",
+      "dateISO": "2026-10-13",
+      "dateLabel": "October 13, 2026",
+      "dateModified": "2026-10-15",
+      "publisher": "BR Labs",
+      "episode": "Episode 12",
+      "sourceHref": "https://x.com/brlabsxyz/status/2110012001468735648",
+      "sourceAction": "Watch the original on X ↗",
+      "summaryNote": "Episode overview based on BR Labs' published description. Watch the original recording for the full discussion.",
+      "visual": {
+        "remote": "https://pbs.twimg.com/amplify_video_thumb/2110009642688659456/img/fhhZ-Fv5Kjl_PdvJ.jpg",
+        "mime": "image/jpeg",
+        "alt": "Official BR Labs Episode 12 video thumbnail: solvers, intents and CoW Swap",
+        "credit": "BR Labs · Episode 12",
+        "action": "Watch episode on X ↗",
+        "width": 1200,
+        "height": 675
+      },
+      "bodySections": [
+        {
+          "h2": "Episode topics",
+          "paras": [
+            "The BR Labs guest episode traces CoW Swap's origins within Gnosis and the use of batch auctions to match trading intentions. Alex Vinyas discusses solver competition, BR Capital's investment history with CoW and how intent-based execution can support software acting on a user's instructions."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/intent-economy-solvers-agentic-trading/", "label": "Episode 6: Intents and solvers" },
+        { "href": "/writing/conversations/desk-building-partners-capital-discipline/", "label": "Episode 11: Building the trading desk" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Solvers and intent-based execution",
+      "contextParas": [
+        "An intent specifies the outcome a user wants and the limits an execution must respect. Solvers compete to find a route that satisfies those instructions. The episode explores how this division of responsibilities developed at CoW Swap and why it matters as more financial activity is initiated by software.",
+        "<a href=\"/writing/conversations/intent-economy-solvers-agentic-trading/\">Episode 6</a> introduces intents, solvers and BRRRolver. <a href=\"/writing/conversations/desk-building-partners-capital-discipline/\">Episode 11</a> describes how the trading desk was built. See <a href=\"/what-i-build/\">What I Build</a> for the operating companies and <a href=\"/media/\">Media</a> for the series."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future",
+      "feedSummary": "BR Labs Episode 12 with Alex Vinyas of CoW Swap on batch auctions, solver competition, trading intents and their role in agent-driven execution.",
+      "llmsTitle": "Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future",
+      "llmsSummary": "BR Labs Episode 12 with Alex Vinyas of CoW Swap on batch auctions, solver competition, trading intents and their role in agent-driven execution."
+    },
+    {
+      "id": "cryptopotato-tokenized",
+      "kind": "press",
+      "route": "/writing/press/tokenized-securities-ownership/",
+      "out": "writing/press/tokenized-securities-ownership/index.html",
+      "nav": "media",
+      "metaTitle": "Tokenized Securities and Ownership | Rezo Shmertz",
+      "description": "A sponsored CryptoPotato feature on tokenized securities, underlying ownership rights and the legal arrangements behind asset wrappers.",
+      "crumb": "Press",
+      "formatLabel": "Sponsored feature",
+      "h1": "Tokenized Securities vs Ownership: What Investors Really Own",
+      "lead": "A sponsored feature on the difference between a token's market exposure and the rights its holder has in the underlying asset.",
+      "dateISO": "2026-10-15",
+      "dateLabel": "October 15, 2026",
+      "dateModified": "2026-10-15",
+      "publisher": "CryptoPotato",
+      "sourceHref": "https://cryptopotato.com/tokenized-securities-vs-ownership-what-investors-really-own/",
+      "sourceAction": "Read the CryptoPotato feature ↗",
+      "summaryNote": "CryptoPotato published this as a sponsored third-party feature. The article is not written by Rezo Shmertz.",
+      "visual": {
+        "remote": "https://cryptopotato.com/wp-content/uploads/2026/10/br-capital-sponsored.jpg",
+        "mime": "image/jpeg",
+        "alt": "CryptoPotato cover for its sponsored feature on tokenized securities and ownership",
+        "credit": "Article image: CryptoPotato",
+        "action": "Read on CryptoPotato ↗",
+        "width": 1201,
+        "height": 720
+      },
+      "bodySections": [
+        {
+          "h2": "Coverage",
+          "paras": [
+            "The article discusses direct ownership, interests held through intermediaries and separately issued stock-linked instruments. It features Rezo Shmertz's views on asset wrappers and why transferability, custody and redemption terms need to be examined separately."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/writing/conversations/tokenized-equities-robinhood-distribution/", "label": "Episode 8: Tokenized equities" },
+        { "href": "/what-i-build/", "label": "What I Build" },
+        { "href": "/research/", "label": "Research" },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Rights in the underlying asset",
+      "contextParas": [
+        "Legal rights come from the terms of the instrument, not from the fact that a token can be transferred. Transfer, custody and redemption can differ from one wrapper to another. This page summarizes a sponsored feature. It is not legal advice and it does not describe every tokenized product.",
+        "For a related discussion of tokenized stocks and wrappers, see <a href=\"/writing/conversations/tokenized-equities-robinhood-distribution/\">Episode 8</a>. <a href=\"/writing/conversations/solvers-intents-alex-vinyas/\">Episode 12</a> looks at intent-based execution. Company context is on <a href=\"/what-i-build/\">What I Build</a>, with further work in <a href=\"/research/\">Research</a> and <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "Tokenized Securities vs Ownership: What Investors Really Own",
+      "feedSummary": "A sponsored CryptoPotato feature on tokenized securities, underlying ownership rights and the legal arrangements behind asset wrappers.",
+      "llmsTitle": "Tokenized Securities vs Ownership: What Investors Really Own",
+      "llmsSummary": "A sponsored CryptoPotato feature on tokenized securities, underlying ownership rights and the legal arrangements behind asset wrappers."
+    },
+    {
+      "id": "techtimes-confidential-ai",
+      "kind": "press",
+      "route": "/writing/press/confidential-computing-enterprise-ai/",
+      "out": "writing/press/confidential-computing-enterprise-ai/index.html",
+      "nav": "media",
+      "metaTitle": "Confidential Computing and Enterprise AI | Rezo Shmertz",
+      "description": "A TechTimes feature by Carl Williams on confidential AI infrastructure, including Rezo Shmertz's work with BR Capital and Super Protocol.",
+      "crumb": "Press",
+      "formatLabel": "Published feature",
+      "h1": "How Confidential Computing Is Driving the Next Era of Enterprise AI",
+      "lead": "Carl Williams examines confidential computing for enterprise AI, including Rezo Shmertz's company-building and investment work.",
+      "dateISO": "2026-08-13",
+      "dateLabel": "August 13, 2026",
+      "dateModified": "2026-10-15",
+      "publisher": "TechTimes",
+      "sourceHref": "https://www.techtimes.com/articles/324265/20260813/how-confidential-computing-driving-enterprise-ai.htm",
+      "sourceAction": "Read the TechTimes feature ↗",
+      "summaryNote": "TechTimes published this feature by Carl Williams. The article is not written by Rezo Shmertz.",
+      "visual": {
+        "remote": "https://d.techtimes.com/en/full/472536/confidential-computing-enterprise-ai.png",
+        "mime": "image/png",
+        "alt": "TechTimes cover for Carl Williams's feature on confidential computing and enterprise AI",
+        "credit": "Article image: TechTimes",
+        "action": "Read on TechTimes ↗",
+        "width": 1660,
+        "height": 948
+      },
+      "bodySections": [
+        {
+          "h2": "Coverage",
+          "paras": [
+            "The feature discusses trusted execution environments, attestation and the protection of data during computation. It places Super Protocol's work within the broader question of how organizations can run sensitive AI workloads with greater control over their infrastructure."
+          ]
+        }
+      ],
+      "related": [
+        { "href": "/what-i-build/", "label": "What I Build" },
+        { "href": "/about/", "label": "About Rezo Shmertz" },
+        { "href": "/research/", "label": "Research" },
+        { "href": "https://developer.nvidia.com/blog/exploring-the-case-of-super-protocol-with-self-sovereign-ai-and-nvidia-confidential-computing/", "label": "NVIDIA technical case: Super Protocol", "external": true },
+        { "href": "/media/", "label": "View all media" }
+      ],
+      "contextHeading": "Confidential execution",
+      "contextParas": [
+        "Confidential computing addresses data in use. Hardware-isolated execution and attestation can help an organization assess the environment running an AI workload. Controls around access, storage and deployment remain separate parts of the system.",
+        "Company context is on <a href=\"/what-i-build/\">What I Build</a> and <a href=\"/about/\">About</a>. The existing <a href=\"https://developer.nvidia.com/blog/exploring-the-case-of-super-protocol-with-self-sovereign-ai-and-nvidia-confidential-computing/\">NVIDIA technical case</a> is a separate source. Other public material is collected in <a href=\"/media/\">Media</a>."
+      ],
+      "footerLeft": { "href": "/media/", "label": "← ALL MEDIA" },
+      "footerRight": { "href": "/writing/", "label": "WRITINGS →" },
+      "feedTitle": "How Confidential Computing Is Driving the Next Era of Enterprise AI",
+      "feedSummary": "A TechTimes feature by Carl Williams on confidential AI infrastructure, including Rezo Shmertz's work with BR Capital and Super Protocol.",
+      "llmsTitle": "How Confidential Computing Is Driving the Next Era of Enterprise AI",
+      "llmsSummary": "A TechTimes feature by Carl Williams on confidential AI infrastructure, including Rezo Shmertz's work with BR Capital and Super Protocol."
     }
   ]
 }

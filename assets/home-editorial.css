@@ -124,3 +124,19 @@
   .home-page .editorial-additions .footer-identity { flex-basis: 100%; }
   .home-page .editorial-additions .site-description { max-width: 49ch; }
 }
+
+/* Keep secondary overview links separate from the clickable article layout. */
+.home-page .editorial-additions .local-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 20px;
+}
+.home-page .editorial-additions .writing-index li > a.text-link {
+  display: inline-flex;
+  max-width: 100%;
+  margin-top: 8px;
+}
+@media (max-width: 840px) {
+  .home-page .editorial-additions .writing-index li > a.text-link { margin-left: 38px; }
+}

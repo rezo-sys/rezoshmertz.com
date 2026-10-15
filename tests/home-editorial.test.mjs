@@ -5,21 +5,22 @@ import test from 'node:test';
 
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
 const css = readFileSync(new URL('../assets/home-editorial.css', import.meta.url), 'utf8');
-const stylesheet = '<link href="/assets/home-editorial.css?v=20260911" rel="stylesheet"/>';
+const stylesheet = '<link href="/assets/home-editorial.css?v=20261015-links" rel="stylesheet"/>';
 const hash = value => createHash('sha256').update(value).digest('hex');
 
 test('hero, navigation, research, metadata and media player remain unchanged', () => {
   // Fingerprints of the approved pre-change production HTML at be83728.
   // Update deliberately only when a later task intentionally changes these regions.
+  // Reviewed the lossless speaking portrait swap. Hero script, navigation and research desk are unchanged.
   assert.equal(hash(html.split('<div class="editorial-additions">')[0].replace(stylesheet, '')),
-    '49f1d9d822caf7f7ca751db9ac805bc6d8aaf49695a918923de26d445b1a802b');
+    'a356d7ec1c7605383f4833d1f41db55aae539c222a33d22bc25644fc4548cb25');
   // Reviewed media.js cache query; dialog markup and hero script are unchanged.
   assert.equal(hash(html.slice(html.indexOf('<dialog aria-labelledby="dialog-title"'))),
-    '72ca22f56d382a404d752e8390d6816ea9da70efbecc356eba6ddc0d617e8c63');
+    'a5d39bebbb76b47335199a9cb3b78e6d9fc97ea70046028a4be94d77af29141a');
   const originalDestinations = Array.from(html.replace(stylesheet, '').matchAll(/\b(?:href|src)="([^"]+)"/g), m => m[1]);
-  // Reviewed Episode 10 links/thumbnail and media.js cache query.
+  // Reviewed Episode 12 links, summary links, essay overview links and the portrait derivative.
   assert.equal(hash(JSON.stringify(originalDestinations)),
-    '209767f9f8a1f010c02109b34cec823a39bcb09194962a286f0e2e6d5d7f264d');
+    'e07430ca067f237b1c80cea2c31f2201f479b2a99796a4b5a939e6bd432ddbf9');
   assert.match(html, /content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/);
   assert.doesNotMatch(html, /noindex|localhost|127\.0\.0\.1|preview\.css|balanced-writing\.css/);
 });
@@ -78,43 +79,45 @@ test('media descriptions preserve all player hooks and footer remains three para
   assert.match(description, /Rezo Shmertz, founder, investor and researcher/);
 });
 
-test('homepage Episode 10 card and player constants match the featured record', () => {
+test('homepage Episode 12 card and player constants match the featured record', () => {
   const media = JSON.parse(readFileSync(new URL('../data/media.json', import.meta.url), 'utf8'));
   const player = readFileSync(new URL('../assets/media.js', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
   const featured = media.records.find(record => record.id === 'podcast');
-  assert.equal(featured.episode, 10);
+  assert.equal(featured.episode, 12);
   assert.equal(featured.player, 'x');
   assert.equal(featured.featuredOrder, 1);
-  assert.equal(featured.date, '2026-09-28');
-  assert.equal(featured.duration, '11:46');
-  assert.equal(featured.title, 'VC After AI Concentration, the Desk Map & One Unified Book');
-  assert.equal(featured.alt, 'BR Labs Episode 10 video thumbnail');
-  assert.equal(featured.url, 'https://x.com/brlabsxyz/status/2104586824328888451');
-  assert.equal(featured.image, 'https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg');
+  assert.equal(featured.date, '2026-10-13');
+  assert.equal(featured.duration, '31:18');
+  assert.equal(featured.title, 'Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future');
+  assert.equal(featured.alt, 'BR Labs Episode 12 video thumbnail');
+  assert.equal(featured.url, 'https://x.com/brlabsxyz/status/2110012001468735648');
+  assert.equal(featured.image, 'https://pbs.twimg.com/amplify_video_thumb/2110009642688659456/img/fhhZ-Fv5Kjl_PdvJ.jpg');
   const card = html.match(/<article class="media-item">[\s\S]*?<\/article>/)[0];
-  assert.equal((card.match(/href="https:\/\/x\.com\/brlabsxyz\/status\/2104586824328888451"/g) || []).length, 2);
-  assert.match(card, /aria-label="Watch BR Labs Episode 10"/);
+  assert.equal((card.match(/href="https:\/\/x\.com\/brlabsxyz\/status\/2110012001468735648"/g) || []).length, 2);
+  assert.match(card, /aria-label="Watch BR Labs Episode 12"/);
   assert.ok(card.includes(`src="${featured.image}"`));
   assert.ok(card.includes(`alt="${featured.alt}"`));
   assert.ok(card.includes(`▶ ${featured.duration}`));
-  assert.ok(card.includes('VC After AI Concentration, the Desk Map &amp; One Unified Book'));
-  assert.ok(card.includes('Episode 10 · Sep 28, 2026'));
+  assert.ok(card.includes('Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future'));
+  assert.ok(card.includes('Episode 12 · Oct 13, 2026'));
   assert.ok(card.includes(`<p class="media-description">${featured.description}</p>`));
+  assert.match(card, /href="\/writing\/conversations\/solvers-intents-alex-vinyas\/">Read summary →/);
+  const photo = html.match(/<article class="media-item">[\s\S]*?<\/article>/g)[2];
+  assert.match(photo, /data-media="event"/);
+  assert.match(photo, /href="\/writing\/appearances\/stablecoins-tbilisi-finance-summit\/">Read summary →/);
   const statusId = featured.url.match(/\/status\/(\d+)$/)[1];
   const constants = player.match(/podcast: \{title:'([^']+)', credit:'([^']+)'\}/);
-  assert.equal(constants[1], `BR Labs Ep. 10: ${featured.title}`);
+  assert.equal(constants[1], `BR Labs Ep. 12: ${featured.title}`);
   assert.ok(constants[2].endsWith(featured.duration));
   assert.match(player, new RegExp(`createTweet\\('${statusId}'`));
-  assert.equal((html.match(/src="\/assets\/media\.js\?v=20260929"/g) || []).length, 1);
+  assert.equal((html.match(/src="\/assets\/media\.js\?v=20261015"/g) || []).length, 1);
   assert.match(html, /src="\/assets\/hero-motion\.js\?v=20260906-typewriter"/);
 });
 
-test('homepage and Media retain their dates alongside the seven new podcast sitemap entries', () => {
+test('previous episode modification dates survive the current homepage and Media refresh', () => {
   const sitemap = readFileSync(new URL('../sitemap.xml', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
   const entries = [...sitemap.matchAll(/<loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod>/g)].map(match => [match[1], match[2]]);
   assert.deepEqual(entries.filter(([, date]) => date === '2026-09-29').map(([loc]) => loc), [
-    'https://rezoshmertz.com/',
-    'https://rezoshmertz.com/media/',
     'https://rezoshmertz.com/writing/conversations/robinhood-gated-defi-ethereum-bitcoin/',
     'https://rezoshmertz.com/writing/conversations/tokenized-rwas-open-permissioned-defi/',
     'https://rezoshmertz.com/writing/conversations/intent-economy-solvers-agentic-trading/',
@@ -123,4 +126,11 @@ test('homepage and Media retain their dates alongside the seven new podcast site
     'https://rezoshmertz.com/writing/conversations/early-bets-liquid-venture-investing/',
     'https://rezoshmertz.com/writing/conversations/vc-ai-concentration-unified-book/',
   ]);
+});
+
+test('new local actions have spacing and do not inherit the mobile article grid', () => {
+  assert.equal((html.match(/class="local-actions"/g) || []).length, 3);
+  assert.match(css, /\.local-actions \{[^}]*display: flex;[^}]*column-gap: 20px;/);
+  assert.match(css, /\.writing-index li > a\.text-link \{[^}]*display: inline-flex;/);
+  assert.match(css, /\.writing-index li > a\.text-link \{ margin-left: 38px; \}/);
 });

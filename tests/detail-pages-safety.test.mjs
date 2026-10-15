@@ -12,11 +12,18 @@ const read = path => readFileSync(new URL(path, root), 'utf8');
 const data = loadDetailData();
 
 test('detail source records preserve approved copy, source URLs, dates and image identity', () => {
+  const early = structuredClone(data.pages.slice(0, 10));
+  const quantum = early.find(page => page.id === 'quantum');
+  quantum.visual.local = '/assets/detail-pages/quantum.webp';
+  delete quantum.dateModified;
   // Change this fingerprint only after checking deliberate edits against their sources.
-  assert.equal(createHash('sha256').update(JSON.stringify(data.pages.slice(0, 10))).digest('hex'), 'b6aeae6c33acbfe3108de942c94f5973a5879eef5cfa26f7f30a4cc9646c7df2');
-  assert.equal(data.pages.slice(10).map(page => page.id).join(','), 'ep04,ep05,ep06,ep07,ep08,ep09,ep10');
+  // The restored quantum path isolates the accepted optimized-cover swap from the other nine records.
+  assert.equal(createHash('sha256').update(JSON.stringify(early)).digest('hex'), 'b6aeae6c33acbfe3108de942c94f5973a5879eef5cfa26f7f30a4cc9646c7df2');
+  assert.equal(data.pages.find(page => page.id === 'quantum').visual.local, '/assets/optimized/quantum-cover.webp');
+  assert.equal(data.pages.slice(10, 17).map(page => page.id).join(','), 'ep04,ep05,ep06,ep07,ep08,ep09,ep10');
   // Episodes 4 to 10 reviewed against publisher descriptions and actual served image dimensions.
-  assert.equal(createHash('sha256').update(JSON.stringify(data.pages.slice(10))).digest('hex'), 'b11f772584b5013d20dc79737186576607219a9b02cd7000367d590459c690e3');
+  assert.equal(createHash('sha256').update(JSON.stringify(data.pages.slice(10, 17))).digest('hex'), 'b11f772584b5013d20dc79737186576607219a9b02cd7000367d590459c690e3');
+  assert.equal(data.pages.slice(17).map(page => page.id).join(','), 'ep11,ep12,cryptopotato-tokenized,techtimes-confidential-ai');
 });
 
 test('every checked-in detail page exactly matches the deterministic builder', () => {
@@ -34,10 +41,11 @@ test('invalid paths, unsafe source links and missing image metadata fail before 
 test('local image files have MIME-appropriate signatures and match the source manifest', () => {
   const sources = JSON.parse(read('assets/detail-pages/SOURCES.json'));
   assert.equal(sources.assets.length, 7);
-  assert.equal(sources.remoteOnly.length, 10);
+  assert.equal(sources.remoteOnly.length, 14);
   for (const item of sources.assets) {
     const page = data.pages.find(p => p.id === item.id);
-    assert.equal(page.visual.local, `/assets/detail-pages/${item.file}`);
+    const expected = item.id === 'quantum' ? '/assets/optimized/quantum-cover.webp' : `/assets/detail-pages/${item.file}`;
+    assert.equal(page.visual.local, expected);
     assert.equal(page.visual.mime, item.mime);
     const bytes = readFileSync(new URL(`assets/detail-pages/${item.file}`, root));
     if (item.mime === 'image/jpeg') assert.equal(bytes.subarray(0, 3).toString('hex'), 'ffd8ff');
@@ -47,6 +55,26 @@ test('local image files have MIME-appropriate signatures and match the source ma
       assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
     }
   }
+  const webpSize = (buf) => {
+    assert.equal(buf.subarray(0, 4).toString(), 'RIFF');
+    assert.equal(buf.subarray(8, 12).toString(), 'WEBP');
+    const chunk = buf.subarray(12, 16).toString();
+    if (chunk === 'VP8X') return [1 + buf.readUIntLE(24, 3), 1 + buf.readUIntLE(27, 3)];
+    if (chunk === 'VP8L') {
+      const bits = buf.readUInt32LE(21);
+      return [(bits & 0x3fff) + 1, ((bits >> 14) & 0x3fff) + 1];
+    }
+    if (chunk === 'VP8 ') return [buf.readUInt16LE(26) & 0x3fff, buf.readUInt16LE(28) & 0x3fff];
+    throw new Error(`Unsupported WebP chunk ${chunk}`);
+  };
+  const quantumDerivative = readFileSync(new URL('assets/optimized/quantum-cover.webp', root));
+  const [quantumWidth, quantumHeight] = webpSize(quantumDerivative);
+  assert.deepEqual([quantumWidth, quantumHeight], [1280, 720]);
+  assert.equal(quantumWidth / quantumHeight, 1280 / 720);
+  const portrait = readFileSync(new URL('assets/optimized/rezo-speaking.webp', root));
+  const [portraitWidth, portraitHeight] = webpSize(portrait);
+  assert.deepEqual([portraitWidth, portraitHeight], [1055, 945]);
+  assert.equal(portraitWidth / portraitHeight, 1055 / 945);
   for (const item of sources.remoteOnly) {
     const visual = data.pages.find(p => p.id === item.id).visual;
     assert.equal(visual.remote, item.imageUrl);

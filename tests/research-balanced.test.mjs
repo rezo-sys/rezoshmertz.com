@@ -52,7 +52,7 @@ test('shared chrome, btc script and data hooks stay intact', () => {
   );
   assert.deepEqual(
     [...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]),
-    ['/assets/about-nav.js?v=20260906-final', '/mockups/btc-live.js?v=20260906-snapshot'],
+    ['/assets/about-nav.js?v=20260906-final', '/mockups/btc-live.js?v=20261015-snapshot'],
   );
   const fields = [...html.matchAll(/data-btc-field="([^"]+)"/g)].map((m) => m[1]).sort();
   assert.deepEqual(fields, [
@@ -68,7 +68,10 @@ test('shared chrome, btc script and data hooks stay intact', () => {
     'status',
     'updatedDate',
   ]);
-  assert.match(html, /datetime="2026-08-10T15:11:04\.060Z"/);
+  assert.doesNotMatch(html, /datetime="2026-08-10T15:11:04\.060Z"|\$64,679|-48\.7%|>BEAR<|>≈75</);
+  assert.match(html, /data-btc-field="price">Awaiting source</);
+  assert.match(html, /data-btc-field="status">Snapshot data</);
+  assert.match(html, /href="https:\/\/btc-dashboard-9307b\.web\.app\/\?mode=dark&amp;style=institutional&amp;page=forecast">Open the dashboard</);
   assert.match(html, /<span hidden data-btc-field="daysLeft">/);
   assert.doesNotMatch(html, /class="sr-only"[^>]*data-btc-field="daysLeft"|data-btc-field="daysLeft"[^>]*class="sr-only"/);
   assert.match(html, /<p class="rb-source" data-btc-field="sourceNote" role="status">/);
@@ -139,9 +142,9 @@ test('SEO names stay consistent while canonical URLs and dates are preserved', (
   assert.equal(page.description, INTRO);
   assert.equal(article.description, INTRO);
   assert.equal(page.datePublished, '2026-07-15');
-  assert.equal(page.dateModified, '2026-08-10');
+  assert.equal(page.dateModified, '2026-10-15');
   assert.equal(article.datePublished, '2026-07-15');
-  assert.equal(article.dateModified, '2026-08-10');
+  assert.equal(article.dateModified, '2026-10-15');
   assert.equal(page.primaryImageOfPage.url, 'https://rezoshmertz.com/og/research.png');
 });
 

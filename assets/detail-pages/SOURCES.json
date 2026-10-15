@@ -20,7 +20,7 @@
       "width": 1280,
       "height": 720,
       "mime": "image/webp",
-      "note": "Lossless WebP of the original PNG cover (identical decoded pixels; smaller than quantum.png). Prefer this file in page markup."
+      "note": "Lossless WebP of the original PNG cover (identical decoded pixels; smaller than quantum.png). The page uses the later accepted derivative at /assets/optimized/quantum-cover.webp. This file remains the preserved detail-pages copy."
     },
     {
       "id": "perp",
@@ -173,6 +173,46 @@
       "height": 675,
       "mime": "image/jpeg",
       "note": "Official publisher-hosted BR Labs JPEG on pbs.twimg.com, verified at 1200x675; not rehosted."
+    },
+    {
+      "id": "ep11",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2104932363461660672/img/kvOg1B8ejoocnhJg.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2107085645495853342",
+      "credit": "BR Labs · Episode 11",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Original publisher-hosted asset; metadata verified without rehosting."
+    },
+    {
+      "id": "ep12",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2110009642688659456/img/fhhZ-Fv5Kjl_PdvJ.jpg",
+      "sourceUrl": "https://x.com/brlabsxyz/status/2110012001468735648",
+      "credit": "BR Labs · Episode 12",
+      "width": 1200,
+      "height": 675,
+      "mime": "image/jpeg",
+      "note": "Original publisher-hosted asset; metadata verified without rehosting. Guest episode with Alex Vinyas of CoW Swap."
+    },
+    {
+      "id": "cryptopotato-tokenized",
+      "imageUrl": "https://cryptopotato.com/wp-content/uploads/2026/10/br-capital-sponsored.jpg",
+      "sourceUrl": "https://cryptopotato.com/tokenized-securities-vs-ownership-what-investors-really-own/",
+      "credit": "Article image: CryptoPotato",
+      "width": 1201,
+      "height": 720,
+      "mime": "image/jpeg",
+      "note": "Original publisher-hosted asset; metadata verified without rehosting. Sponsored third-party feature."
+    },
+    {
+      "id": "techtimes-confidential-ai",
+      "imageUrl": "https://d.techtimes.com/en/full/472536/confidential-computing-enterprise-ai.png",
+      "sourceUrl": "https://www.techtimes.com/articles/324265/20260813/how-confidential-computing-driving-enterprise-ai.htm",
+      "credit": "Article image: TechTimes",
+      "width": 1660,
+      "height": 948,
+      "mime": "image/png",
+      "note": "Original publisher-hosted asset; metadata verified without rehosting. Feature by Carl Williams."
     }
   ]
 }

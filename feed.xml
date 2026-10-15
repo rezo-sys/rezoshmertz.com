@@ -4,14 +4,14 @@
   <id>https://rezoshmertz.com/</id>
   <link href="https://rezoshmertz.com/feed.xml" rel="self"/>
   <link href="https://rezoshmertz.com/"/>
-  <updated>2026-09-29T00:00:00Z</updated>
+  <updated>2026-10-15T00:00:00Z</updated>
   <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
   <entry>
     <title>Bitcoin Cycle Roadmap and Bear-Market Scenario · Rezo Shmertz</title>
     <id>https://rezoshmertz.com/research/</id>
     <link href="https://rezoshmertz.com/research/"/>
     <published>2026-07-15T00:00:00Z</published>
-    <updated>2026-08-10T00:00:00Z</updated>
+    <updated>2026-10-15T00:00:00Z</updated>
     <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
     <summary>A historical Bitcoin cycle scenario framework with cycle timing, drawdown context, and a dated snapshot readout. An analyst scenario, not a prediction.</summary>
   </entry>
@@ -20,7 +20,7 @@
     <id>https://rezoshmertz.com/research/ai-money/</id>
     <link href="https://rezoshmertz.com/research/ai-money/"/>
     <published>2026-07-15T00:00:00Z</published>
-    <updated>2026-08-10T00:00:00Z</updated>
+    <updated>2026-09-11T00:00:00Z</updated>
     <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
     <summary>Results, methodology, and open data from 1,260 AI monetary-choice responses across 28 scenarios, four functions of money, and five frontier models.</summary>
   </entry>
@@ -65,7 +65,7 @@
     <id>https://rezoshmertz.com/writing/quantum-threat-to-bitcoin/</id>
     <link href="https://rezoshmertz.com/writing/quantum-threat-to-bitcoin/"/>
     <published>2026-02-10T00:00:00Z</published>
-    <updated>2026-09-23T00:00:00Z</updated>
+    <updated>2026-10-15T00:00:00Z</updated>
     <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
     <summary>Bitcoin&apos;s quantum risk has an unknowable deadline. Rezo Shmertz argues for address hygiene, post-quantum research, and upgrade optionality without panic.</summary>
   </entry>
@@ -176,5 +176,41 @@
     <updated>2026-09-29T00:00:00Z</updated>
     <author><name>Rezo Shmertz</name><uri>https://rezoshmertz.com/about/</uri></author>
     <summary>Rezo Shmertz on AI venture investing, founder adaptability, BRRRolver and the goal of a unified CeFi and DeFi trading book in BR Labs Episode 10.</summary>
+  </entry>
+  <entry>
+    <title>How the Desk Was Built, Partners&apos; Capital First &amp; Discipline</title>
+    <id>https://rezoshmertz.com/writing/conversations/desk-building-partners-capital-discipline/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/desk-building-partners-capital-discipline/"/>
+    <published>2026-10-05T00:00:00Z</published>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <author><name>BR Labs</name><uri>https://x.com/brlabsxyz</uri></author>
+    <summary>Rezo Shmertz discusses building a trading desk, partners&apos; capital, market-neutral strategies and risk discipline in BR Labs Episode 11.</summary>
+  </entry>
+  <entry>
+    <title>Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future</title>
+    <id>https://rezoshmertz.com/writing/conversations/solvers-intents-alex-vinyas/</id>
+    <link href="https://rezoshmertz.com/writing/conversations/solvers-intents-alex-vinyas/"/>
+    <published>2026-10-13T00:00:00Z</published>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <author><name>BR Labs</name><uri>https://x.com/brlabsxyz</uri></author>
+    <summary>BR Labs Episode 12 with Alex Vinyas of CoW Swap on batch auctions, solver competition, trading intents and their role in agent-driven execution.</summary>
+  </entry>
+  <entry>
+    <title>Tokenized Securities vs Ownership: What Investors Really Own</title>
+    <id>https://rezoshmertz.com/writing/press/tokenized-securities-ownership/</id>
+    <link href="https://rezoshmertz.com/writing/press/tokenized-securities-ownership/"/>
+    <published>2026-10-15T00:00:00Z</published>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <author><name>Bridgit Murphy</name></author>
+    <summary>A sponsored CryptoPotato feature on tokenized securities, underlying ownership rights and the legal arrangements behind asset wrappers.</summary>
+  </entry>
+  <entry>
+    <title>How Confidential Computing Is Driving the Next Era of Enterprise AI</title>
+    <id>https://rezoshmertz.com/writing/press/confidential-computing-enterprise-ai/</id>
+    <link href="https://rezoshmertz.com/writing/press/confidential-computing-enterprise-ai/"/>
+    <published>2026-08-13T00:00:00Z</published>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <author><name>Carl Williams</name></author>
+    <summary>A TechTimes feature by Carl Williams on confidential AI infrastructure, including Rezo Shmertz&apos;s work with BR Capital and Super Protocol.</summary>
   </entry>
 </feed>

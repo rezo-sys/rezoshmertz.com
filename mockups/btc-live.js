@@ -121,6 +121,12 @@ const dateFormatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: "UTC",
 });
 
+export function trackerFailureNote(hasRendered) {
+  return hasRendered
+    ? "Could not refresh the tracker source. The last displayed snapshot and observation dates are retained. Automatic checks resume while this page is visible; you can also open the dashboard below."
+    : "Snapshot unavailable. Open the dashboard below.";
+}
+
 export function formatBitcoinReadout(readout) {
   const formatDate = (value) => dateFormatter.format(new Date(value)).toUpperCase();
   const note = (asOf, retained) => asOf
@@ -194,12 +200,17 @@ export function createBitcoinUpdater({ fetchImpl = fetch, onUpdate, onError,
 }
 
 if (typeof window !== "undefined" && typeof document !== "undefined" && document.querySelector("[data-btc-field]")) {
+  let renderedSnapshot = false;
   const updater = createBitcoinUpdater({
-    onUpdate(readout) { renderFields({ ...formatBitcoinReadout(readout), updatedAt: readout.updatedAt }); },
+    onUpdate(readout) {
+      renderFields({ ...formatBitcoinReadout(readout), updatedAt: readout.updatedAt });
+      renderedSnapshot = true;
+    },
     onError() {
       document.documentElement.dataset.btcDataStatus = "fallback";
+      const message = trackerFailureNote(renderedSnapshot);
       document.querySelectorAll('[data-btc-field="sourceNote"]').forEach((element) => {
-        element.textContent = "Could not refresh the tracker source. The last displayed snapshot and observation dates are retained. Automatic checks resume while this page is visible; you can also open the dashboard below.";
+        element.textContent = message;
       });
     },
   });

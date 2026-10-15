@@ -1,21 +1,21 @@
 {
   "title": "Rezo Shmertz: Podcasts, Panels & Media",
-  "description": "BR Labs podcasts, industry panels and press commentary featuring Rezo Shmertz on crypto markets, investing and financial technology.",
-  "intro": "Alongside his work at BR Labs, Rezo Shmertz participates in industry panels and contributes commentary on crypto markets, investing and financial technology. This page brings together podcast episodes, public appearances and press coverage of that work.",
+  "description": "BR Labs podcasts, appearances, published features and company announcements featuring Rezo Shmertz on crypto markets, investing and financial technology.",
+  "intro": "Alongside his work at BR Labs, Rezo Shmertz participates in industry panels and contributes commentary on crypto markets, investing and financial technology. This page brings together podcast episodes, including guest and company discussions, scheduled appearances, published features and company announcements.",
   "records": [
     {
       "id": "podcast",
-      "title": "VC After AI Concentration, the Desk Map & One Unified Book",
-      "description": "Venture investing after AI concentration, the trading desk’s structure and a unified trading book.",
-      "url": "https://x.com/brlabsxyz/status/2104586824328888451",
-      "image": "https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg",
-      "alt": "BR Labs Episode 10 video thumbnail",
-      "summaryUrl": "/writing/conversations/vc-ai-concentration-unified-book/",
-      "date": "2026-09-28",
+      "title": "Solvers and Intents with Alex Vinyas: History, Utility and the Agentic Future",
+      "description": "Alex Vinyas of CoW Swap on batch auctions, solver competition and the role of intents in agent-driven execution.",
+      "url": "https://x.com/brlabsxyz/status/2110012001468735648",
+      "image": "https://pbs.twimg.com/amplify_video_thumb/2110009642688659456/img/fhhZ-Fv5Kjl_PdvJ.jpg",
+      "alt": "BR Labs Episode 12 video thumbnail",
+      "summaryUrl": "/writing/conversations/solvers-intents-alex-vinyas/",
+      "date": "2026-10-13",
       "kind": "podcast",
       "publisher": "BR Labs",
-      "episode": 10,
-      "duration": "11:46",
+      "episode": 12,
+      "duration": "31:18",
       "featuredOrder": 1,
       "player": "x"
     },
@@ -46,6 +46,36 @@
       "publisher": "GFTN",
       "featuredOrder": 3,
       "player": "photo"
+    },
+    {
+      "id": "ep11",
+      "title": "How the Desk Was Built, Partners' Capital First & Discipline",
+      "description": "How the desk developed around partners' own capital, quantitative research and responsibility for risk.",
+      "url": "https://x.com/brlabsxyz/status/2107085645495853342",
+      "image": "https://pbs.twimg.com/amplify_video_thumb/2104932363461660672/img/kvOg1B8ejoocnhJg.jpg",
+      "alt": "BR Labs Episode 11 video thumbnail",
+      "summaryUrl": "/writing/conversations/desk-building-partners-capital-discipline/",
+      "date": "2026-10-05",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 11,
+      "duration": "18:50",
+      "player": "x"
+    },
+    {
+      "id": "ep10",
+      "title": "VC After AI Concentration, the Desk Map & One Unified Book",
+      "description": "Venture investing after AI concentration, the trading desk’s structure and a unified trading book.",
+      "url": "https://x.com/brlabsxyz/status/2104586824328888451",
+      "image": "https://pbs.twimg.com/amplify_video_thumb/2104582925639634944/img/JjgEPVQsT3E3o1Nl.jpg",
+      "alt": "BR Labs Episode 10 video thumbnail",
+      "summaryUrl": "/writing/conversations/vc-ai-concentration-unified-book/",
+      "date": "2026-09-28",
+      "kind": "podcast",
+      "publisher": "BR Labs",
+      "episode": 10,
+      "duration": "11:46",
+      "player": "x"
     },
     {
       "id": "ep09",
@@ -169,6 +199,96 @@
       "date": "2025-09-05",
       "kind": "press",
       "publisher": "CryptoSlate"
+    },
+    {
+      "id": "cryptopotato-tokenized",
+      "title": "Tokenized Securities vs Ownership: What Investors Really Own",
+      "description": "A sponsored feature examining tokenized securities, underlying ownership rights and the legal arrangements behind asset wrappers.",
+      "url": "https://cryptopotato.com/tokenized-securities-vs-ownership-what-investors-really-own/",
+      "summaryUrl": "/writing/press/tokenized-securities-ownership/",
+      "date": "2026-10-15",
+      "kind": "press",
+      "publisher": "CryptoPotato",
+      "coverageLabel": "Sponsored feature"
+    },
+    {
+      "id": "techtimes-confidential-ai",
+      "title": "How Confidential Computing Is Driving the Next Era of Enterprise AI",
+      "description": "A feature by Carl Williams on confidential AI infrastructure, including Rezo Shmertz's work with BR Capital and Super Protocol.",
+      "url": "https://www.techtimes.com/articles/324265/20260813/how-confidential-computing-driving-enterprise-ai.htm",
+      "summaryUrl": "/writing/press/confidential-computing-enterprise-ai/",
+      "date": "2026-08-13",
+      "kind": "press",
+      "publisher": "TechTimes",
+      "coverageLabel": "Published feature"
+    },
+    {
+      "id": "solver-announcement",
+      "title": "BRRRolver and the Agentic Economy",
+      "description": "BR Labs' company announcement about BRRRolver, its solver for executing user-defined trading outcomes on CoW Protocol.",
+      "url": "https://news.marketersmedia.com/br-labs-brrrolver-shows-how-the-agentic-economy-is-already-operating-in-defi/89204834",
+      "date": "2026-10-01",
+      "kind": "announcement",
+      "publisher": "MarketersMEDIA"
+    },
+    {
+      "id": "tracker-announcement",
+      "title": "Public Access to the Bitcoin Cycle Tracker",
+      "description": "BR Capital's announcement introducing public access to its Bitcoin cycle research dashboard.",
+      "url": "https://financewire.com/2026/10/08/br-capital-opens-public-access-to-proprietary-bitcoin-cycle-tracker/",
+      "date": "2026-10-08",
+      "kind": "announcement",
+      "publisher": "FinanceWire"
+    },
+    {
+      "id": "rebrand-announcement",
+      "title": "BRRR DAO Becomes BR Labs",
+      "description": "The company explains the move to the BR Labs name, the continuity of its research and engineering, and BRRRolver's established product name.",
+      "url": "https://financewire.com/2026/10/09/br-labs-founded-by-revaz-shmertz-announces-rebrand-from-brrr-dao/",
+      "date": "2026-10-09",
+      "kind": "announcement",
+      "publisher": "FinanceWire"
+    },
+    {
+      "id": "podcast-milestone",
+      "title": "The First Ten BR Labs Podcast Episodes",
+      "description": "A dated announcement about the first ten episodes. The current collection also includes subsequent episodes.",
+      "url": "https://news.marketersmedia.com/br-labs-marks-ten-published-podcast-episodes-on-defi-and-liquid-markets/89206147",
+      "date": "2026-10-14",
+      "kind": "announcement",
+      "publisher": "MarketersMEDIA"
+    },
+    {
+      "id": "tbilisi-2026-roundtable",
+      "title": "Cross-Border Financial Innovation: Defining What the Region Can Test Together",
+      "description": "Rezo Shmertz is listed as moderator for this Tbilisi Finance Summit roundtable on regional financial infrastructure.",
+      "url": "https://tbilisifinancesummit.gftn.co/agenda/agnd176-cross-border-financial-innovation-defining-what-the-region-can-test-together",
+      "date": "2026-10-27",
+      "kind": "event",
+      "publisher": "GFTN",
+      "coverageLabel": "Scheduled moderator",
+      "status": "scheduled"
+    },
+    {
+      "id": "tbilisi-2026-investor",
+      "title": "Investor Thesis in 2027: Headwinds and Tailwinds",
+      "description": "A scheduled Tbilisi Finance Summit panel on the investment outlook for fintech, AI and financial infrastructure, with Rezo Shmertz among the listed participants.",
+      "url": "https://tbilisifinancesummit.gftn.co/agenda/agnd173-investor-thesis-in-2027-headwinds-and-tailwinds",
+      "date": "2026-10-28",
+      "kind": "event",
+      "publisher": "GFTN",
+      "coverageLabel": "Scheduled panel participant",
+      "status": "scheduled"
+    },
+    {
+      "id": "hsc-2026-recap",
+      "title": "HSC Asset Management Singapore",
+      "description": "Rezo Shmertz's photo recap of the Trezor and Stellar stage at HSC Asset Management Singapore.",
+      "url": "https://x.com/rezosh/status/2108174067442356716",
+      "date": "2026-10-08",
+      "kind": "photo",
+      "publisher": "Rezo Shmertz",
+      "coverageLabel": "Event recap"
     }
   ]
 }

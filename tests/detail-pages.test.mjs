@@ -9,12 +9,12 @@ const read = (rel) => readFileSync(join(root, rel), 'utf8');
 
 const data = loadDetailData();
 validateDetailData(data);
-assert.equal(data.pages.length, 17);
+assert.equal(data.pages.length, 21);
 
 const articles = data.pages.filter((p) => p.kind === 'article');
 const media = data.pages.filter((p) => p.kind !== 'article');
 assert.equal(articles.length, 4);
-assert.equal(media.length, 13);
+assert.equal(media.length, 17);
 
 for (const page of data.pages) {
   const html = read(page.out);
@@ -50,8 +50,9 @@ for (const page of data.pages) {
 }
 
 const quantumHtml = read('writing/quantum-threat-to-bitcoin/index.html');
-assert.match(quantumHtml, /\/assets\/detail-pages\/quantum\.webp/);
+assert.match(quantumHtml, /\/assets\/optimized\/quantum-cover\.webp/);
 assert.ok(existsSync(join(root, 'assets/detail-pages/quantum.webp')));
+assert.ok(existsSync(join(root, 'assets/optimized/quantum-cover.webp')));
 
 const tbilisi = read('writing/appearances/stablecoins-tbilisi-finance-summit/index.html');
 assert.match(tbilisi, /<figure class="appearance-photo" data-visual-fallback>/);
@@ -85,7 +86,7 @@ assert.match(llms, /Corporate L1s and regulatory arbitrage/);
 assert.match(llms, /Stablecoins at the Tbilisi Finance Summit/);
 
 const built = buildAll(data);
-assert.equal(built.length, 17);
+assert.equal(built.length, 21);
 for (const { html, page } of built) {
   assert.match(html, /body class="detail-page"/);
   const h1Html = page.h1.replaceAll('&', '&amp;').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -93,4 +94,4 @@ for (const { html, page } of built) {
   assert.match(html, /BreadcrumbList/);
 }
 
-console.log('PASS: 17 allowlisted detail pages, labels, nav, metadata, covers, Tbilisi fallback, CSS scope, feed/llms sync, builder render.');
+console.log('PASS: 21 allowlisted detail pages, labels, nav, metadata, covers, Tbilisi fallback, CSS scope, feed/llms sync, builder render.');

@@ -14,12 +14,13 @@ const htmlEsc = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').
 const xml = value => htmlEsc(value).replaceAll("'", '&apos;');
 const episodeLabel = episode => `Episode ${String(episode).padStart(2, '0')}`;
 
-test('all ten podcast records link to exactly one local podcast page', () => {
+test('all twelve podcast records link to exactly one local podcast page', () => {
   const records = media.records.filter(record => record.kind === 'podcast');
   const pages = data.pages.filter(page => page.kind === 'podcast');
-  assert.equal(records.length, 10);
-  assert.equal(pages.length, 10);
-  assert.equal(media.records.find(record => record.episode === 10 && record.featuredOrder === 1).id, 'podcast');
+  assert.equal(records.length, 12);
+  assert.equal(pages.length, 12);
+  assert.equal(media.records.find(record => record.episode === 12 && record.featuredOrder === 1).id, 'podcast');
+  assert.equal(media.records.find(record => record.episode === 10).id, 'ep10');
   const titles = new Set();
   const descriptions = new Set();
   for (const record of records) {

@@ -10,7 +10,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 
 test('About preserves the original photograph and shared header/footer', () => {
   assert.equal(hash(readFileSync(new URL('../rezo-speaking-cutout-v4-hero.png', import.meta.url))), '36e6f73fd3eb98f8c338a6a21eee27c88666eaa95e4e31a1e47fc61ec5ae4aa9');
-  assert.match(html, /src="\/rezo-speaking-cutout-v4-hero.png" width="1055" height="945"/);
+  assert.match(html, /src="\/assets\/optimized\/rezo-speaking.webp" width="1055" height="945"/);
   assert.equal(hash(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]), 'a102954204559db5f59ff814e78d95dc6091f390585516c2216ad3f3b4fe5bc7');
   assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]), '35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28');
   assert.deepEqual([...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m => m[1]), ['/assets/about-nav.js?v=20260906-final']);
@@ -48,8 +48,8 @@ test('About retains canonical profile metadata and scoped, wrapping styles', () 
   assert.match(html, /href="https:\/\/rezoshmertz.com\/about\/" rel="canonical"/);
   const graph = JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
   const profile = graph.find(node => node['@type'] === 'ProfilePage');
-  assert.equal(profile.dateModified, '2026-09-15');
-  assert.match(read('sitemap.xml'), /<loc>https:\/\/rezoshmertz.com\/about\/<\/loc><lastmod>2026-09-15<\/lastmod>/);
+  assert.equal(profile.dateModified, '2026-10-15');
+  assert.match(read('sitemap.xml'), /<loc>https:\/\/rezoshmertz.com\/about\/<\/loc><lastmod>2026-10-15<\/lastmod>/);
   assert.equal(profile.mainEntity['@id'], graph.find(node => node['@type'] === 'Person')['@id']);
   assert.ok(html.indexOf('/assets/about-profile.css') < html.indexOf('</head>'));
   for (const match of css.replace(/\/\*[\s\S]*?\*\//g, '').matchAll(/([^{}]+)\{/g)) {

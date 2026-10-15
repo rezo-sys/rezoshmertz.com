@@ -32,11 +32,18 @@ for (const [path, source] of html) {
       if (!ids.includes(id)) failures.push(`${path}: missing anchor ${url.pathname}${url.hash}`);
     }
   }
-  // Keep structured data parseable and avoid reintroducing the retired summit URLs.
+  // Keep structured data parseable. Only the current 2026 speaker and agenda URLs are allowed on this host.
   for (const match of source.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     assert.doesNotThrow(() => JSON.parse(match[1]), `Invalid structured data in ${path}`);
   }
-  assert.ok(!source.includes('https://tbilisifinancesummit.gftn.co/'), `Retired summit link in ${path}`);
+  const allowedSummit = [
+    'https://tbilisifinancesummit.gftn.co/speakers?speaker=spkr12835-rezo-shmertz',
+    'https://tbilisifinancesummit.gftn.co/agenda/agnd176-cross-border-financial-innovation-defining-what-the-region-can-test-together',
+    'https://tbilisifinancesummit.gftn.co/agenda/agnd173-investor-thesis-in-2027-headwinds-and-tailwinds',
+  ];
+  for (const found of source.match(/https:\/\/tbilisifinancesummit\.gftn\.co\/[^"'\s]*/g) || []) {
+    assert.ok(allowedSummit.includes(found), `Unapproved summit link in ${path}: ${found}`);
+  }
 }
 assert.deepEqual(failures, [], failures.join('\n'));
 const appearance = html.get('writing/appearances/stablecoins-tbilisi-finance-summit/index.html');

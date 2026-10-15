@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { runInNewContext } from 'node:vm';
 const source = await readFile(new URL('../mockups/btc-live.js', import.meta.url), 'utf8');
-const { deriveBitcoinReadout, formatBitcoinReadout, decodeFirestoreValue, createBitcoinUpdater, POLL_INTERVAL_MS } =
+const { deriveBitcoinReadout, formatBitcoinReadout, decodeFirestoreValue, createBitcoinUpdater, trackerFailureNote, POLL_INTERVAL_MS } =
   await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
 const now = new Date('2026-09-05T22:00:00Z');
 const metric = (value, extra = {}) => ({ value, asOf: '2026-09-05T21:00:00Z', stale: false, ...extra });
@@ -104,6 +105,55 @@ test('stopped requests cannot render a late response', async () => {
   let release; const h = harness(() => new Promise(resolve => { release = resolve; }));
   const task = h.updater.refresh(); h.updater.stop(); release(response()); await task;
   assert.equal(h.updates.length, 0); assert.equal(h.pending.size, 0);
+});
+test('initial HTML waits for a source, and failure text follows whether a snapshot has rendered', async () => {
+  const html = await readFile(new URL('../research/index.html', import.meta.url), 'utf8');
+  assert.match(html, /data-btc-field="price">Awaiting source</);
+  assert.match(html, /data-btc-field="drawdown">Awaiting source</);
+  assert.match(html, /data-btc-field="phase">Awaiting source</);
+  assert.match(html, /data-btc-field="status">Snapshot data</);
+  assert.match(html, /Open the dashboard</);
+  assert.match(html, /<noscript><p class="rb-source">Snapshot values require JavaScript\./);
+  assert.match(html, /<span hidden data-btc-field="daysLeft"><\/span>/);
+  assert.doesNotMatch(html, /\$64,679|-48\.7%|>BEAR<|10 AUG 2026|≈75|datetime="2026-08-10/);
+  assert.match(trackerFailureNote(false), /Snapshot unavailable/);
+  assert.match(trackerFailureNote(false), /Open the dashboard below/);
+  assert.doesNotMatch(trackerFailureNote(false), /retained/i);
+  assert.match(trackerFailureNote(true), /last displayed snapshot and observation dates are retained/);
+});
+test('browser wiring distinguishes initial failure, successful recovery and a later failed refresh', async () => {
+  const fields = Object.fromEntries(['price','drawdown','phase','status','sourceNote','updatedDate'].map(name => [name, { dataset: { btcField: name }, textContent: 'Awaiting source' }]));
+  const events = {}, pending = new Map();
+  let timerId = 0, fail = true;
+  const document = {
+    visibilityState: 'visible', documentElement: { dataset: {} },
+    querySelector: () => fields.price,
+    querySelectorAll: selector => selector === '[data-btc-field]' ? Object.values(fields) : [fields.sourceNote],
+    addEventListener: (name, fn) => { events[name] = fn; },
+  };
+  const window = {
+    setTimeout: (fn, ms) => { pending.set(++timerId, { fn, ms }); return timerId; },
+    clearTimeout: id => pending.delete(id),
+    addEventListener: (name, fn) => { events[name] = fn; },
+  };
+  runInNewContext(source.replace(/^export /gm, ''), {
+    document, window, Date, Intl, AbortController, HTMLTimeElement: class {},
+    fetch: async () => fail ? { ok: false, status: 503 } : response(),
+  });
+  const settle = () => new Promise(resolve => setImmediate(resolve));
+  await settle();
+  assert.equal(document.documentElement.dataset.btcDataStatus, 'fallback');
+  assert.match(fields.sourceNote.textContent, /Snapshot unavailable/);
+  assert.doesNotMatch(fields.sourceNote.textContent, /retained/i);
+  assert.equal(fields.price.textContent, 'Awaiting source');
+  fail = false; events.pageshow(); await settle();
+  assert.equal(document.documentElement.dataset.btcDataStatus, 'snapshot');
+  assert.equal(fields.price.textContent, '$78,670');
+  const retained = Object.fromEntries(['price','drawdown','phase','updatedDate'].map(name => [name, fields[name].textContent]));
+  fail = true; events.pageshow(); await settle();
+  assert.match(fields.sourceNote.textContent, /last displayed snapshot and observation dates are retained/);
+  for (const [name, value] of Object.entries(retained)) assert.equal(fields[name].textContent, value);
+  events.pagehide(); assert.equal(pending.size, 0);
 });
 test('request timeout aborts the request and reports failure', async () => {
   const h = harness((url, { signal }) => new Promise((resolve, reject) => signal.addEventListener('abort', () => reject(new Error('aborted')))));
