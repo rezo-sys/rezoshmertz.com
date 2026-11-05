@@ -1,0 +1,13 @@
+.form-shell{max-width:720px;margin:0 auto;padding:56px 20px 64px}
+.form-shell h1{font-size:clamp(30px,3.4vw,38px);margin:0 0 18px;max-width:none}
+.form-intro{font-size:17px;line-height:1.65;color:#d1d4d2;margin:0 0 28px}
+.request-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;padding-top:28px;border-top:1px solid var(--line)}
+.email-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:12px 22px;background:var(--yellow);border:1px solid var(--yellow);border-radius:0;color:var(--ink);font:700 16px/1.5 var(--sans);text-decoration:none}
+.email-button:hover{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.back-legal{display:inline-flex;align-items:center;min-height:48px;color:var(--yellow);font-size:15px;line-height:1.5;text-decoration:underline;text-underline-offset:4px}
+.back-legal:hover{color:var(--paper)}
+.email-note,.email-fallback{font-size:15px;line-height:1.65;color:#b9bdbe;margin:20px 0 0}
+.email-fallback a{display:inline-block;max-width:100%;color:var(--yellow);text-underline-offset:4px;overflow-wrap:anywhere}
+.form-shell a:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}
+@media(max-width:620px){.form-shell{padding:36px 0 48px}.form-shell h1{font-size:32px}.form-intro{font-size:16px}.request-actions{flex-direction:column;align-items:flex-start}}
+@media print{.form-shell h1,.form-intro,.email-note,.email-fallback,.email-fallback a,.back-legal{color:#222}.email-button{background:white;color:black;border-color:black}}

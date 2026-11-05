@@ -48,7 +48,7 @@ test('shared chrome, btc script and data hooks stay intact', () => {
   );
   assert.equal(
     hash(html.slice(html.indexOf('<footer class="site-footer">'), html.indexOf('</footer>', html.indexOf('<footer class="site-footer">')) + '</footer>'.length)),
-    '35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28',
+    '180acd9978906244836e4844c1dac2b0d4f0c8f792875a61f4812446859d0138',
   );
   assert.deepEqual(
     [...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]),

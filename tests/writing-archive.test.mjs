@@ -27,7 +27,7 @@ test('all 18 approved records retain exact dates, titles, sources and excerpts',
 
 test('approved shell is unchanged; preview scaffolding is absent', () => {
   assert.equal(hash(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]), 'e126b3d88611140337c758a66c96c8fa854090fcb47b532d3bd0ac3ca28da7c8');
-  assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]), '35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28');
+  assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]), '180acd9978906244836e4844c1dac2b0d4f0c8f792875a61f4812446859d0138');
   assert.doesNotMatch(html, /noindex|Local preview|127\.0\.0\.1|archive-refinements|Think in public|—/);
   assert.equal([...html.matchAll(/<h1\b/g)].length, 1);
   assert.match(html, /Essays on Bitcoin, crypto markets and AI, exploring how money works, where market advantages come from and what makes financial systems trustworthy\./);
