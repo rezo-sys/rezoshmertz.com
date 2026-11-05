@@ -41,7 +41,7 @@ test('contact page offers direct email with a visible fallback and no submission
   assert.ok(contact.includes('content="index,follow" name="robots"'));
   assert.doesNotMatch(contact, /noindex|http-equiv="refresh"|application\/ld\+json|<!--/);
   assert.doesNotMatch(contact, /<form\b|<input\b|<textarea\b|document-request\.js|formspree|formsubmit|received|role="status"/i);
-  assert.ok(contact.includes('This opens your email app. Review your message and send it from your own account.'));
+  assert.ok(contact.includes('<p class="email-fallback">Email: '));
   assert.ok(contact.includes('>rezoassistant@gmail.com</a>'));
   assert.match(contact, /href="\/legal-context\/"/);
   assert.match(sitemap, /<loc>https:\/\/rezoshmertz.com\/contact\/<\/loc><lastmod>2026-11-05<\/lastmod>/);

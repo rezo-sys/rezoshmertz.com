@@ -6,8 +6,8 @@
 .email-button:hover{background:var(--paper);border-color:var(--paper);color:var(--ink)}
 .back-legal{display:inline-flex;align-items:center;min-height:48px;color:var(--yellow);font-size:15px;line-height:1.5;text-decoration:underline;text-underline-offset:4px}
 .back-legal:hover{color:var(--paper)}
-.email-note,.email-fallback{font-size:15px;line-height:1.65;color:#b9bdbe;margin:20px 0 0}
+.email-fallback{font-size:15px;line-height:1.65;color:#b9bdbe;margin:20px 0 0}
 .email-fallback a{display:inline-block;max-width:100%;color:var(--yellow);text-underline-offset:4px;overflow-wrap:anywhere}
 .form-shell a:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}
 @media(max-width:620px){.form-shell{padding:36px 0 48px}.form-shell h1{font-size:32px}.form-intro{font-size:16px}.request-actions{flex-direction:column;align-items:flex-start}}
-@media print{.form-shell h1,.form-intro,.email-note,.email-fallback,.email-fallback a,.back-legal{color:#222}.email-button{background:white;color:black;border-color:black}}
+@media print{.form-shell h1,.form-intro,.email-fallback,.email-fallback a,.back-legal{color:#222}.email-button{background:white;color:black;border-color:black}}
