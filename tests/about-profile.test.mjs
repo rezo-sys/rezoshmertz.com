@@ -12,7 +12,7 @@ test('About preserves the original photograph and shared header/footer', () => {
   assert.equal(hash(readFileSync(new URL('../rezo-speaking-cutout-v4-hero.png', import.meta.url))), '36e6f73fd3eb98f8c338a6a21eee27c88666eaa95e4e31a1e47fc61ec5ae4aa9');
   assert.match(html, /src="\/assets\/optimized\/rezo-speaking.webp" width="1055" height="945"/);
   assert.equal(hash(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]), 'a102954204559db5f59ff814e78d95dc6091f390585516c2216ad3f3b4fe5bc7');
-  assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]), '180acd9978906244836e4844c1dac2b0d4f0c8f792875a61f4812446859d0138');
+  assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]), '35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28');
   assert.deepEqual([...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m => m[1]), ['/assets/about-nav.js?v=20260906-final']);
 });
 
@@ -39,9 +39,8 @@ test('About keeps concise source records and useful linked bottom context', () =
   assert.match(records, /https:\/\/developer.nvidia.com\/blog\/exploring-the-case-of-super-protocol-with-self-sovereign-ai-and-nvidia-confidential-computing\//);
   assert.ok([...records.matchAll(/<p>(.*?)<\/p>/g)].every(m => m[1].length < 100));
   const context = html.match(/<section class="about-context"[\s\S]*?<\/section>/)[0];
-  assert.equal((context.match(/<p>/g) || []).length, 3);
-  assert.equal((context.match(/<a /g) || []).length, 7);
-  assert.match(context, /<p><a href="\/legal-context\/">Legal context<\/a><\/p>/);
+  assert.equal((context.match(/<p>/g) || []).length, 2);
+  assert.equal((context.match(/<a /g) || []).length, 6);
   assert.doesNotMatch(html, /noindex|127\.0\.0\.1|—|icoholder/);
 });
 

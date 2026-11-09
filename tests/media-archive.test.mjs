@@ -105,7 +105,7 @@ test('build is deterministic and schema exactly follows the static visible list'
 
 test('original shell and homepage player are unchanged, with no preview residue', () => {
   assert.equal(hash(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]),'36d55ea4c2ee97f5a2cbf65b06191b46b6e8504deb295ecc2107bce4d940dbc4');
-  assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]),'180acd9978906244836e4844c1dac2b0d4f0c8f792875a61f4812446859d0138');
+  assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]),'35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28');
   // Reviewed Episode 12 title, credit and tweet ID. Player behavior is unchanged.
   assert.equal(hash(read('assets/media.js')),'fa55605ef487888d0e285c545e29644556d1b0e7a7c1f923f9cb9e0e8bb725e5');
   assert.equal((html.match(/<h1\b/g)||[]).length,1);

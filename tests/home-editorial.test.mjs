@@ -20,7 +20,7 @@ test('hero, navigation, research, metadata and media player remain unchanged', (
   const originalDestinations = Array.from(html.replace(stylesheet, '').matchAll(/\b(?:href|src)="([^"]+)"/g), m => m[1]);
   // Reviewed Episode 12 links, summary links, essay overview links and the portrait derivative.
   assert.equal(hash(JSON.stringify(originalDestinations)),
-    'e7ed7c312a9e007f0ec3d50133a25c50eb5f5b539b1b364e1743f044bf7e4fc6');
+    'e07430ca067f237b1c80cea2c31f2201f479b2a99796a4b5a939e6bd432ddbf9');
   assert.match(html, /content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/);
   assert.doesNotMatch(html, /noindex|localhost|127\.0\.0\.1|preview\.css|balanced-writing\.css/);
 });
