@@ -1,0 +1,42 @@
+/* Keep the approved statement layout within the shared site shell. */
+.legal-context {
+  width: min(870px, 100%);
+  padding: clamp(18px, 5vw, 44px);
+  font: 15px/1.55 system-ui, sans-serif;
+}
+
+.legal-article { max-width: 72ch; }
+
+.legal-article h1 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 5vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+
+.legal-article h2 {
+  margin: 29px 0 10px;
+  font-size: clamp(19px, 3vw, 25px);
+  line-height: 1.22;
+  letter-spacing: -.02em;
+}
+
+.legal-article h2:last-of-type {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-article p {
+  margin: 0 0 13px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.legal-article em { color: #e3e3d8; }
+
+.legal-article a {
+  color: var(--yellow);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
