@@ -33,6 +33,13 @@ test('Escape closes, prevents default and restores trigger focus',()=>{const e=e
 test('Closed disclosure does not consume Escape intended for another control',()=>{const e=env();let prevented=false;e.listeners['document:keydown']({key:'Escape',preventDefault(){prevented=true;}});assert.equal(prevented,false);assert.equal(e.trigger.focused,undefined);});
 test('Outside pointer closes; inside pointer preserves disclosure',()=>{const e=env({open:true});e.listeners['document:pointerdown']({target:e.inside});assert.equal(e.disclosure.open,true);e.listeners['document:pointerdown']({target:{}});assert.equal(e.disclosure.open,false);});
 test('Internal focus traversal stays open; leaving closes',()=>{const e=env({open:true});e.listeners['disclosure:focusout']({relatedTarget:e.inside});assert.equal(e.disclosure.open,true);e.listeners['disclosure:focusout']({relatedTarget:{}});assert.equal(e.disclosure.open,false);});
+test('Safari pointer focus loss preserves the open link until its click completes', () => {
+  const e = env({open: true});
+  e.listeners['disclosure:focusout']({relatedTarget: null});
+  assert.equal(e.disclosure.open, true);
+  e.listeners['disclosure:click']({target: {closest() { return {}; }}});
+  assert.equal(e.disclosure.open, false);
+});
 test('Link click closes while summary activation remains native',()=>{const e=env({open:true});e.listeners['disclosure:click']({target:{closest(){return null;}}});assert.equal(e.disclosure.open,true);e.listeners['disclosure:click']({target:{closest(){return {};}}});assert.equal(e.disclosure.open,false);});
 test('Pagehide closes disclosure',()=>{const e=env({open:true});e.listeners['window:pagehide']();assert.equal(e.disclosure.open,false);});
 console.log(JSON.stringify({scope:'Deterministic source/event/measurement mocks; not native browser geometry or keyboard testing',source_sha256:'sha256:'+crypto.createHash('sha256').update(source).digest('hex'),passed:tests.filter(t=>t.result==='PASS').length,total:tests.length,tests},null,2));

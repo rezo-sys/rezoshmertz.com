@@ -52,7 +52,7 @@ test('shared chrome, btc script and data hooks stay intact', () => {
   );
   assert.deepEqual(
     [...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]),
-    ['/assets/about-nav.js?v=20260906-final', '/mockups/btc-live.js?v=20261015-snapshot'],
+    ['/assets/about-nav.js?v=20261112-safari-focus', '/mockups/btc-live.js?v=20261015-snapshot'],
   );
   const fields = [...html.matchAll(/data-btc-field="([^"]+)"/g)].map((m) => m[1]).sort();
   assert.deepEqual(fields, [

@@ -10,17 +10,18 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 
 test('hero, navigation, research, metadata and media player remain unchanged', () => {
   // Fingerprints of the approved pre-change production HTML at be83728.
+  // Reviewed the Safari navigation script cache version change on 2026-11-12.
   // Update deliberately only when a later task intentionally changes these regions.
   // Reviewed the lossless speaking portrait swap. Hero script, navigation and research desk are unchanged.
   assert.equal(hash(html.split('<div class="editorial-additions">')[0].replace(stylesheet, '')),
-    'a356d7ec1c7605383f4833d1f41db55aae539c222a33d22bc25644fc4548cb25');
+    'df4bc565767ec853943d3da0f92415471083125fe0cc6dcc93e74d48576b3ad4');
   // Reviewed media.js cache query; dialog markup and hero script are unchanged.
   assert.equal(hash(html.slice(html.indexOf('<dialog aria-labelledby="dialog-title"'))),
     'a5d39bebbb76b47335199a9cb3b78e6d9fc97ea70046028a4be94d77af29141a');
   const originalDestinations = Array.from(html.replace(stylesheet, '').matchAll(/\b(?:href|src)="([^"]+)"/g), m => m[1]);
   // Reviewed Episode 12 links, summary links, essay overview links and the portrait derivative.
   assert.equal(hash(JSON.stringify(originalDestinations)),
-    'e07430ca067f237b1c80cea2c31f2201f479b2a99796a4b5a939e6bd432ddbf9');
+    'eb6b54b3004773fb2321a00143847ba15270ab7f016e9e0ecb0419a732ff5ee6');
   assert.match(html, /content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/);
   assert.doesNotMatch(html, /noindex|localhost|127\.0\.0\.1|preview\.css|balanced-writing\.css/);
 });

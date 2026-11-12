@@ -31,7 +31,8 @@
     if (!disclosure.contains(event.target)) close();
   });
   disclosure.addEventListener('focusout', event => {
-    if (!disclosure.contains(event.relatedTarget)) close();
+    // Safari reports no focus destination when a pointer activates a link.
+    if (event.relatedTarget && !disclosure.contains(event.relatedTarget)) close();
   });
   disclosure.addEventListener('click', event => {
     if (event.target.closest('a')) close();

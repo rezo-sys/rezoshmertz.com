@@ -13,7 +13,7 @@ test('About preserves the original photograph and shared header/footer', () => {
   assert.match(html, /src="\/assets\/optimized\/rezo-speaking.webp" width="1055" height="945"/);
   assert.equal(hash(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0]), 'a102954204559db5f59ff814e78d95dc6091f390585516c2216ad3f3b4fe5bc7');
   assert.equal(hash(html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)[0]), '35269686b46e1336e7f36646a8e057769482a6e1d522b0244ba623c9c7332f28');
-  assert.deepEqual([...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m => m[1]), ['/assets/about-nav.js?v=20260906-final']);
+  assert.deepEqual([...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m => m[1]), ['/assets/about-nav.js?v=20261112-safari-focus']);
 });
 
 test('About exposes approved biography, social routes and equal work paths without scripts', () => {

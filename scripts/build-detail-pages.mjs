@@ -251,7 +251,7 @@ ${page.kind === 'article' ? '<meta name="author" content="Rezo Shmertz"/>\n' : '
 <link rel="stylesheet" href="/assets/finishing.css?v=20260906-final"/>
 <link rel="stylesheet" href="/assets/about-nav.css?v=20260906-final"/>
 <link rel="stylesheet" href="/assets/detail-pages.css?v=${CSS_V}"/>
-<script src="/assets/about-nav.js?v=20260906-final" defer></script>
+<script src="/assets/about-nav.js?v=20261112-safari-focus" defer></script>
 <script src="/assets/detail-image-fallback.js?v=${CSS_V}" defer></script>
 </head>`;
 }
